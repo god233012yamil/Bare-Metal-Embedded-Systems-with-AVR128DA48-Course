@@ -140,7 +140,7 @@ Download and install [Microchip Studio](https://www.microchip.com/en-us/tools-re
 ### 3. Clone This Repository
 
 ```bash
-git clone https://github.com/<your-username>/Bare-Metal-Embedded-Systems-AVR128DA48.git
+git clone https://github.com/god233012yamil/Bare-Metal-Embedded-Systems-with-AVR128DA48-Course.git
 ```
 
 ### 4. Open a Project
