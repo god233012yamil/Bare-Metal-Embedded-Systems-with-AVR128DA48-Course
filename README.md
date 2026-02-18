@@ -124,7 +124,7 @@ The progression is intentional: **fundamentals first, peripherals next, then int
 ```
 
 Each day folder contains:
-- A **PowerPoint presentation** (`.pptx`) covering the theory and register details
+- A **PDF presentation** (`.pdf`) covering the theory and register details
 - One or more **Microchip Studio C projects** (GCC C Executable) demonstrating the concepts with fully commented source code
 
 ## Getting Started
