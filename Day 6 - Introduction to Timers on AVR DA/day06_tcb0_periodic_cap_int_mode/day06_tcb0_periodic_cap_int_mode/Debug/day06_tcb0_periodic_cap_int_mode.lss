@@ -1,0 +1,329 @@
+
+day06_tcb0_periodic_cap_int_mode.elf:     file format elf32-avr
+
+Sections:
+Idx Name          Size      VMA       LMA       File off  Algn
+  0 .data         00000000  00804000  00804000  00000288  2**0
+                  CONTENTS, ALLOC, LOAD, DATA
+  1 .text         00000214  00000000  00000000  00000074  2**1
+                  CONTENTS, ALLOC, LOAD, READONLY, CODE
+  2 .bss          00000004  00804000  00804000  00000288  2**0
+                  ALLOC
+  3 .comment      00000030  00000000  00000000  00000288  2**0
+                  CONTENTS, READONLY
+  4 .note.gnu.avr.deviceinfo 00000040  00000000  00000000  000002b8  2**2
+                  CONTENTS, READONLY
+  5 .debug_aranges 00000028  00000000  00000000  000002f8  2**0
+                  CONTENTS, READONLY, DEBUGGING
+  6 .debug_info   000039b7  00000000  00000000  00000320  2**0
+                  CONTENTS, READONLY, DEBUGGING
+  7 .debug_abbrev 0000311e  00000000  00000000  00003cd7  2**0
+                  CONTENTS, READONLY, DEBUGGING
+  8 .debug_line   000003af  00000000  00000000  00006df5  2**0
+                  CONTENTS, READONLY, DEBUGGING
+  9 .debug_frame  00000054  00000000  00000000  000071a4  2**2
+                  CONTENTS, READONLY, DEBUGGING
+ 10 .debug_str    00001c89  00000000  00000000  000071f8  2**0
+                  CONTENTS, READONLY, DEBUGGING
+ 11 .debug_loc    000000df  00000000  00000000  00008e81  2**0
+                  CONTENTS, READONLY, DEBUGGING
+ 12 .debug_ranges 00000018  00000000  00000000  00008f60  2**0
+                  CONTENTS, READONLY, DEBUGGING
+
+Disassembly of section .text:
+
+00000000 <__vectors>:
+   0:	0c 94 74 00 	jmp	0xe8	; 0xe8 <__ctors_end>
+   4:	0c 94 86 00 	jmp	0x10c	; 0x10c <__bad_interrupt>
+   8:	0c 94 86 00 	jmp	0x10c	; 0x10c <__bad_interrupt>
+   c:	0c 94 86 00 	jmp	0x10c	; 0x10c <__bad_interrupt>
+  10:	0c 94 86 00 	jmp	0x10c	; 0x10c <__bad_interrupt>
+  14:	0c 94 86 00 	jmp	0x10c	; 0x10c <__bad_interrupt>
+  18:	0c 94 86 00 	jmp	0x10c	; 0x10c <__bad_interrupt>
+  1c:	0c 94 86 00 	jmp	0x10c	; 0x10c <__bad_interrupt>
+  20:	0c 94 86 00 	jmp	0x10c	; 0x10c <__bad_interrupt>
+  24:	0c 94 86 00 	jmp	0x10c	; 0x10c <__bad_interrupt>
+  28:	0c 94 86 00 	jmp	0x10c	; 0x10c <__bad_interrupt>
+  2c:	0c 94 86 00 	jmp	0x10c	; 0x10c <__bad_interrupt>
+  30:	0c 94 88 00 	jmp	0x110	; 0x110 <__vector_12>
+  34:	0c 94 86 00 	jmp	0x10c	; 0x10c <__bad_interrupt>
+  38:	0c 94 86 00 	jmp	0x10c	; 0x10c <__bad_interrupt>
+  3c:	0c 94 86 00 	jmp	0x10c	; 0x10c <__bad_interrupt>
+  40:	0c 94 86 00 	jmp	0x10c	; 0x10c <__bad_interrupt>
+  44:	0c 94 86 00 	jmp	0x10c	; 0x10c <__bad_interrupt>
+  48:	0c 94 86 00 	jmp	0x10c	; 0x10c <__bad_interrupt>
+  4c:	0c 94 86 00 	jmp	0x10c	; 0x10c <__bad_interrupt>
+  50:	0c 94 86 00 	jmp	0x10c	; 0x10c <__bad_interrupt>
+  54:	0c 94 86 00 	jmp	0x10c	; 0x10c <__bad_interrupt>
+  58:	0c 94 86 00 	jmp	0x10c	; 0x10c <__bad_interrupt>
+  5c:	0c 94 86 00 	jmp	0x10c	; 0x10c <__bad_interrupt>
+  60:	0c 94 86 00 	jmp	0x10c	; 0x10c <__bad_interrupt>
+  64:	0c 94 86 00 	jmp	0x10c	; 0x10c <__bad_interrupt>
+  68:	0c 94 86 00 	jmp	0x10c	; 0x10c <__bad_interrupt>
+  6c:	0c 94 86 00 	jmp	0x10c	; 0x10c <__bad_interrupt>
+  70:	0c 94 86 00 	jmp	0x10c	; 0x10c <__bad_interrupt>
+  74:	0c 94 86 00 	jmp	0x10c	; 0x10c <__bad_interrupt>
+  78:	0c 94 86 00 	jmp	0x10c	; 0x10c <__bad_interrupt>
+  7c:	0c 94 86 00 	jmp	0x10c	; 0x10c <__bad_interrupt>
+  80:	0c 94 86 00 	jmp	0x10c	; 0x10c <__bad_interrupt>
+  84:	0c 94 86 00 	jmp	0x10c	; 0x10c <__bad_interrupt>
+  88:	0c 94 86 00 	jmp	0x10c	; 0x10c <__bad_interrupt>
+  8c:	0c 94 86 00 	jmp	0x10c	; 0x10c <__bad_interrupt>
+  90:	0c 94 86 00 	jmp	0x10c	; 0x10c <__bad_interrupt>
+  94:	0c 94 86 00 	jmp	0x10c	; 0x10c <__bad_interrupt>
+  98:	0c 94 86 00 	jmp	0x10c	; 0x10c <__bad_interrupt>
+  9c:	0c 94 86 00 	jmp	0x10c	; 0x10c <__bad_interrupt>
+  a0:	0c 94 86 00 	jmp	0x10c	; 0x10c <__bad_interrupt>
+  a4:	0c 94 86 00 	jmp	0x10c	; 0x10c <__bad_interrupt>
+  a8:	0c 94 86 00 	jmp	0x10c	; 0x10c <__bad_interrupt>
+  ac:	0c 94 86 00 	jmp	0x10c	; 0x10c <__bad_interrupt>
+  b0:	0c 94 86 00 	jmp	0x10c	; 0x10c <__bad_interrupt>
+  b4:	0c 94 86 00 	jmp	0x10c	; 0x10c <__bad_interrupt>
+  b8:	0c 94 86 00 	jmp	0x10c	; 0x10c <__bad_interrupt>
+  bc:	0c 94 86 00 	jmp	0x10c	; 0x10c <__bad_interrupt>
+  c0:	0c 94 86 00 	jmp	0x10c	; 0x10c <__bad_interrupt>
+  c4:	0c 94 86 00 	jmp	0x10c	; 0x10c <__bad_interrupt>
+  c8:	0c 94 86 00 	jmp	0x10c	; 0x10c <__bad_interrupt>
+  cc:	0c 94 86 00 	jmp	0x10c	; 0x10c <__bad_interrupt>
+  d0:	0c 94 86 00 	jmp	0x10c	; 0x10c <__bad_interrupt>
+  d4:	0c 94 86 00 	jmp	0x10c	; 0x10c <__bad_interrupt>
+  d8:	0c 94 86 00 	jmp	0x10c	; 0x10c <__bad_interrupt>
+  dc:	0c 94 86 00 	jmp	0x10c	; 0x10c <__bad_interrupt>
+  e0:	0c 94 86 00 	jmp	0x10c	; 0x10c <__bad_interrupt>
+  e4:	0c 94 86 00 	jmp	0x10c	; 0x10c <__bad_interrupt>
+
+000000e8 <__ctors_end>:
+  e8:	11 24       	eor	r1, r1
+  ea:	1f be       	out	0x3f, r1	; 63
+  ec:	cf ef       	ldi	r28, 0xFF	; 255
+  ee:	cd bf       	out	0x3d, r28	; 61
+  f0:	df e7       	ldi	r29, 0x7F	; 127
+  f2:	de bf       	out	0x3e, r29	; 62
+
+000000f4 <__do_clear_bss>:
+  f4:	20 e4       	ldi	r18, 0x40	; 64
+  f6:	a0 e0       	ldi	r26, 0x00	; 0
+  f8:	b0 e4       	ldi	r27, 0x40	; 64
+  fa:	01 c0       	rjmp	.+2      	; 0xfe <.do_clear_bss_start>
+
+000000fc <.do_clear_bss_loop>:
+  fc:	1d 92       	st	X+, r1
+
+000000fe <.do_clear_bss_start>:
+  fe:	a4 30       	cpi	r26, 0x04	; 4
+ 100:	b2 07       	cpc	r27, r18
+ 102:	e1 f7       	brne	.-8      	; 0xfc <.do_clear_bss_loop>
+ 104:	0e 94 b4 00 	call	0x168	; 0x168 <main>
+ 108:	0c 94 08 01 	jmp	0x210	; 0x210 <_exit>
+
+0000010c <__bad_interrupt>:
+ 10c:	0c 94 00 00 	jmp	0	; 0x0 <__vectors>
+
+00000110 <__vector_12>:
+
+/*
+ * TCB0 interrupt vector (handles OVF and/or CAPT depending on what you enable)
+ */
+ISR(TCB0_INT_vect)
+{   	
+ 110:	1f 92       	push	r1
+ 112:	0f 92       	push	r0
+ 114:	0f b6       	in	r0, 0x3f	; 63
+ 116:	0f 92       	push	r0
+ 118:	11 24       	eor	r1, r1
+ 11a:	8f 93       	push	r24
+ 11c:	9f 93       	push	r25
+ 11e:	af 93       	push	r26
+ 120:	bf 93       	push	r27
+    if (TCB0.INTFLAGS & TCB_CAPT_bm) {
+ 122:	80 91 06 0b 	lds	r24, 0x0B06	; 0x800b06 <__TEXT_REGION_LENGTH__+0x7e0b06>
+ 126:	80 ff       	sbrs	r24, 0
+ 128:	16 c0       	rjmp	.+44     	; 0x156 <__vector_12+0x46>
+		TCB0.INTFLAGS = TCB_CAPT_bm;  // clear interrupt flag
+ 12a:	81 e0       	ldi	r24, 0x01	; 1
+ 12c:	80 93 06 0b 	sts	0x0B06, r24	; 0x800b06 <__TEXT_REGION_LENGTH__+0x7e0b06>
+		g_ms_ticks++;				  // 1 ms tick counter
+ 130:	80 91 00 40 	lds	r24, 0x4000	; 0x804000 <__DATA_REGION_ORIGIN__>
+ 134:	90 91 01 40 	lds	r25, 0x4001	; 0x804001 <__DATA_REGION_ORIGIN__+0x1>
+ 138:	a0 91 02 40 	lds	r26, 0x4002	; 0x804002 <__DATA_REGION_ORIGIN__+0x2>
+ 13c:	b0 91 03 40 	lds	r27, 0x4003	; 0x804003 <__DATA_REGION_ORIGIN__+0x3>
+ 140:	01 96       	adiw	r24, 0x01	; 1
+ 142:	a1 1d       	adc	r26, r1
+ 144:	b1 1d       	adc	r27, r1
+ 146:	80 93 00 40 	sts	0x4000, r24	; 0x804000 <__DATA_REGION_ORIGIN__>
+ 14a:	90 93 01 40 	sts	0x4001, r25	; 0x804001 <__DATA_REGION_ORIGIN__+0x1>
+ 14e:	a0 93 02 40 	sts	0x4002, r26	; 0x804002 <__DATA_REGION_ORIGIN__+0x2>
+ 152:	b0 93 03 40 	sts	0x4003, r27	; 0x804003 <__DATA_REGION_ORIGIN__+0x3>
+	}                
+}
+ 156:	bf 91       	pop	r27
+ 158:	af 91       	pop	r26
+ 15a:	9f 91       	pop	r25
+ 15c:	8f 91       	pop	r24
+ 15e:	0f 90       	pop	r0
+ 160:	0f be       	out	0x3f, r0	; 63
+ 162:	0f 90       	pop	r0
+ 164:	1f 90       	pop	r1
+ 166:	18 95       	reti
+
+00000168 <main>:
+/*
+ * CCP-protected register write helper
+ */
+static inline void ccp_write_io(volatile uint8_t *addr, uint8_t value)
+{
+    CCP = CCP_IOREG_gc;
+ 168:	88 ed       	ldi	r24, 0xD8	; 216
+ 16a:	84 bf       	out	0x34, r24	; 52
+    *addr = value;
+ 16c:	10 92 60 00 	sts	0x0060, r1	; 0x800060 <__TEXT_REGION_LENGTH__+0x7e0060>
+/*
+ * CCP-protected register write helper
+ */
+static inline void ccp_write_io(volatile uint8_t *addr, uint8_t value)
+{
+    CCP = CCP_IOREG_gc;
+ 170:	84 bf       	out	0x34, r24	; 52
+    *addr = value;
+ 172:	94 e2       	ldi	r25, 0x24	; 36
+ 174:	90 93 68 00 	sts	0x0068, r25	; 0x800068 <__TEXT_REGION_LENGTH__+0x7e0068>
+/*
+ * CCP-protected register write helper
+ */
+static inline void ccp_write_io(volatile uint8_t *addr, uint8_t value)
+{
+    CCP = CCP_IOREG_gc;
+ 178:	84 bf       	out	0x34, r24	; 52
+    *addr = value;
+ 17a:	81 e0       	ldi	r24, 0x01	; 1
+ 17c:	80 93 61 00 	sts	0x0061, r24	; 0x800061 <__TEXT_REGION_LENGTH__+0x7e0061>
+ * Configure LED pin as output (push-pull).
+ */
+static void led_init(void)
+{
+	// Set PC6 as output 
+	LED_PORT.DIRSET = LED_PIN_bm;   
+ 180:	e0 e4       	ldi	r30, 0x40	; 64
+ 182:	f4 e0       	ldi	r31, 0x04	; 4
+ 184:	90 e4       	ldi	r25, 0x40	; 64
+ 186:	91 83       	std	Z+1, r25	; 0x01
+	
+	// Drive PC6 LOW (LED off at start)
+	LED_PORT.OUTCLR  = LED_PIN_bm;   
+ 188:	96 83       	std	Z+6, r25	; 0x06
+ * - CCMP = 6000 -> 1 ms period
+ */
+static void tcb0_init_1ms_tick(void)
+{
+    // Disable TCB0 before configuration
+    TCB0.CTRLA &= ~(1 << TCB_ENABLE_bp);          
+ 18a:	e0 e0       	ldi	r30, 0x00	; 0
+ 18c:	fb e0       	ldi	r31, 0x0B	; 11
+ 18e:	90 81       	ld	r25, Z
+ 190:	9e 7f       	andi	r25, 0xFE	; 254
+ 192:	90 83       	st	Z, r25
+	                      
+	// CCMP calculation:
+	// CCMP = (time_in_ms * F_CPU) / 1000
+	// Period for 1 ms (6 MHz / 1000) 
+    TCB0.CCMP = 6000;
+ 194:	20 e7       	ldi	r18, 0x70	; 112
+ 196:	37 e1       	ldi	r19, 0x17	; 23
+ 198:	24 87       	std	Z+12, r18	; 0x0c
+ 19a:	35 87       	std	Z+13, r19	; 0x0d
+	
+	// reset counter (good practice)
+	TCB0.CNT = 0U;
+ 19c:	12 86       	std	Z+10, r1	; 0x0a
+ 19e:	13 86       	std	Z+11, r1	; 0x0b
+
+    // Periodic interrupt mode 
+    TCB0.CTRLB = TCB_CNTMODE_INT_gc;
+ 1a0:	11 82       	std	Z+1, r1	; 0x01
+
+    // Clear pending interrupt flag
+    TCB0.INTFLAGS = TCB_CAPT_bm;
+ 1a2:	86 83       	std	Z+6, r24	; 0x06
+
+    // Enable CAPT interrupt, disable overflow interrupt
+    TCB0.INTCTRL = 1 << TCB_CAPT_bp		// Capture/Timeout interrupt enabled
+ 1a4:	85 83       	std	Z+5, r24	; 0x05
+				 | 0 << TCB_OVF_bp;		// Overflow interrupt disabled
+
+    // Start timer: clock = CLK_PER/2, enable
+    TCB0.CTRLA = TCB_CLKSEL_DIV2_gc 
+ 1a6:	83 e0       	ldi	r24, 0x03	; 3
+ 1a8:	80 83       	st	Z, r24
+	
+	// Initialize TCB0 in Periodic Interrupt Mode for a 1 ms tick.
+    tcb0_init_1ms_tick();
+	
+	// Enable global interrupts.
+    sei();
+ 1aa:	78 94       	sei
+         * then TCB is running, but interrupts are not being serviced.
+         *
+         * Comment this block out after debugging.
+         */
+        if (TCB0.INTFLAGS & TCB_CAPT_bm) {
+			TCB0.INTFLAGS = TCB_CAPT_bm;    // clear flag
+ 1ac:	21 e0       	ldi	r18, 0x01	; 1
+			g_ms_ticks++;					// 1 ms tick counter					
+        }
+		
+		// Toggle LED every N milliseconds
+		if(g_ms_ticks >= LED_TOGGLE_MS) {
+			LED_PORT.OUTTGL = LED_PIN_bm;   // atomic toggle
+ 1ae:	c0 e4       	ldi	r28, 0x40	; 64
+ 1b0:	d4 e0       	ldi	r29, 0x04	; 4
+ 1b2:	30 e4       	ldi	r19, 0x40	; 64
+         * If this toggles the LED but the ISR breakpoint never hits,
+         * then TCB is running, but interrupts are not being serviced.
+         *
+         * Comment this block out after debugging.
+         */
+        if (TCB0.INTFLAGS & TCB_CAPT_bm) {
+ 1b4:	86 81       	ldd	r24, Z+6	; 0x06
+ 1b6:	80 ff       	sbrs	r24, 0
+ 1b8:	14 c0       	rjmp	.+40     	; 0x1e2 <main+0x7a>
+			TCB0.INTFLAGS = TCB_CAPT_bm;    // clear flag
+ 1ba:	26 83       	std	Z+6, r18	; 0x06
+			g_ms_ticks++;					// 1 ms tick counter					
+ 1bc:	80 91 00 40 	lds	r24, 0x4000	; 0x804000 <__DATA_REGION_ORIGIN__>
+ 1c0:	90 91 01 40 	lds	r25, 0x4001	; 0x804001 <__DATA_REGION_ORIGIN__+0x1>
+ 1c4:	a0 91 02 40 	lds	r26, 0x4002	; 0x804002 <__DATA_REGION_ORIGIN__+0x2>
+ 1c8:	b0 91 03 40 	lds	r27, 0x4003	; 0x804003 <__DATA_REGION_ORIGIN__+0x3>
+ 1cc:	01 96       	adiw	r24, 0x01	; 1
+ 1ce:	a1 1d       	adc	r26, r1
+ 1d0:	b1 1d       	adc	r27, r1
+ 1d2:	80 93 00 40 	sts	0x4000, r24	; 0x804000 <__DATA_REGION_ORIGIN__>
+ 1d6:	90 93 01 40 	sts	0x4001, r25	; 0x804001 <__DATA_REGION_ORIGIN__+0x1>
+ 1da:	a0 93 02 40 	sts	0x4002, r26	; 0x804002 <__DATA_REGION_ORIGIN__+0x2>
+ 1de:	b0 93 03 40 	sts	0x4003, r27	; 0x804003 <__DATA_REGION_ORIGIN__+0x3>
+        }
+		
+		// Toggle LED every N milliseconds
+		if(g_ms_ticks >= LED_TOGGLE_MS) {
+ 1e2:	80 91 00 40 	lds	r24, 0x4000	; 0x804000 <__DATA_REGION_ORIGIN__>
+ 1e6:	90 91 01 40 	lds	r25, 0x4001	; 0x804001 <__DATA_REGION_ORIGIN__+0x1>
+ 1ea:	a0 91 02 40 	lds	r26, 0x4002	; 0x804002 <__DATA_REGION_ORIGIN__+0x2>
+ 1ee:	b0 91 03 40 	lds	r27, 0x4003	; 0x804003 <__DATA_REGION_ORIGIN__+0x3>
+ 1f2:	84 3f       	cpi	r24, 0xF4	; 244
+ 1f4:	91 40       	sbci	r25, 0x01	; 1
+ 1f6:	a1 05       	cpc	r26, r1
+ 1f8:	b1 05       	cpc	r27, r1
+ 1fa:	e0 f2       	brcs	.-72     	; 0x1b4 <main+0x4c>
+			LED_PORT.OUTTGL = LED_PIN_bm;   // atomic toggle
+ 1fc:	3f 83       	std	Y+7, r19	; 0x07
+			g_ms_ticks = 0;
+ 1fe:	10 92 00 40 	sts	0x4000, r1	; 0x804000 <__DATA_REGION_ORIGIN__>
+ 202:	10 92 01 40 	sts	0x4001, r1	; 0x804001 <__DATA_REGION_ORIGIN__+0x1>
+ 206:	10 92 02 40 	sts	0x4002, r1	; 0x804002 <__DATA_REGION_ORIGIN__+0x2>
+ 20a:	10 92 03 40 	sts	0x4003, r1	; 0x804003 <__DATA_REGION_ORIGIN__+0x3>
+ 20e:	d2 cf       	rjmp	.-92     	; 0x1b4 <main+0x4c>
+
+00000210 <_exit>:
+ 210:	f8 94       	cli
+
+00000212 <__stop_program>:
+ 212:	ff cf       	rjmp	.-2      	; 0x212 <__stop_program>
