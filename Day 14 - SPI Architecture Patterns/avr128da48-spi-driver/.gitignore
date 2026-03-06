@@ -1,0 +1,59 @@
+# Atmel Studio / Microchip Studio
+*.atsln
+*.atsuo
+*.cproj
+*.componentinfo.xml
+.vs/
+Debug/
+Release/
+
+# AVR build artifacts
+*.elf
+*.hex
+*.eep
+*.lss
+*.map
+*.sym
+*.o
+*.d
+*.a
+*.i
+*.s
+*.su
+
+# Simulator files
+*.simu
+
+# Backup files
+*~
+*.bak
+*.tmp
+*.swp
+
+# OS-specific
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# IDE-specific (VS Code, etc.)
+.vscode/
+*.code-workspace
+
+# Build directories
+build/
+bin/
+obj/
+
+# Documentation build artifacts (if using Doxygen)
+html/
+latex/
+docs/_build/
+
+# Python (if using scripts)
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+.Python
+venv/
+ENV/
