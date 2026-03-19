@@ -1,0 +1,249 @@
+
+LowPowerWakeUpRTC_CMP.elf:     file format elf32-avr
+
+Sections:
+Idx Name          Size      VMA       LMA       File off  Algn
+  0 .data         00000000  00804000  00804000  000001e4  2**0
+                  CONTENTS, ALLOC, LOAD, DATA
+  1 .text         00000190  00000000  00000000  00000054  2**1
+                  CONTENTS, ALLOC, LOAD, READONLY, CODE
+  2 .comment      00000030  00000000  00000000  000001e4  2**0
+                  CONTENTS, READONLY
+  3 .note.gnu.avr.deviceinfo 00000040  00000000  00000000  00000214  2**2
+                  CONTENTS, READONLY
+  4 .debug_aranges 00000028  00000000  00000000  00000254  2**0
+                  CONTENTS, READONLY, DEBUGGING
+  5 .debug_info   0000380c  00000000  00000000  0000027c  2**0
+                  CONTENTS, READONLY, DEBUGGING
+  6 .debug_abbrev 000030b0  00000000  00000000  00003a88  2**0
+                  CONTENTS, READONLY, DEBUGGING
+  7 .debug_line   0000036a  00000000  00000000  00006b38  2**0
+                  CONTENTS, READONLY, DEBUGGING
+  8 .debug_frame  00000054  00000000  00000000  00006ea4  2**2
+                  CONTENTS, READONLY, DEBUGGING
+  9 .debug_str    00001ac4  00000000  00000000  00006ef8  2**0
+                  CONTENTS, READONLY, DEBUGGING
+ 10 .debug_loc    00000063  00000000  00000000  000089bc  2**0
+                  CONTENTS, READONLY, DEBUGGING
+ 11 .debug_ranges 00000018  00000000  00000000  00008a1f  2**0
+                  CONTENTS, READONLY, DEBUGGING
+
+Disassembly of section .text:
+
+00000000 <__vectors>:
+   0:	0c 94 74 00 	jmp	0xe8	; 0xe8 <__ctors_end>
+   4:	0c 94 7e 00 	jmp	0xfc	; 0xfc <__bad_interrupt>
+   8:	0c 94 7e 00 	jmp	0xfc	; 0xfc <__bad_interrupt>
+   c:	0c 94 80 00 	jmp	0x100	; 0x100 <__vector_3>
+  10:	0c 94 7e 00 	jmp	0xfc	; 0xfc <__bad_interrupt>
+  14:	0c 94 7e 00 	jmp	0xfc	; 0xfc <__bad_interrupt>
+  18:	0c 94 7e 00 	jmp	0xfc	; 0xfc <__bad_interrupt>
+  1c:	0c 94 7e 00 	jmp	0xfc	; 0xfc <__bad_interrupt>
+  20:	0c 94 7e 00 	jmp	0xfc	; 0xfc <__bad_interrupt>
+  24:	0c 94 7e 00 	jmp	0xfc	; 0xfc <__bad_interrupt>
+  28:	0c 94 7e 00 	jmp	0xfc	; 0xfc <__bad_interrupt>
+  2c:	0c 94 7e 00 	jmp	0xfc	; 0xfc <__bad_interrupt>
+  30:	0c 94 7e 00 	jmp	0xfc	; 0xfc <__bad_interrupt>
+  34:	0c 94 7e 00 	jmp	0xfc	; 0xfc <__bad_interrupt>
+  38:	0c 94 7e 00 	jmp	0xfc	; 0xfc <__bad_interrupt>
+  3c:	0c 94 7e 00 	jmp	0xfc	; 0xfc <__bad_interrupt>
+  40:	0c 94 7e 00 	jmp	0xfc	; 0xfc <__bad_interrupt>
+  44:	0c 94 7e 00 	jmp	0xfc	; 0xfc <__bad_interrupt>
+  48:	0c 94 7e 00 	jmp	0xfc	; 0xfc <__bad_interrupt>
+  4c:	0c 94 7e 00 	jmp	0xfc	; 0xfc <__bad_interrupt>
+  50:	0c 94 7e 00 	jmp	0xfc	; 0xfc <__bad_interrupt>
+  54:	0c 94 7e 00 	jmp	0xfc	; 0xfc <__bad_interrupt>
+  58:	0c 94 7e 00 	jmp	0xfc	; 0xfc <__bad_interrupt>
+  5c:	0c 94 7e 00 	jmp	0xfc	; 0xfc <__bad_interrupt>
+  60:	0c 94 7e 00 	jmp	0xfc	; 0xfc <__bad_interrupt>
+  64:	0c 94 7e 00 	jmp	0xfc	; 0xfc <__bad_interrupt>
+  68:	0c 94 7e 00 	jmp	0xfc	; 0xfc <__bad_interrupt>
+  6c:	0c 94 7e 00 	jmp	0xfc	; 0xfc <__bad_interrupt>
+  70:	0c 94 7e 00 	jmp	0xfc	; 0xfc <__bad_interrupt>
+  74:	0c 94 7e 00 	jmp	0xfc	; 0xfc <__bad_interrupt>
+  78:	0c 94 7e 00 	jmp	0xfc	; 0xfc <__bad_interrupt>
+  7c:	0c 94 7e 00 	jmp	0xfc	; 0xfc <__bad_interrupt>
+  80:	0c 94 7e 00 	jmp	0xfc	; 0xfc <__bad_interrupt>
+  84:	0c 94 7e 00 	jmp	0xfc	; 0xfc <__bad_interrupt>
+  88:	0c 94 7e 00 	jmp	0xfc	; 0xfc <__bad_interrupt>
+  8c:	0c 94 7e 00 	jmp	0xfc	; 0xfc <__bad_interrupt>
+  90:	0c 94 7e 00 	jmp	0xfc	; 0xfc <__bad_interrupt>
+  94:	0c 94 7e 00 	jmp	0xfc	; 0xfc <__bad_interrupt>
+  98:	0c 94 7e 00 	jmp	0xfc	; 0xfc <__bad_interrupt>
+  9c:	0c 94 7e 00 	jmp	0xfc	; 0xfc <__bad_interrupt>
+  a0:	0c 94 7e 00 	jmp	0xfc	; 0xfc <__bad_interrupt>
+  a4:	0c 94 7e 00 	jmp	0xfc	; 0xfc <__bad_interrupt>
+  a8:	0c 94 7e 00 	jmp	0xfc	; 0xfc <__bad_interrupt>
+  ac:	0c 94 7e 00 	jmp	0xfc	; 0xfc <__bad_interrupt>
+  b0:	0c 94 7e 00 	jmp	0xfc	; 0xfc <__bad_interrupt>
+  b4:	0c 94 7e 00 	jmp	0xfc	; 0xfc <__bad_interrupt>
+  b8:	0c 94 7e 00 	jmp	0xfc	; 0xfc <__bad_interrupt>
+  bc:	0c 94 7e 00 	jmp	0xfc	; 0xfc <__bad_interrupt>
+  c0:	0c 94 7e 00 	jmp	0xfc	; 0xfc <__bad_interrupt>
+  c4:	0c 94 7e 00 	jmp	0xfc	; 0xfc <__bad_interrupt>
+  c8:	0c 94 7e 00 	jmp	0xfc	; 0xfc <__bad_interrupt>
+  cc:	0c 94 7e 00 	jmp	0xfc	; 0xfc <__bad_interrupt>
+  d0:	0c 94 7e 00 	jmp	0xfc	; 0xfc <__bad_interrupt>
+  d4:	0c 94 7e 00 	jmp	0xfc	; 0xfc <__bad_interrupt>
+  d8:	0c 94 7e 00 	jmp	0xfc	; 0xfc <__bad_interrupt>
+  dc:	0c 94 7e 00 	jmp	0xfc	; 0xfc <__bad_interrupt>
+  e0:	0c 94 7e 00 	jmp	0xfc	; 0xfc <__bad_interrupt>
+  e4:	0c 94 7e 00 	jmp	0xfc	; 0xfc <__bad_interrupt>
+
+000000e8 <__ctors_end>:
+  e8:	11 24       	eor	r1, r1
+  ea:	1f be       	out	0x3f, r1	; 63
+  ec:	cf ef       	ldi	r28, 0xFF	; 255
+  ee:	cd bf       	out	0x3d, r28	; 61
+  f0:	df e7       	ldi	r29, 0x7F	; 127
+  f2:	de bf       	out	0x3e, r29	; 62
+  f4:	0e 94 a2 00 	call	0x144	; 0x144 <main>
+  f8:	0c 94 c6 00 	jmp	0x18c	; 0x18c <_exit>
+
+000000fc <__bad_interrupt>:
+  fc:	0c 94 00 00 	jmp	0	; 0x0 <__vectors>
+
+00000100 <__vector_3>:
+ *    match is another 1 second away.  16-bit wrap is intentional and
+ *    correct – it re-synchronises with the free-running CNT naturally.
+ * 3. Toggle the LED.
+ */
+ISR(RTC_CNT_vect)
+{
+ 100:	1f 92       	push	r1
+ 102:	0f 92       	push	r0
+ 104:	0f b6       	in	r0, 0x3f	; 63
+ 106:	0f 92       	push	r0
+ 108:	11 24       	eor	r1, r1
+ 10a:	0b b6       	in	r0, 0x3b	; 59
+ 10c:	0f 92       	push	r0
+ 10e:	8f 93       	push	r24
+ 110:	9f 93       	push	r25
+ 112:	ef 93       	push	r30
+ 114:	ff 93       	push	r31
+    /* 1. Clear the CMP interrupt flag */
+    RTC.INTFLAGS = RTC_CMP_bm;
+ 116:	e0 e4       	ldi	r30, 0x40	; 64
+ 118:	f1 e0       	ldi	r31, 0x01	; 1
+ 11a:	82 e0       	ldi	r24, 0x02	; 2
+ 11c:	83 83       	std	Z+3, r24	; 0x03
+
+    /* 2. Advance compare register by one period (16-bit wrap is fine) */
+    RTC.CMP = (uint16_t)(RTC.CMP + RTC_CMP_STEP);
+ 11e:	84 85       	ldd	r24, Z+12	; 0x0c
+ 120:	95 85       	ldd	r25, Z+13	; 0x0d
+ 122:	90 58       	subi	r25, 0x80	; 128
+ 124:	84 87       	std	Z+12, r24	; 0x0c
+ 126:	95 87       	std	Z+13, r25	; 0x0d
+
+    /* 3. Toggle LED (PC6, active LOW) */
+    PORTC.OUTTGL = LED_PIN;
+ 128:	80 e4       	ldi	r24, 0x40	; 64
+ 12a:	80 93 47 04 	sts	0x0447, r24	; 0x800447 <__TEXT_REGION_LENGTH__+0x7e0447>
+}
+ 12e:	ff 91       	pop	r31
+ 130:	ef 91       	pop	r30
+ 132:	9f 91       	pop	r25
+ 134:	8f 91       	pop	r24
+ 136:	0f 90       	pop	r0
+ 138:	0b be       	out	0x3b, r0	; 59
+ 13a:	0f 90       	pop	r0
+ 13c:	0f be       	out	0x3f, r0	; 63
+ 13e:	0f 90       	pop	r0
+ 140:	1f 90       	pop	r1
+ 142:	18 95       	reti
+
+00000144 <main>:
+ * @brief Configure PC6 as a push-pull output for LED0.
+ *        LED is active LOW – drive HIGH (off) initially.
+ */
+static void LED_init(void)
+{
+    PORTC.DIRSET = LED_PIN;     /* PC6 as output          */
+ 144:	e0 e4       	ldi	r30, 0x40	; 64
+ 146:	f4 e0       	ldi	r31, 0x04	; 4
+ 148:	80 e4       	ldi	r24, 0x40	; 64
+ 14a:	81 83       	std	Z+1, r24	; 0x01
+    PORTC.OUTSET = LED_PIN;     /* LED off initially      */
+ 14c:	85 83       	std	Z+5, r24	; 0x05
+ * RTC_CMP_STEP ticks later, i.e. after 1 second.
+ */
+static void RTC_init(void)
+{
+    /* 1. Select internal 32.768 kHz oscillator */
+    RTC.CLKSEL = RTC_CLKSEL_OSC32K_gc;
+ 14e:	10 92 47 01 	sts	0x0147, r1	; 0x800147 <__TEXT_REGION_LENGTH__+0x7e0147>
+
+    /* 2. Wait for all register to be synchronized */
+    while (RTC.STATUS > 0)
+ 152:	e0 e4       	ldi	r30, 0x40	; 64
+ 154:	f1 e0       	ldi	r31, 0x01	; 1
+ 156:	81 81       	ldd	r24, Z+1	; 0x01
+ 158:	81 11       	cpse	r24, r1
+ 15a:	fd cf       	rjmp	.-6      	; 0x156 <main+0x12>
+    {
+        ;
+    }
+
+    /* 3. Free-running counter: PER = 0xFFFF (full 16-bit range) */
+    RTC.PER = 0xFFFFu;
+ 15c:	e0 e4       	ldi	r30, 0x40	; 64
+ 15e:	f1 e0       	ldi	r31, 0x01	; 1
+ 160:	8f ef       	ldi	r24, 0xFF	; 255
+ 162:	9f ef       	ldi	r25, 0xFF	; 255
+ 164:	82 87       	std	Z+10, r24	; 0x0a
+ 166:	93 87       	std	Z+11, r25	; 0x0b
+
+    /* 4. First compare value: match after 32768 ticks = 1 second     */
+    RTC.CMP = RTC_CMP_STEP;
+ 168:	80 e0       	ldi	r24, 0x00	; 0
+ 16a:	90 e8       	ldi	r25, 0x80	; 128
+ 16c:	84 87       	std	Z+12, r24	; 0x0c
+ 16e:	95 87       	std	Z+13, r25	; 0x0d
+
+    /* 5. Enable CMP interrupt */
+    RTC.INTCTRL = RTC_CMP_bm;
+ 170:	82 e0       	ldi	r24, 0x02	; 2
+ 172:	82 83       	std	Z+2, r24	; 0x02
+
+    /* Wait for all register to be synchronized */
+    while (RTC.STATUS > 0)
+ 174:	81 81       	ldd	r24, Z+1	; 0x01
+ 176:	81 11       	cpse	r24, r1
+ 178:	fd cf       	rjmp	.-6      	; 0x174 <main+0x30>
+    {
+        ;
+    }
+    
+	/* 6. Enable RTC: prescaler = DIV1, keep running in standby/sleep  */
+	RTC.CTRLA = RTC_PRESCALER_DIV1_gc  /* No prescaling               */
+ 17a:	81 e8       	ldi	r24, 0x81	; 129
+ 17c:	80 93 40 01 	sts	0x0140, r24	; 0x800140 <__TEXT_REGION_LENGTH__+0x7e0140>
+ *        In Power-Down the CPU and most peripherals are stopped;
+ *        the RTC continues running from its asynchronous clock domain.
+ */
+static void SLEEP_init(void)
+{
+    SLPCTRL.CTRLA = SLPCTRL_SMODE_PDOWN_gc  /* Power-Down mode */
+ 180:	85 e0       	ldi	r24, 0x05	; 5
+ 182:	80 93 50 00 	sts	0x0050, r24	; 0x800050 <__TEXT_REGION_LENGTH__+0x7e0050>
+	
+	// Select Power-Down as the sleep mode.
+	SLEEP_init();
+
+	// Enable Global interrupt
+	sei();          
+ 186:	78 94       	sei
+
+	for (;;)
+	{
+		// Enter Power-Down; wake on RTC CMP interrupt
+		sleep_cpu(); 
+ 188:	88 95       	sleep
+ 18a:	fe cf       	rjmp	.-4      	; 0x188 <main+0x44>
+
+0000018c <_exit>:
+ 18c:	f8 94       	cli
+
+0000018e <__stop_program>:
+ 18e:	ff cf       	rjmp	.-2      	; 0x18e <__stop_program>
