@@ -1,0 +1,2536 @@
+
+FSM_VendingMachine.elf:     file format elf32-avr
+
+Sections:
+Idx Name          Size      VMA       LMA       File off  Algn
+  0 .data         000005b2  00804000  00000d32  00000dc6  2**0
+                  CONTENTS, ALLOC, LOAD, DATA
+  1 .text         00000d32  00000000  00000000  00000094  2**1
+                  CONTENTS, ALLOC, LOAD, READONLY, CODE
+  2 .bss          00000035  008045b2  008045b2  00001378  2**0
+                  ALLOC
+  3 .comment      00000030  00000000  00000000  00001378  2**0
+                  CONTENTS, READONLY
+  4 .note.gnu.avr.deviceinfo 00000040  00000000  00000000  000013a8  2**2
+                  CONTENTS, READONLY
+  5 .debug_aranges 000001a0  00000000  00000000  000013e8  2**0
+                  CONTENTS, READONLY, DEBUGGING
+  6 .debug_info   00005802  00000000  00000000  00001588  2**0
+                  CONTENTS, READONLY, DEBUGGING
+  7 .debug_abbrev 00003784  00000000  00000000  00006d8a  2**0
+                  CONTENTS, READONLY, DEBUGGING
+  8 .debug_line   00000f74  00000000  00000000  0000a50e  2**0
+                  CONTENTS, READONLY, DEBUGGING
+  9 .debug_frame  000004d0  00000000  00000000  0000b484  2**2
+                  CONTENTS, READONLY, DEBUGGING
+ 10 .debug_str    0000240d  00000000  00000000  0000b954  2**0
+                  CONTENTS, READONLY, DEBUGGING
+ 11 .debug_loc    00001526  00000000  00000000  0000dd61  2**0
+                  CONTENTS, READONLY, DEBUGGING
+ 12 .debug_ranges 00000178  00000000  00000000  0000f287  2**0
+                  CONTENTS, READONLY, DEBUGGING
+
+Disassembly of section .text:
+
+00000000 <__vectors>:
+   0:	0c 94 74 00 	jmp	0xe8	; 0xe8 <__ctors_end>
+   4:	0c 94 93 00 	jmp	0x126	; 0x126 <__bad_interrupt>
+   8:	0c 94 93 00 	jmp	0x126	; 0x126 <__bad_interrupt>
+   c:	0c 94 93 00 	jmp	0x126	; 0x126 <__bad_interrupt>
+  10:	0c 94 93 00 	jmp	0x126	; 0x126 <__bad_interrupt>
+  14:	0c 94 93 00 	jmp	0x126	; 0x126 <__bad_interrupt>
+  18:	0c 94 93 00 	jmp	0x126	; 0x126 <__bad_interrupt>
+  1c:	0c 94 93 00 	jmp	0x126	; 0x126 <__bad_interrupt>
+  20:	0c 94 93 00 	jmp	0x126	; 0x126 <__bad_interrupt>
+  24:	0c 94 93 00 	jmp	0x126	; 0x126 <__bad_interrupt>
+  28:	0c 94 93 00 	jmp	0x126	; 0x126 <__bad_interrupt>
+  2c:	0c 94 93 00 	jmp	0x126	; 0x126 <__bad_interrupt>
+  30:	0c 94 4f 01 	jmp	0x29e	; 0x29e <__vector_12>
+  34:	0c 94 93 00 	jmp	0x126	; 0x126 <__bad_interrupt>
+  38:	0c 94 93 00 	jmp	0x126	; 0x126 <__bad_interrupt>
+  3c:	0c 94 93 00 	jmp	0x126	; 0x126 <__bad_interrupt>
+  40:	0c 94 93 00 	jmp	0x126	; 0x126 <__bad_interrupt>
+  44:	0c 94 93 00 	jmp	0x126	; 0x126 <__bad_interrupt>
+  48:	0c 94 93 00 	jmp	0x126	; 0x126 <__bad_interrupt>
+  4c:	0c 94 93 00 	jmp	0x126	; 0x126 <__bad_interrupt>
+  50:	0c 94 93 00 	jmp	0x126	; 0x126 <__bad_interrupt>
+  54:	0c 94 93 00 	jmp	0x126	; 0x126 <__bad_interrupt>
+  58:	0c 94 93 00 	jmp	0x126	; 0x126 <__bad_interrupt>
+  5c:	0c 94 93 00 	jmp	0x126	; 0x126 <__bad_interrupt>
+  60:	0c 94 77 01 	jmp	0x2ee	; 0x2ee <__vector_24>
+  64:	0c 94 93 00 	jmp	0x126	; 0x126 <__bad_interrupt>
+  68:	0c 94 93 00 	jmp	0x126	; 0x126 <__bad_interrupt>
+  6c:	0c 94 93 00 	jmp	0x126	; 0x126 <__bad_interrupt>
+  70:	0c 94 93 00 	jmp	0x126	; 0x126 <__bad_interrupt>
+  74:	0c 94 93 00 	jmp	0x126	; 0x126 <__bad_interrupt>
+  78:	0c 94 93 00 	jmp	0x126	; 0x126 <__bad_interrupt>
+  7c:	0c 94 93 00 	jmp	0x126	; 0x126 <__bad_interrupt>
+  80:	0c 94 93 00 	jmp	0x126	; 0x126 <__bad_interrupt>
+  84:	0c 94 93 00 	jmp	0x126	; 0x126 <__bad_interrupt>
+  88:	0c 94 93 00 	jmp	0x126	; 0x126 <__bad_interrupt>
+  8c:	0c 94 93 00 	jmp	0x126	; 0x126 <__bad_interrupt>
+  90:	0c 94 93 00 	jmp	0x126	; 0x126 <__bad_interrupt>
+  94:	0c 94 93 00 	jmp	0x126	; 0x126 <__bad_interrupt>
+  98:	0c 94 93 00 	jmp	0x126	; 0x126 <__bad_interrupt>
+  9c:	0c 94 93 00 	jmp	0x126	; 0x126 <__bad_interrupt>
+  a0:	0c 94 93 00 	jmp	0x126	; 0x126 <__bad_interrupt>
+  a4:	0c 94 93 00 	jmp	0x126	; 0x126 <__bad_interrupt>
+  a8:	0c 94 93 00 	jmp	0x126	; 0x126 <__bad_interrupt>
+  ac:	0c 94 93 00 	jmp	0x126	; 0x126 <__bad_interrupt>
+  b0:	0c 94 93 00 	jmp	0x126	; 0x126 <__bad_interrupt>
+  b4:	0c 94 93 00 	jmp	0x126	; 0x126 <__bad_interrupt>
+  b8:	0c 94 93 00 	jmp	0x126	; 0x126 <__bad_interrupt>
+  bc:	0c 94 93 00 	jmp	0x126	; 0x126 <__bad_interrupt>
+  c0:	0c 94 93 00 	jmp	0x126	; 0x126 <__bad_interrupt>
+  c4:	0c 94 93 00 	jmp	0x126	; 0x126 <__bad_interrupt>
+  c8:	0c 94 93 00 	jmp	0x126	; 0x126 <__bad_interrupt>
+  cc:	0c 94 93 00 	jmp	0x126	; 0x126 <__bad_interrupt>
+  d0:	0c 94 93 00 	jmp	0x126	; 0x126 <__bad_interrupt>
+  d4:	0c 94 93 00 	jmp	0x126	; 0x126 <__bad_interrupt>
+  d8:	0c 94 93 00 	jmp	0x126	; 0x126 <__bad_interrupt>
+  dc:	0c 94 93 00 	jmp	0x126	; 0x126 <__bad_interrupt>
+  e0:	0c 94 93 00 	jmp	0x126	; 0x126 <__bad_interrupt>
+  e4:	0c 94 93 00 	jmp	0x126	; 0x126 <__bad_interrupt>
+
+000000e8 <__ctors_end>:
+  e8:	11 24       	eor	r1, r1
+  ea:	1f be       	out	0x3f, r1	; 63
+  ec:	cf ef       	ldi	r28, 0xFF	; 255
+  ee:	cd bf       	out	0x3d, r28	; 61
+  f0:	df e7       	ldi	r29, 0x7F	; 127
+  f2:	de bf       	out	0x3e, r29	; 62
+
+000000f4 <__do_copy_data>:
+  f4:	15 e4       	ldi	r17, 0x45	; 69
+  f6:	a0 e0       	ldi	r26, 0x00	; 0
+  f8:	b0 e4       	ldi	r27, 0x40	; 64
+  fa:	e2 e3       	ldi	r30, 0x32	; 50
+  fc:	fd e0       	ldi	r31, 0x0D	; 13
+  fe:	00 e0       	ldi	r16, 0x00	; 0
+ 100:	0b bf       	out	0x3b, r16	; 59
+ 102:	02 c0       	rjmp	.+4      	; 0x108 <__do_copy_data+0x14>
+ 104:	07 90       	elpm	r0, Z+
+ 106:	0d 92       	st	X+, r0
+ 108:	a2 3b       	cpi	r26, 0xB2	; 178
+ 10a:	b1 07       	cpc	r27, r17
+ 10c:	d9 f7       	brne	.-10     	; 0x104 <__do_copy_data+0x10>
+
+0000010e <__do_clear_bss>:
+ 10e:	25 e4       	ldi	r18, 0x45	; 69
+ 110:	a2 eb       	ldi	r26, 0xB2	; 178
+ 112:	b5 e4       	ldi	r27, 0x45	; 69
+ 114:	01 c0       	rjmp	.+2      	; 0x118 <.do_clear_bss_start>
+
+00000116 <.do_clear_bss_loop>:
+ 116:	1d 92       	st	X+, r1
+
+00000118 <.do_clear_bss_start>:
+ 118:	a7 3e       	cpi	r26, 0xE7	; 231
+ 11a:	b2 07       	cpc	r27, r18
+ 11c:	e1 f7       	brne	.-8      	; 0x116 <.do_clear_bss_loop>
+ 11e:	0e 94 95 00 	call	0x12a	; 0x12a <main>
+ 122:	0c 94 97 06 	jmp	0xd2e	; 0xd2e <_exit>
+
+00000126 <__bad_interrupt>:
+ 126:	0c 94 00 00 	jmp	0	; 0x0 <__vectors>
+
+0000012a <main>:
+ * @return Never returns (embedded superloop).
+ */
+int main(void)
+{
+    /* Initialise all hardware peripherals */
+    hal_init();
+ 12a:	0e 94 9b 01 	call	0x336	; 0x336 <hal_init>
+
+    /* Initialise the vending machine FSM */
+    vending_init(&g_vend);
+ 12e:	82 eb       	ldi	r24, 0xB2	; 178
+ 130:	95 e4       	ldi	r25, 0x45	; 69
+ 132:	0e 94 ac 04 	call	0x958	; 0x958 <vending_init>
+
+    /* Kick off the first ADC conversion so results arrive from the start */
+    hal_adc_start();
+ 136:	0e 94 ec 01 	call	0x3d8	; 0x3d8 <hal_adc_start>
+
+    /* Enable global interrupts - TCB0 (tick) and ADC0 (result) ISRs live */
+    sei();
+ 13a:	78 94       	sei
+     * real-time behavior is achieved entirely through elapsed-time checks
+     * against the 1 ms system tick provided by TCB0.
+     */
+    while (1)
+    {
+        vending_run(&g_vend);
+ 13c:	82 eb       	ldi	r24, 0xB2	; 178
+ 13e:	95 e4       	ldi	r25, 0x45	; 69
+ 140:	0e 94 87 05 	call	0xb0e	; 0xb0e <vending_run>
+ 144:	fb cf       	rjmp	.-10     	; 0x13c <main+0x12>
+
+00000146 <fsm_init>:
+              const fsm_transition_t  *table,
+              uint8_t                  table_len,
+              const fsm_state_hooks_t *hooks,
+              uint8_t                  num_states,
+              void                    *ctx)
+{
+ 146:	cf 92       	push	r12
+ 148:	df 92       	push	r13
+ 14a:	ef 92       	push	r14
+ 14c:	0f 93       	push	r16
+ 14e:	1f 93       	push	r17
+ 150:	fc 01       	movw	r30, r24
+    fsm->current_state = init_state;
+ 152:	60 83       	st	Z, r22
+    fsm->table         = table;
+ 154:	41 83       	std	Z+1, r20	; 0x01
+ 156:	52 83       	std	Z+2, r21	; 0x02
+    fsm->table_len     = table_len;
+ 158:	23 83       	std	Z+3, r18	; 0x03
+    fsm->hooks         = hooks;
+ 15a:	04 83       	std	Z+4, r16	; 0x04
+ 15c:	15 83       	std	Z+5, r17	; 0x05
+    fsm->num_states    = num_states;
+ 15e:	e6 82       	std	Z+6, r14	; 0x06
+    fsm->ctx           = ctx;
+ 160:	c7 82       	std	Z+7, r12	; 0x07
+ 162:	d0 86       	std	Z+8, r13	; 0x08
+
+    /* Fire entry hook for the initial state */
+    if ((hooks != NULL) && (init_state < num_states) &&
+ 164:	01 15       	cp	r16, r1
+ 166:	11 05       	cpc	r17, r1
+ 168:	79 f0       	breq	.+30     	; 0x188 <fsm_init+0x42>
+ 16a:	6e 15       	cp	r22, r14
+ 16c:	68 f4       	brcc	.+26     	; 0x188 <fsm_init+0x42>
+        (hooks[init_state].on_entry != NULL))
+ 16e:	f8 01       	movw	r30, r16
+ 170:	84 e0       	ldi	r24, 0x04	; 4
+ 172:	68 9f       	mul	r22, r24
+ 174:	e0 0d       	add	r30, r0
+ 176:	f1 1d       	adc	r31, r1
+ 178:	11 24       	eor	r1, r1
+ 17a:	01 90       	ld	r0, Z+
+ 17c:	f0 81       	ld	r31, Z
+ 17e:	e0 2d       	mov	r30, r0
+    fsm->hooks         = hooks;
+    fsm->num_states    = num_states;
+    fsm->ctx           = ctx;
+
+    /* Fire entry hook for the initial state */
+    if ((hooks != NULL) && (init_state < num_states) &&
+ 180:	30 97       	sbiw	r30, 0x00	; 0
+ 182:	11 f0       	breq	.+4      	; 0x188 <fsm_init+0x42>
+ 184:	c6 01       	movw	r24, r12
+        (hooks[init_state].on_entry != NULL))
+    {
+        hooks[init_state].on_entry(ctx);
+ 186:	09 95       	icall
+    }
+}
+ 188:	1f 91       	pop	r17
+ 18a:	0f 91       	pop	r16
+ 18c:	ef 90       	pop	r14
+ 18e:	df 90       	pop	r13
+ 190:	cf 90       	pop	r12
+ 192:	08 95       	ret
+
+00000194 <fsm_dispatch>:
+ *
+ * Note: on_exit and on_entry are called even when the state does not change
+ * (i.e. self-transitions are fully supported).
+ */
+bool fsm_dispatch(fsm_t *fsm, fsm_id_t event)
+{
+ 194:	0f 93       	push	r16
+ 196:	1f 93       	push	r17
+ 198:	cf 93       	push	r28
+ 19a:	df 93       	push	r29
+ 19c:	dc 01       	movw	r26, r24
+    uint8_t i;
+
+    /* Scan transition table for a matching row */
+    for (i = 0; i < fsm->table_len; i++)
+ 19e:	13 96       	adiw	r26, 0x03	; 3
+ 1a0:	8c 91       	ld	r24, X
+ 1a2:	13 97       	sbiw	r26, 0x03	; 3
+ 1a4:	88 23       	and	r24, r24
+ 1a6:	09 f4       	brne	.+2      	; 0x1aa <fsm_dispatch+0x16>
+ 1a8:	61 c0       	rjmp	.+194    	; 0x26c <__EEPROM_REGION_LENGTH__+0x6c>
+ 1aa:	11 96       	adiw	r26, 0x01	; 1
+ 1ac:	ed 91       	ld	r30, X+
+ 1ae:	fc 91       	ld	r31, X
+ 1b0:	12 97       	sbiw	r26, 0x02	; 2
+    {
+        const fsm_transition_t *row = &fsm->table[i];
+ 1b2:	90 e0       	ldi	r25, 0x00	; 0
+ 1b4:	ef 01       	movw	r28, r30
+
+        bool state_match = (row->from_state == FSM_ANY) ||
+ 1b6:	20 81       	ld	r18, Z
+ 1b8:	2f 3f       	cpi	r18, 0xFF	; 255
+ 1ba:	09 f4       	brne	.+2      	; 0x1be <fsm_dispatch+0x2a>
+ 1bc:	62 c0       	rjmp	.+196    	; 0x282 <__EEPROM_REGION_LENGTH__+0x82>
+ 1be:	31 e0       	ldi	r19, 0x01	; 1
+ 1c0:	4c 91       	ld	r20, X
+ 1c2:	42 13       	cpse	r20, r18
+ 1c4:	30 e0       	ldi	r19, 0x00	; 0
+                           (row->from_state == fsm->current_state);
+
+        bool event_match = (row->trigger == FSM_ANY) ||
+ 1c6:	29 81       	ldd	r18, Y+1	; 0x01
+ 1c8:	2f 3f       	cpi	r18, 0xFF	; 255
+ 1ca:	09 f4       	brne	.+2      	; 0x1ce <fsm_dispatch+0x3a>
+ 1cc:	57 c0       	rjmp	.+174    	; 0x27c <__EEPROM_REGION_LENGTH__+0x7c>
+                           (row->trigger == event);
+
+        if (state_match && event_match)
+ 1ce:	33 23       	and	r19, r19
+ 1d0:	09 f4       	brne	.+2      	; 0x1d4 <fsm_dispatch+0x40>
+ 1d2:	46 c0       	rjmp	.+140    	; 0x260 <__EEPROM_REGION_LENGTH__+0x60>
+ 1d4:	62 13       	cpse	r22, r18
+ 1d6:	44 c0       	rjmp	.+136    	; 0x260 <__EEPROM_REGION_LENGTH__+0x60>
+ 1d8:	8d 01       	movw	r16, r26
+        {
+            /* ---- Step 1: call on_exit for the CURRENT state ----------- */
+            if ((fsm->hooks != NULL) &&
+ 1da:	14 96       	adiw	r26, 0x04	; 4
+ 1dc:	8d 91       	ld	r24, X+
+ 1de:	9c 91       	ld	r25, X
+ 1e0:	15 97       	sbiw	r26, 0x05	; 5
+ 1e2:	00 97       	sbiw	r24, 0x00	; 0
+ 1e4:	b1 f0       	breq	.+44     	; 0x212 <__EEPROM_REGION_LENGTH__+0x12>
+                (fsm->current_state < fsm->num_states) &&
+ 1e6:	2c 91       	ld	r18, X
+                           (row->trigger == event);
+
+        if (state_match && event_match)
+        {
+            /* ---- Step 1: call on_exit for the CURRENT state ----------- */
+            if ((fsm->hooks != NULL) &&
+ 1e8:	16 96       	adiw	r26, 0x06	; 6
+ 1ea:	3c 91       	ld	r19, X
+ 1ec:	16 97       	sbiw	r26, 0x06	; 6
+ 1ee:	23 17       	cp	r18, r19
+ 1f0:	80 f4       	brcc	.+32     	; 0x212 <__EEPROM_REGION_LENGTH__+0x12>
+                (fsm->current_state < fsm->num_states) &&
+                (fsm->hooks[fsm->current_state].on_exit != NULL))
+ 1f2:	fc 01       	movw	r30, r24
+ 1f4:	34 e0       	ldi	r19, 0x04	; 4
+ 1f6:	23 9f       	mul	r18, r19
+ 1f8:	e0 0d       	add	r30, r0
+ 1fa:	f1 1d       	adc	r31, r1
+ 1fc:	11 24       	eor	r1, r1
+ 1fe:	02 80       	ldd	r0, Z+2	; 0x02
+ 200:	f3 81       	ldd	r31, Z+3	; 0x03
+ 202:	e0 2d       	mov	r30, r0
+
+        if (state_match && event_match)
+        {
+            /* ---- Step 1: call on_exit for the CURRENT state ----------- */
+            if ((fsm->hooks != NULL) &&
+                (fsm->current_state < fsm->num_states) &&
+ 204:	30 97       	sbiw	r30, 0x00	; 0
+ 206:	29 f0       	breq	.+10     	; 0x212 <__EEPROM_REGION_LENGTH__+0x12>
+                (fsm->hooks[fsm->current_state].on_exit != NULL))
+            {
+                fsm->hooks[fsm->current_state].on_exit(fsm->ctx);
+ 208:	17 96       	adiw	r26, 0x07	; 7
+ 20a:	8d 91       	ld	r24, X+
+ 20c:	9c 91       	ld	r25, X
+ 20e:	18 97       	sbiw	r26, 0x08	; 8
+ 210:	09 95       	icall
+            }
+
+            /* ---- Step 2: execute the transition action ---------------- */
+            if (row->action != NULL)
+ 212:	ea 81       	ldd	r30, Y+2	; 0x02
+ 214:	fb 81       	ldd	r31, Y+3	; 0x03
+ 216:	30 97       	sbiw	r30, 0x00	; 0
+ 218:	31 f0       	breq	.+12     	; 0x226 <__EEPROM_REGION_LENGTH__+0x26>
+            {
+                row->action(fsm->ctx);
+ 21a:	d8 01       	movw	r26, r16
+ 21c:	17 96       	adiw	r26, 0x07	; 7
+ 21e:	8d 91       	ld	r24, X+
+ 220:	9c 91       	ld	r25, X
+ 222:	18 97       	sbiw	r26, 0x08	; 8
+ 224:	09 95       	icall
+            }
+
+            /* ---- Step 3: update current state ------------------------- */
+            fsm->current_state = row->next_state;
+ 226:	2c 81       	ldd	r18, Y+4	; 0x04
+ 228:	f8 01       	movw	r30, r16
+ 22a:	20 83       	st	Z, r18
+
+            /* ---- Step 4: call on_entry for the NEW state -------------- */
+            if ((fsm->hooks != NULL) &&
+ 22c:	84 81       	ldd	r24, Z+4	; 0x04
+ 22e:	95 81       	ldd	r25, Z+5	; 0x05
+ 230:	00 97       	sbiw	r24, 0x00	; 0
+ 232:	f1 f0       	breq	.+60     	; 0x270 <__EEPROM_REGION_LENGTH__+0x70>
+ 234:	36 81       	ldd	r19, Z+6	; 0x06
+ 236:	23 17       	cp	r18, r19
+ 238:	e8 f4       	brcc	.+58     	; 0x274 <__EEPROM_REGION_LENGTH__+0x74>
+                (fsm->current_state < fsm->num_states) &&
+                (fsm->hooks[fsm->current_state].on_entry != NULL))
+ 23a:	fc 01       	movw	r30, r24
+ 23c:	34 e0       	ldi	r19, 0x04	; 4
+ 23e:	23 9f       	mul	r18, r19
+ 240:	e0 0d       	add	r30, r0
+ 242:	f1 1d       	adc	r31, r1
+ 244:	11 24       	eor	r1, r1
+ 246:	01 90       	ld	r0, Z+
+ 248:	f0 81       	ld	r31, Z
+ 24a:	e0 2d       	mov	r30, r0
+            /* ---- Step 3: update current state ------------------------- */
+            fsm->current_state = row->next_state;
+
+            /* ---- Step 4: call on_entry for the NEW state -------------- */
+            if ((fsm->hooks != NULL) &&
+                (fsm->current_state < fsm->num_states) &&
+ 24c:	30 97       	sbiw	r30, 0x00	; 0
+ 24e:	a1 f0       	breq	.+40     	; 0x278 <__EEPROM_REGION_LENGTH__+0x78>
+                (fsm->hooks[fsm->current_state].on_entry != NULL))
+            {
+                fsm->hooks[fsm->current_state].on_entry(fsm->ctx);
+ 250:	d8 01       	movw	r26, r16
+ 252:	17 96       	adiw	r26, 0x07	; 7
+ 254:	8d 91       	ld	r24, X+
+ 256:	9c 91       	ld	r25, X
+ 258:	18 97       	sbiw	r26, 0x08	; 8
+ 25a:	09 95       	icall
+            }
+
+            return true; /* A transition fired */
+ 25c:	81 e0       	ldi	r24, 0x01	; 1
+ 25e:	17 c0       	rjmp	.+46     	; 0x28e <__EEPROM_REGION_LENGTH__+0x8e>
+bool fsm_dispatch(fsm_t *fsm, fsm_id_t event)
+{
+    uint8_t i;
+
+    /* Scan transition table for a matching row */
+    for (i = 0; i < fsm->table_len; i++)
+ 260:	9f 5f       	subi	r25, 0xFF	; 255
+ 262:	35 96       	adiw	r30, 0x05	; 5
+ 264:	98 13       	cpse	r25, r24
+ 266:	a6 cf       	rjmp	.-180    	; 0x1b4 <fsm_dispatch+0x20>
+
+            return true; /* A transition fired */
+        }
+    }
+
+    return false; /* No matching rule – event discarded */
+ 268:	80 e0       	ldi	r24, 0x00	; 0
+ 26a:	11 c0       	rjmp	.+34     	; 0x28e <__EEPROM_REGION_LENGTH__+0x8e>
+ 26c:	80 e0       	ldi	r24, 0x00	; 0
+ 26e:	0f c0       	rjmp	.+30     	; 0x28e <__EEPROM_REGION_LENGTH__+0x8e>
+                (fsm->hooks[fsm->current_state].on_entry != NULL))
+            {
+                fsm->hooks[fsm->current_state].on_entry(fsm->ctx);
+            }
+
+            return true; /* A transition fired */
+ 270:	81 e0       	ldi	r24, 0x01	; 1
+ 272:	0d c0       	rjmp	.+26     	; 0x28e <__EEPROM_REGION_LENGTH__+0x8e>
+ 274:	81 e0       	ldi	r24, 0x01	; 1
+ 276:	0b c0       	rjmp	.+22     	; 0x28e <__EEPROM_REGION_LENGTH__+0x8e>
+ 278:	81 e0       	ldi	r24, 0x01	; 1
+ 27a:	09 c0       	rjmp	.+18     	; 0x28e <__EEPROM_REGION_LENGTH__+0x8e>
+                           (row->from_state == fsm->current_state);
+
+        bool event_match = (row->trigger == FSM_ANY) ||
+                           (row->trigger == event);
+
+        if (state_match && event_match)
+ 27c:	33 23       	and	r19, r19
+ 27e:	81 f3       	breq	.-32     	; 0x260 <__EEPROM_REGION_LENGTH__+0x60>
+ 280:	ab cf       	rjmp	.-170    	; 0x1d8 <fsm_dispatch+0x44>
+        const fsm_transition_t *row = &fsm->table[i];
+
+        bool state_match = (row->from_state == FSM_ANY) ||
+                           (row->from_state == fsm->current_state);
+
+        bool event_match = (row->trigger == FSM_ANY) ||
+ 282:	21 81       	ldd	r18, Z+1	; 0x01
+ 284:	2f 3f       	cpi	r18, 0xFF	; 255
+ 286:	09 f4       	brne	.+2      	; 0x28a <__EEPROM_REGION_LENGTH__+0x8a>
+ 288:	a7 cf       	rjmp	.-178    	; 0x1d8 <fsm_dispatch+0x44>
+    /* Scan transition table for a matching row */
+    for (i = 0; i < fsm->table_len; i++)
+    {
+        const fsm_transition_t *row = &fsm->table[i];
+
+        bool state_match = (row->from_state == FSM_ANY) ||
+ 28a:	31 e0       	ldi	r19, 0x01	; 1
+ 28c:	a0 cf       	rjmp	.-192    	; 0x1ce <fsm_dispatch+0x3a>
+            return true; /* A transition fired */
+        }
+    }
+
+    return false; /* No matching rule – event discarded */
+}
+ 28e:	df 91       	pop	r29
+ 290:	cf 91       	pop	r28
+ 292:	1f 91       	pop	r17
+ 294:	0f 91       	pop	r16
+ 296:	08 95       	ret
+
+00000298 <fsm_state>:
+ * A thin accessor so callers do not need to dereference fsm_t directly.
+ */
+fsm_id_t fsm_state(const fsm_t *fsm)
+{
+    return fsm->current_state;
+}
+ 298:	fc 01       	movw	r30, r24
+ 29a:	80 81       	ld	r24, Z
+ 29c:	08 95       	ret
+
+0000029e <__vector_12>:
+ *
+ * Increments the global millisecond counter used by hal_tick_ms() and
+ * hal_elapsed_ms().  The CAPT interrupt flag is cleared by writing 1 to it.
+ */
+ISR(TCB0_INT_vect)
+{
+ 29e:	1f 92       	push	r1
+ 2a0:	0f 92       	push	r0
+ 2a2:	0f b6       	in	r0, 0x3f	; 63
+ 2a4:	0f 92       	push	r0
+ 2a6:	11 24       	eor	r1, r1
+ 2a8:	8f 93       	push	r24
+ 2aa:	9f 93       	push	r25
+ 2ac:	af 93       	push	r26
+ 2ae:	bf 93       	push	r27
+    TCB0.INTFLAGS = TCB_CAPT_bm;   /* clear the interrupt flag */
+ 2b0:	81 e0       	ldi	r24, 0x01	; 1
+ 2b2:	80 93 06 0b 	sts	0x0B06, r24	; 0x800b06 <__TEXT_REGION_LENGTH__+0x7e0b06>
+    g_tick_ms++;
+ 2b6:	80 91 e3 45 	lds	r24, 0x45E3	; 0x8045e3 <g_tick_ms>
+ 2ba:	90 91 e4 45 	lds	r25, 0x45E4	; 0x8045e4 <g_tick_ms+0x1>
+ 2be:	a0 91 e5 45 	lds	r26, 0x45E5	; 0x8045e5 <g_tick_ms+0x2>
+ 2c2:	b0 91 e6 45 	lds	r27, 0x45E6	; 0x8045e6 <g_tick_ms+0x3>
+ 2c6:	01 96       	adiw	r24, 0x01	; 1
+ 2c8:	a1 1d       	adc	r26, r1
+ 2ca:	b1 1d       	adc	r27, r1
+ 2cc:	80 93 e3 45 	sts	0x45E3, r24	; 0x8045e3 <g_tick_ms>
+ 2d0:	90 93 e4 45 	sts	0x45E4, r25	; 0x8045e4 <g_tick_ms+0x1>
+ 2d4:	a0 93 e5 45 	sts	0x45E5, r26	; 0x8045e5 <g_tick_ms+0x2>
+ 2d8:	b0 93 e6 45 	sts	0x45E6, r27	; 0x8045e6 <g_tick_ms+0x3>
+}
+ 2dc:	bf 91       	pop	r27
+ 2de:	af 91       	pop	r26
+ 2e0:	9f 91       	pop	r25
+ 2e2:	8f 91       	pop	r24
+ 2e4:	0f 90       	pop	r0
+ 2e6:	0f be       	out	0x3f, r0	; 63
+ 2e8:	0f 90       	pop	r0
+ 2ea:	1f 90       	pop	r1
+ 2ec:	18 95       	reti
+
+000002ee <__vector_24>:
+ *
+ * Reads the 12-bit result into the module variable and sets the ready flag.
+ * The main application is notified via hal_adc_ready().
+ */
+ISR(ADC0_RESRDY_vect)
+{
+ 2ee:	1f 92       	push	r1
+ 2f0:	0f 92       	push	r0
+ 2f2:	0f b6       	in	r0, 0x3f	; 63
+ 2f4:	0f 92       	push	r0
+ 2f6:	11 24       	eor	r1, r1
+ 2f8:	0b b6       	in	r0, 0x3b	; 59
+ 2fa:	0f 92       	push	r0
+ 2fc:	2f 93       	push	r18
+ 2fe:	3f 93       	push	r19
+ 300:	8f 93       	push	r24
+ 302:	ef 93       	push	r30
+ 304:	ff 93       	push	r31
+    ADC0.INTFLAGS  = ADC_RESRDY_bm; /* clear the interrupt flag */
+ 306:	e0 e0       	ldi	r30, 0x00	; 0
+ 308:	f6 e0       	ldi	r31, 0x06	; 6
+ 30a:	81 e0       	ldi	r24, 0x01	; 1
+ 30c:	85 87       	std	Z+13, r24	; 0x0d
+    g_adc_result   = ADC0.RES;      /* latch the result         */
+ 30e:	20 89       	ldd	r18, Z+16	; 0x10
+ 310:	31 89       	ldd	r19, Z+17	; 0x11
+ 312:	20 93 e0 45 	sts	0x45E0, r18	; 0x8045e0 <g_adc_result>
+ 316:	30 93 e1 45 	sts	0x45E1, r19	; 0x8045e1 <g_adc_result+0x1>
+    g_adc_ready    = true;
+ 31a:	80 93 e2 45 	sts	0x45E2, r24	; 0x8045e2 <g_adc_ready>
+}
+ 31e:	ff 91       	pop	r31
+ 320:	ef 91       	pop	r30
+ 322:	8f 91       	pop	r24
+ 324:	3f 91       	pop	r19
+ 326:	2f 91       	pop	r18
+ 328:	0f 90       	pop	r0
+ 32a:	0b be       	out	0x3b, r0	; 59
+ 32c:	0f 90       	pop	r0
+ 32e:	0f be       	out	0x3f, r0	; 63
+ 330:	0f 90       	pop	r0
+ 332:	1f 90       	pop	r1
+ 334:	18 95       	reti
+
+00000336 <hal_init>:
+    /* ------------------------------------------------------------------
+     * 1. GPIO
+     * ------------------------------------------------------------------ */
+
+    /* LED: output, start HIGH (LED off – active LOW) */
+    PORTC.OUTSET  = LED_PIN;
+ 336:	e0 e4       	ldi	r30, 0x40	; 64
+ 338:	f4 e0       	ldi	r31, 0x04	; 4
+ 33a:	20 e4       	ldi	r18, 0x40	; 64
+ 33c:	25 83       	std	Z+5, r18	; 0x05
+    PORTC.DIRSET  = LED_PIN;
+ 33e:	21 83       	std	Z+1, r18	; 0x01
+
+    /* SW0: input, internal pull-up, falling-edge sense (interrupt unused –
+     * polled via hal_btn_pressed() instead to keep code simple)           */
+    PORTC.DIRCLR   = BTN_SW0_PIN;
+ 340:	80 e8       	ldi	r24, 0x80	; 128
+ 342:	82 83       	std	Z+2, r24	; 0x02
+    PORTC.PIN7CTRL = PORT_PULLUPEN_bm | PORT_ISC_INTDISABLE_gc;
+ 344:	88 e0       	ldi	r24, 0x08	; 8
+ 346:	87 8b       	std	Z+23, r24	; 0x17
+
+    /* COIN button on PA2: input, pull-up */
+    PORTA.DIRCLR   = BTN_COIN_PIN;
+ 348:	e0 e0       	ldi	r30, 0x00	; 0
+ 34a:	f4 e0       	ldi	r31, 0x04	; 4
+ 34c:	94 e0       	ldi	r25, 0x04	; 4
+ 34e:	92 83       	std	Z+2, r25	; 0x02
+    PORTA.PIN2CTRL = PORT_PULLUPEN_bm | PORT_ISC_INTDISABLE_gc;
+ 350:	82 8b       	std	Z+18, r24	; 0x12
+
+    /* DISPENSE button on PA3: input, pull-up */
+    PORTA.DIRCLR   = BTN_DISP_PIN;
+ 352:	82 83       	std	Z+2, r24	; 0x02
+    PORTA.PIN3CTRL = PORT_PULLUPEN_bm | PORT_ISC_INTDISABLE_gc;
+ 354:	83 8b       	std	Z+19, r24	; 0x13
+
+    /* ADC input PD3: disable digital input buffer to reduce noise/current */
+    PORTD.DIRCLR   = ADC_PIN;
+ 356:	a0 e6       	ldi	r26, 0x60	; 96
+ 358:	b4 e0       	ldi	r27, 0x04	; 4
+ 35a:	12 96       	adiw	r26, 0x02	; 2
+ 35c:	8c 93       	st	X, r24
+ 35e:	12 97       	sbiw	r26, 0x02	; 2
+    PORTD.PIN3CTRL = PORT_ISC_INPUT_DISABLE_gc;
+ 360:	53 96       	adiw	r26, 0x13	; 19
+ 362:	9c 93       	st	X, r25
+
+    /* USART0 TX (PA0): output; RX (PA1): input (default after reset) */
+    PORTA.DIRSET  = UART_TX_PIN;
+ 364:	81 e0       	ldi	r24, 0x01	; 1
+ 366:	81 83       	std	Z+1, r24	; 0x01
+    PORTA.DIRCLR  = UART_RX_PIN;
+ 368:	32 e0       	ldi	r19, 0x02	; 2
+ 36a:	32 83       	std	Z+2, r19	; 0x02
+
+    /* ------------------------------------------------------------------
+     * 2. USART0 – 9600 baud, 8-N-1, asynchronous normal mode
+     * ------------------------------------------------------------------ */
+    USART0.BAUD  = USART_BAUD_REG;
+ 36c:	e0 e0       	ldi	r30, 0x00	; 0
+ 36e:	f8 e0       	ldi	r31, 0x08	; 8
+ 370:	42 e8       	ldi	r20, 0x82	; 130
+ 372:	56 e0       	ldi	r21, 0x06	; 6
+ 374:	40 87       	std	Z+8, r20	; 0x08
+ 376:	51 87       	std	Z+9, r21	; 0x09
+    USART0.CTRLB = USART_TXEN_bm;  /* enable TX; leave RX disabled */
+ 378:	26 83       	std	Z+6, r18	; 0x06
+
+    /* ------------------------------------------------------------------
+     * 3. ADC0 – 12-bit, VDD reference, AIN3, result-ready interrupt
+     * ------------------------------------------------------------------ */
+    VREF.ADC0REF = VREF_REFSEL_VDD_gc;               /* VDD as reference   */
+ 37a:	25 e0       	ldi	r18, 0x05	; 5
+ 37c:	20 93 a0 00 	sts	0x00A0, r18	; 0x8000a0 <__TEXT_REGION_LENGTH__+0x7e00a0>
+    ADC0.CTRLC   = ADC_PRESC_DIV16_gc;               /* 4MHz/16 = 250 kHz  */
+ 380:	e0 e0       	ldi	r30, 0x00	; 0
+ 382:	f6 e0       	ldi	r31, 0x06	; 6
+ 384:	92 83       	std	Z+2, r25	; 0x02
+    ADC0.MUXPOS  = ADC_MUXPOS_AIN3_gc;               /* PA3 / AIN3 input   */
+ 386:	93 e0       	ldi	r25, 0x03	; 3
+ 388:	90 87       	std	Z+8, r25	; 0x08
+    ADC0.INTCTRL = ADC_RESRDY_bm;                     /* RESRDY interrupt   */
+ 38a:	84 87       	std	Z+12, r24	; 0x0c
+    ADC0.CTRLA   = ADC_RESSEL_12BIT_gc | ADC_ENABLE_bm;
+ 38c:	80 83       	st	Z, r24
+     *
+     *    Mode  : Periodic Interrupt (TCB_CNTMODE_INT_gc)
+     *    Clock : CLK_PER (4 MHz), no prescaler
+     *    CCMP  : 3999  => interrupt period = (3999+1) / 4000000 = 1 ms
+     * ------------------------------------------------------------------ */
+    TCB0.CCMP    = TCB0_CCMP_1MS;
+ 38e:	e0 e0       	ldi	r30, 0x00	; 0
+ 390:	fb e0       	ldi	r31, 0x0B	; 11
+ 392:	2f e9       	ldi	r18, 0x9F	; 159
+ 394:	3f e0       	ldi	r19, 0x0F	; 15
+ 396:	24 87       	std	Z+12, r18	; 0x0c
+ 398:	35 87       	std	Z+13, r19	; 0x0d
+    TCB0.INTCTRL = TCB_CAPT_bm;                       /* CAPT/OVF interrupt */
+ 39a:	85 83       	std	Z+5, r24	; 0x05
+    TCB0.CTRLB   = TCB_CNTMODE_INT_gc;               /* Periodic int mode  */
+ 39c:	11 82       	std	Z+1, r1	; 0x01
+    TCB0.CTRLA   = TCB_CLKSEL_DIV1_gc | TCB_ENABLE_bm; /* CLK_PER, run */
+ 39e:	80 83       	st	Z, r24
+ 3a0:	eb ec       	ldi	r30, 0xCB	; 203
+ 3a2:	f5 e4       	ldi	r31, 0x45	; 69
+ 3a4:	80 ee       	ldi	r24, 0xE0	; 224
+ 3a6:	95 e4       	ldi	r25, 0x45	; 69
+    /* ------------------------------------------------------------------
+     * 5. Reset software debounce state for all buttons
+     * ------------------------------------------------------------------ */
+    for (uint8_t i = 0; i < HAL_BTN_COUNT; i++)
+    {
+        g_btn[i].last_raw  = false;
+ 3a8:	10 82       	st	Z, r1
+        g_btn[i].stable    = false;
+ 3aa:	11 82       	std	Z+1, r1	; 0x01
+        g_btn[i].timestamp = 0;
+ 3ac:	12 82       	std	Z+2, r1	; 0x02
+ 3ae:	13 82       	std	Z+3, r1	; 0x03
+ 3b0:	14 82       	std	Z+4, r1	; 0x04
+ 3b2:	15 82       	std	Z+5, r1	; 0x05
+        g_btn[i].edge_flag = false;
+ 3b4:	16 82       	std	Z+6, r1	; 0x06
+ 3b6:	37 96       	adiw	r30, 0x07	; 7
+    TCB0.CTRLA   = TCB_CLKSEL_DIV1_gc | TCB_ENABLE_bm; /* CLK_PER, run */
+
+    /* ------------------------------------------------------------------
+     * 5. Reset software debounce state for all buttons
+     * ------------------------------------------------------------------ */
+    for (uint8_t i = 0; i < HAL_BTN_COUNT; i++)
+ 3b8:	e8 17       	cp	r30, r24
+ 3ba:	f9 07       	cpc	r31, r25
+ 3bc:	a9 f7       	brne	.-22     	; 0x3a8 <hal_init+0x72>
+        g_btn[i].last_raw  = false;
+        g_btn[i].stable    = false;
+        g_btn[i].timestamp = 0;
+        g_btn[i].edge_flag = false;
+    }
+}
+ 3be:	08 95       	ret
+
+000003c0 <hal_led_on>:
+/**
+ * @brief Turn LED0 on (drive PC6 LOW).
+ */
+void hal_led_on(void)
+{
+    PORTC.OUTCLR = LED_PIN;
+ 3c0:	80 e4       	ldi	r24, 0x40	; 64
+ 3c2:	80 93 46 04 	sts	0x0446, r24	; 0x800446 <__TEXT_REGION_LENGTH__+0x7e0446>
+ 3c6:	08 95       	ret
+
+000003c8 <hal_led_off>:
+/**
+ * @brief Turn LED0 off (drive PC6 HIGH).
+ */
+void hal_led_off(void)
+{
+    PORTC.OUTSET = LED_PIN;
+ 3c8:	80 e4       	ldi	r24, 0x40	; 64
+ 3ca:	80 93 45 04 	sts	0x0445, r24	; 0x800445 <__TEXT_REGION_LENGTH__+0x7e0445>
+ 3ce:	08 95       	ret
+
+000003d0 <hal_led_toggle>:
+/**
+ * @brief Toggle LED0.
+ */
+void hal_led_toggle(void)
+{
+    PORTC.OUTTGL = LED_PIN;
+ 3d0:	80 e4       	ldi	r24, 0x40	; 64
+ 3d2:	80 93 47 04 	sts	0x0447, r24	; 0x800447 <__TEXT_REGION_LENGTH__+0x7e0447>
+ 3d6:	08 95       	ret
+
+000003d8 <hal_adc_start>:
+ *
+ * Writes the STCONV bit.  The ISR will set g_adc_ready when done.
+ */
+void hal_adc_start(void)
+{
+    ADC0.COMMAND = ADC_STCONV_bm;
+ 3d8:	81 e0       	ldi	r24, 0x01	; 1
+ 3da:	80 93 0a 06 	sts	0x060A, r24	; 0x80060a <__TEXT_REGION_LENGTH__+0x7e060a>
+ 3de:	08 95       	ret
+
+000003e0 <hal_adc_ready>:
+ *
+ * @return true if the RESRDY ISR has stored a new sample.
+ */
+bool hal_adc_ready(void)
+{
+    return g_adc_ready;
+ 3e0:	80 91 e2 45 	lds	r24, 0x45E2	; 0x8045e2 <g_adc_ready>
+}
+ 3e4:	08 95       	ret
+
+000003e6 <hal_adc_read>:
+ *
+ * @return 12-bit ADC sample (0–4095).
+ */
+uint16_t hal_adc_read(void)
+{
+    g_adc_ready = false;     /* clear ready flag so caller knows it was read */
+ 3e6:	10 92 e2 45 	sts	0x45E2, r1	; 0x8045e2 <g_adc_ready>
+    return g_adc_result;
+ 3ea:	80 91 e0 45 	lds	r24, 0x45E0	; 0x8045e0 <g_adc_result>
+ 3ee:	90 91 e1 45 	lds	r25, 0x45E1	; 0x8045e1 <g_adc_result+0x1>
+}
+ 3f2:	08 95       	ret
+
+000003f4 <hal_tick_ms>:
+ * 32-bit read on an 8-bit CPU.
+ */
+uint32_t hal_tick_ms(void)
+{
+    uint32_t t;
+    uint8_t  sreg = SREG;   /* save interrupt state */
+ 3f4:	2f b7       	in	r18, 0x3f	; 63
+    cli();
+ 3f6:	f8 94       	cli
+    t = g_tick_ms;
+ 3f8:	60 91 e3 45 	lds	r22, 0x45E3	; 0x8045e3 <g_tick_ms>
+ 3fc:	70 91 e4 45 	lds	r23, 0x45E4	; 0x8045e4 <g_tick_ms+0x1>
+ 400:	80 91 e5 45 	lds	r24, 0x45E5	; 0x8045e5 <g_tick_ms+0x2>
+ 404:	90 91 e6 45 	lds	r25, 0x45E6	; 0x8045e6 <g_tick_ms+0x3>
+    SREG = sreg;            /* restore interrupt state */
+ 408:	2f bf       	out	0x3f, r18	; 63
+    return t;
+}
+ 40a:	08 95       	ret
+
+0000040c <hal_btn_pressed>:
+ *
+ * @param[in] btn  Button to query.
+ * @return true on the leading edge of a confirmed press, false otherwise.
+ */
+bool hal_btn_pressed(hal_btn_id_t btn)
+{
+ 40c:	cf 92       	push	r12
+ 40e:	df 92       	push	r13
+ 410:	ef 92       	push	r14
+ 412:	ff 92       	push	r15
+ 414:	1f 93       	push	r17
+ 416:	cf 93       	push	r28
+ 418:	df 93       	push	r29
+    if (btn >= HAL_BTN_COUNT) return false;
+ 41a:	83 30       	cpi	r24, 0x03	; 3
+ 41c:	08 f0       	brcs	.+2      	; 0x420 <hal_btn_pressed+0x14>
+ 41e:	99 c0       	rjmp	.+306    	; 0x552 <hal_btn_pressed+0x146>
+
+    btn_state_t *b   = &g_btn[btn];
+ 420:	c8 2f       	mov	r28, r24
+ 422:	d0 e0       	ldi	r29, 0x00	; 0
+ * @param[in] btn  Button identifier.
+ * @return true if the button pin is currently driven LOW (pressed).
+ */
+static bool btn_raw_pressed(hal_btn_id_t btn)
+{
+    switch (btn)
+ 424:	81 30       	cpi	r24, 0x01	; 1
+ 426:	59 f0       	breq	.+22     	; 0x43e <hal_btn_pressed+0x32>
+ 428:	18 f0       	brcs	.+6      	; 0x430 <hal_btn_pressed+0x24>
+ 42a:	82 30       	cpi	r24, 0x02	; 2
+ 42c:	81 f0       	breq	.+32     	; 0x44e <hal_btn_pressed+0x42>
+ 42e:	17 c0       	rjmp	.+46     	; 0x45e <hal_btn_pressed+0x52>
+    {
+        case HAL_BTN_SW0:
+            return !(PORTC.IN & BTN_SW0_PIN);
+ 430:	10 91 48 04 	lds	r17, 0x0448	; 0x800448 <__TEXT_REGION_LENGTH__+0x7e0448>
+ 434:	10 95       	com	r17
+ 436:	11 1f       	adc	r17, r17
+ 438:	11 27       	eor	r17, r17
+ 43a:	11 1f       	adc	r17, r17
+ 43c:	11 c0       	rjmp	.+34     	; 0x460 <hal_btn_pressed+0x54>
+
+        case HAL_BTN_COIN:
+            return !(PORTA.IN & BTN_COIN_PIN);
+ 43e:	10 91 08 04 	lds	r17, 0x0408	; 0x800408 <__TEXT_REGION_LENGTH__+0x7e0408>
+ 442:	12 fb       	bst	r17, 2
+ 444:	88 27       	eor	r24, r24
+ 446:	80 f9       	bld	r24, 0
+ 448:	11 e0       	ldi	r17, 0x01	; 1
+ 44a:	18 27       	eor	r17, r24
+ 44c:	09 c0       	rjmp	.+18     	; 0x460 <hal_btn_pressed+0x54>
+
+        case HAL_BTN_DISPENSE:
+            return !(PORTA.IN & BTN_DISP_PIN);
+ 44e:	10 91 08 04 	lds	r17, 0x0408	; 0x800408 <__TEXT_REGION_LENGTH__+0x7e0408>
+ 452:	13 fb       	bst	r17, 3
+ 454:	88 27       	eor	r24, r24
+ 456:	80 f9       	bld	r24, 0
+ 458:	11 e0       	ldi	r17, 0x01	; 1
+ 45a:	18 27       	eor	r17, r24
+ 45c:	01 c0       	rjmp	.+2      	; 0x460 <hal_btn_pressed+0x54>
+
+        default:
+            return false;
+ 45e:	10 e0       	ldi	r17, 0x00	; 0
+
+    btn_state_t *b   = &g_btn[btn];
+    bool         raw = btn_raw_pressed(btn);
+
+    /* Detect raw-level change and restart debounce timer */
+    if (raw != b->last_raw)
+ 460:	fe 01       	movw	r30, r28
+ 462:	ee 0f       	add	r30, r30
+ 464:	ff 1f       	adc	r31, r31
+ 466:	ee 0f       	add	r30, r30
+ 468:	ff 1f       	adc	r31, r31
+ 46a:	ee 0f       	add	r30, r30
+ 46c:	ff 1f       	adc	r31, r31
+ 46e:	ec 1b       	sub	r30, r28
+ 470:	fd 0b       	sbc	r31, r29
+ 472:	e5 53       	subi	r30, 0x35	; 53
+ 474:	fa 4b       	sbci	r31, 0xBA	; 186
+ 476:	80 81       	ld	r24, Z
+ 478:	81 17       	cp	r24, r17
+ 47a:	c1 f0       	breq	.+48     	; 0x4ac <hal_btn_pressed+0xa0>
+    {
+        b->last_raw  = raw;
+ 47c:	fe 01       	movw	r30, r28
+ 47e:	ee 0f       	add	r30, r30
+ 480:	ff 1f       	adc	r31, r31
+ 482:	ee 0f       	add	r30, r30
+ 484:	ff 1f       	adc	r31, r31
+ 486:	ee 0f       	add	r30, r30
+ 488:	ff 1f       	adc	r31, r31
+ 48a:	ec 1b       	sub	r30, r28
+ 48c:	fd 0b       	sbc	r31, r29
+ 48e:	e5 53       	subi	r30, 0x35	; 53
+ 490:	fa 4b       	sbci	r31, 0xBA	; 186
+ 492:	10 83       	st	Z, r17
+        b->timestamp = g_tick_ms;  /* snapshot current time */
+ 494:	80 91 e3 45 	lds	r24, 0x45E3	; 0x8045e3 <g_tick_ms>
+ 498:	90 91 e4 45 	lds	r25, 0x45E4	; 0x8045e4 <g_tick_ms+0x1>
+ 49c:	a0 91 e5 45 	lds	r26, 0x45E5	; 0x8045e5 <g_tick_ms+0x2>
+ 4a0:	b0 91 e6 45 	lds	r27, 0x45E6	; 0x8045e6 <g_tick_ms+0x3>
+ 4a4:	82 83       	std	Z+2, r24	; 0x02
+ 4a6:	93 83       	std	Z+3, r25	; 0x03
+ 4a8:	a4 83       	std	Z+4, r26	; 0x04
+ 4aa:	b5 83       	std	Z+5, r27	; 0x05
+    }
+
+    /* Check whether the level has been stable long enough */
+    if (hal_elapsed_ms(b->timestamp) >= DEBOUNCE_MS)
+ 4ac:	fe 01       	movw	r30, r28
+ 4ae:	ee 0f       	add	r30, r30
+ 4b0:	ff 1f       	adc	r31, r31
+ 4b2:	ee 0f       	add	r30, r30
+ 4b4:	ff 1f       	adc	r31, r31
+ 4b6:	ee 0f       	add	r30, r30
+ 4b8:	ff 1f       	adc	r31, r31
+ 4ba:	ec 1b       	sub	r30, r28
+ 4bc:	fd 0b       	sbc	r31, r29
+ 4be:	e5 53       	subi	r30, 0x35	; 53
+ 4c0:	fa 4b       	sbci	r31, 0xBA	; 186
+ 4c2:	c2 80       	ldd	r12, Z+2	; 0x02
+ 4c4:	d3 80       	ldd	r13, Z+3	; 0x03
+ 4c6:	e4 80       	ldd	r14, Z+4	; 0x04
+ 4c8:	f5 80       	ldd	r15, Z+5	; 0x05
+ *
+ * @param[in] start_ms  Value previously obtained from hal_tick_ms().
+ */
+uint32_t hal_elapsed_ms(uint32_t start_ms)
+{
+    return hal_tick_ms() - start_ms;  /* wraps correctly in unsigned arithmetic */
+ 4ca:	0e 94 fa 01 	call	0x3f4	; 0x3f4 <hal_tick_ms>
+        b->last_raw  = raw;
+        b->timestamp = g_tick_ms;  /* snapshot current time */
+    }
+
+    /* Check whether the level has been stable long enough */
+    if (hal_elapsed_ms(b->timestamp) >= DEBOUNCE_MS)
+ 4ce:	dc 01       	movw	r26, r24
+ 4d0:	cb 01       	movw	r24, r22
+ 4d2:	8c 19       	sub	r24, r12
+ 4d4:	9d 09       	sbc	r25, r13
+ 4d6:	ae 09       	sbc	r26, r14
+ 4d8:	bf 09       	sbc	r27, r15
+ 4da:	44 97       	sbiw	r24, 0x14	; 20
+ 4dc:	a1 05       	cpc	r26, r1
+ 4de:	b1 05       	cpc	r27, r1
+ 4e0:	e0 f0       	brcs	.+56     	; 0x51a <hal_btn_pressed+0x10e>
+    {
+        if (raw != b->stable)
+ 4e2:	fe 01       	movw	r30, r28
+ 4e4:	ee 0f       	add	r30, r30
+ 4e6:	ff 1f       	adc	r31, r31
+ 4e8:	ee 0f       	add	r30, r30
+ 4ea:	ff 1f       	adc	r31, r31
+ 4ec:	ee 0f       	add	r30, r30
+ 4ee:	ff 1f       	adc	r31, r31
+ 4f0:	ec 1b       	sub	r30, r28
+ 4f2:	fd 0b       	sbc	r31, r29
+ 4f4:	e5 53       	subi	r30, 0x35	; 53
+ 4f6:	fa 4b       	sbci	r31, 0xBA	; 186
+ 4f8:	81 81       	ldd	r24, Z+1	; 0x01
+ 4fa:	81 17       	cp	r24, r17
+ 4fc:	71 f0       	breq	.+28     	; 0x51a <hal_btn_pressed+0x10e>
+        {
+            b->stable = raw;
+ 4fe:	fe 01       	movw	r30, r28
+ 500:	ee 0f       	add	r30, r30
+ 502:	ff 1f       	adc	r31, r31
+ 504:	ee 0f       	add	r30, r30
+ 506:	ff 1f       	adc	r31, r31
+ 508:	ee 0f       	add	r30, r30
+ 50a:	ff 1f       	adc	r31, r31
+ 50c:	ec 1b       	sub	r30, r28
+ 50e:	fd 0b       	sbc	r31, r29
+ 510:	e5 53       	subi	r30, 0x35	; 53
+ 512:	fa 4b       	sbci	r31, 0xBA	; 186
+ 514:	11 83       	std	Z+1, r17	; 0x01
+
+            /* Rising edge of a PRESS: set the one-shot flag */
+            if (b->stable == true)
+ 516:	11 11       	cpse	r17, r1
+ 518:	0e c0       	rjmp	.+28     	; 0x536 <hal_btn_pressed+0x12a>
+            }
+        }
+    }
+
+    /* Consume the edge flag and report to the caller */
+    if (b->edge_flag)
+ 51a:	fe 01       	movw	r30, r28
+ 51c:	ee 0f       	add	r30, r30
+ 51e:	ff 1f       	adc	r31, r31
+ 520:	ee 0f       	add	r30, r30
+ 522:	ff 1f       	adc	r31, r31
+ 524:	ee 0f       	add	r30, r30
+ 526:	ff 1f       	adc	r31, r31
+ 528:	ec 1b       	sub	r30, r28
+ 52a:	fd 0b       	sbc	r31, r29
+ 52c:	e5 53       	subi	r30, 0x35	; 53
+ 52e:	fa 4b       	sbci	r31, 0xBA	; 186
+ 530:	86 81       	ldd	r24, Z+6	; 0x06
+ 532:	88 23       	and	r24, r24
+ 534:	79 f0       	breq	.+30     	; 0x554 <hal_btn_pressed+0x148>
+    {
+        b->edge_flag = false;
+ 536:	fe 01       	movw	r30, r28
+ 538:	ee 0f       	add	r30, r30
+ 53a:	ff 1f       	adc	r31, r31
+ 53c:	ee 0f       	add	r30, r30
+ 53e:	ff 1f       	adc	r31, r31
+ 540:	ee 0f       	add	r30, r30
+ 542:	ff 1f       	adc	r31, r31
+ 544:	ec 1b       	sub	r30, r28
+ 546:	fd 0b       	sbc	r31, r29
+ 548:	e5 53       	subi	r30, 0x35	; 53
+ 54a:	fa 4b       	sbci	r31, 0xBA	; 186
+ 54c:	16 82       	std	Z+6, r1	; 0x06
+        return true;
+ 54e:	81 e0       	ldi	r24, 0x01	; 1
+ 550:	01 c0       	rjmp	.+2      	; 0x554 <hal_btn_pressed+0x148>
+ * @param[in] btn  Button to query.
+ * @return true on the leading edge of a confirmed press, false otherwise.
+ */
+bool hal_btn_pressed(hal_btn_id_t btn)
+{
+    if (btn >= HAL_BTN_COUNT) return false;
+ 552:	80 e0       	ldi	r24, 0x00	; 0
+        b->edge_flag = false;
+        return true;
+    }
+
+    return false;
+}
+ 554:	df 91       	pop	r29
+ 556:	cf 91       	pop	r28
+ 558:	1f 91       	pop	r17
+ 55a:	ff 90       	pop	r15
+ 55c:	ef 90       	pop	r14
+ 55e:	df 90       	pop	r13
+ 560:	cf 90       	pop	r12
+ 562:	08 95       	ret
+
+00000564 <hal_elapsed_ms>:
+ * without any special-case code.
+ *
+ * @param[in] start_ms  Value previously obtained from hal_tick_ms().
+ */
+uint32_t hal_elapsed_ms(uint32_t start_ms)
+{
+ 564:	cf 92       	push	r12
+ 566:	df 92       	push	r13
+ 568:	ef 92       	push	r14
+ 56a:	ff 92       	push	r15
+ 56c:	6b 01       	movw	r12, r22
+ 56e:	7c 01       	movw	r14, r24
+    return hal_tick_ms() - start_ms;  /* wraps correctly in unsigned arithmetic */
+ 570:	0e 94 fa 01 	call	0x3f4	; 0x3f4 <hal_tick_ms>
+ 574:	6c 19       	sub	r22, r12
+ 576:	7d 09       	sbc	r23, r13
+ 578:	8e 09       	sbc	r24, r14
+ 57a:	9f 09       	sbc	r25, r15
+}
+ 57c:	ff 90       	pop	r15
+ 57e:	ef 90       	pop	r14
+ 580:	df 90       	pop	r13
+ 582:	cf 90       	pop	r12
+ 584:	08 95       	ret
+
+00000586 <hal_uart_putc>:
+ * @param[in] c  Byte to transmit.
+ */
+void hal_uart_putc(char c)
+{
+    /* Wait for the transmit data register to be empty */
+    while (!(USART0.STATUS & USART_DREIF_bm))
+ 586:	e0 e0       	ldi	r30, 0x00	; 0
+ 588:	f8 e0       	ldi	r31, 0x08	; 8
+ 58a:	94 81       	ldd	r25, Z+4	; 0x04
+ 58c:	95 ff       	sbrs	r25, 5
+ 58e:	fd cf       	rjmp	.-6      	; 0x58a <hal_uart_putc+0x4>
+    {
+        /* busy-wait */
+    }
+    USART0.TXDATAL = (uint8_t)c;
+ 590:	80 93 02 08 	sts	0x0802, r24	; 0x800802 <__TEXT_REGION_LENGTH__+0x7e0802>
+ 594:	08 95       	ret
+
+00000596 <hal_uart_puts>:
+ * @brief Transmit a null-terminated string over USART0.
+ *
+ * @param[in] s  String to send.
+ */
+void hal_uart_puts(const char *s)
+{
+ 596:	cf 93       	push	r28
+ 598:	df 93       	push	r29
+ 59a:	ec 01       	movw	r28, r24
+    while (*s)
+ 59c:	88 81       	ld	r24, Y
+ 59e:	88 23       	and	r24, r24
+ 5a0:	31 f0       	breq	.+12     	; 0x5ae <hal_uart_puts+0x18>
+ 5a2:	21 96       	adiw	r28, 0x01	; 1
+    {
+        hal_uart_putc(*s++);
+ 5a4:	0e 94 c3 02 	call	0x586	; 0x586 <hal_uart_putc>
+ *
+ * @param[in] s  String to send.
+ */
+void hal_uart_puts(const char *s)
+{
+    while (*s)
+ 5a8:	89 91       	ld	r24, Y+
+ 5aa:	81 11       	cpse	r24, r1
+ 5ac:	fb cf       	rjmp	.-10     	; 0x5a4 <hal_uart_puts+0xe>
+    {
+        hal_uart_putc(*s++);
+    }
+}
+ 5ae:	df 91       	pop	r29
+ 5b0:	cf 91       	pop	r28
+ 5b2:	08 95       	ret
+
+000005b4 <hal_uart_put_u16>:
+ * Uses a small local buffer; no heap allocation.
+ *
+ * @param[in] value  Integer to print.
+ */
+void hal_uart_put_u16(uint16_t value)
+{
+ 5b4:	0f 93       	push	r16
+ 5b6:	1f 93       	push	r17
+ 5b8:	cf 93       	push	r28
+ 5ba:	df 93       	push	r29
+ 5bc:	cd b7       	in	r28, 0x3d	; 61
+ 5be:	de b7       	in	r29, 0x3e	; 62
+ 5c0:	26 97       	sbiw	r28, 0x06	; 6
+ 5c2:	cd bf       	out	0x3d, r28	; 61
+ 5c4:	de bf       	out	0x3e, r29	; 62
+ 5c6:	ac 01       	movw	r20, r24
+    char    buf[6];    /* max 5 digits for 65535 + null terminator */
+    uint8_t idx = sizeof(buf) - 1;
+
+    buf[idx] = '\0';
+ 5c8:	1e 82       	std	Y+6, r1	; 0x06
+
+    if (value == 0)
+ 5ca:	89 2b       	or	r24, r25
+ 5cc:	21 f4       	brne	.+8      	; 0x5d6 <hal_uart_put_u16+0x22>
+    {
+        buf[--idx] = '0';
+ 5ce:	80 e3       	ldi	r24, 0x30	; 48
+ 5d0:	8d 83       	std	Y+5, r24	; 0x05
+ 5d2:	e4 e0       	ldi	r30, 0x04	; 4
+ 5d4:	36 c0       	rjmp	.+108    	; 0x642 <hal_uart_put_u16+0x8e>
+ 5d6:	e5 e0       	ldi	r30, 0x05	; 5
+    }
+    else
+    {
+        while (value > 0 && idx > 0)
+        {
+            buf[--idx] = (char)('0' + (value % 10));
+ 5d8:	e1 50       	subi	r30, 0x01	; 1
+ 5da:	01 e0       	ldi	r16, 0x01	; 1
+ 5dc:	10 e0       	ldi	r17, 0x00	; 0
+ 5de:	0c 0f       	add	r16, r28
+ 5e0:	1d 1f       	adc	r17, r29
+ 5e2:	0e 0f       	add	r16, r30
+ 5e4:	11 1d       	adc	r17, r1
+ 5e6:	9a 01       	movw	r18, r20
+ 5e8:	ad ec       	ldi	r26, 0xCD	; 205
+ 5ea:	bc ec       	ldi	r27, 0xCC	; 204
+ 5ec:	0e 94 74 06 	call	0xce8	; 0xce8 <__umulhisi3>
+ 5f0:	96 95       	lsr	r25
+ 5f2:	87 95       	ror	r24
+ 5f4:	96 95       	lsr	r25
+ 5f6:	87 95       	ror	r24
+ 5f8:	96 95       	lsr	r25
+ 5fa:	87 95       	ror	r24
+ 5fc:	9c 01       	movw	r18, r24
+ 5fe:	22 0f       	add	r18, r18
+ 600:	33 1f       	adc	r19, r19
+ 602:	88 0f       	add	r24, r24
+ 604:	99 1f       	adc	r25, r25
+ 606:	88 0f       	add	r24, r24
+ 608:	99 1f       	adc	r25, r25
+ 60a:	88 0f       	add	r24, r24
+ 60c:	99 1f       	adc	r25, r25
+ 60e:	82 0f       	add	r24, r18
+ 610:	93 1f       	adc	r25, r19
+ 612:	9a 01       	movw	r18, r20
+ 614:	28 1b       	sub	r18, r24
+ 616:	39 0b       	sbc	r19, r25
+ 618:	c9 01       	movw	r24, r18
+ 61a:	80 5d       	subi	r24, 0xD0	; 208
+ 61c:	d8 01       	movw	r26, r16
+ 61e:	8c 93       	st	X, r24
+            value /= 10;
+ 620:	9a 01       	movw	r18, r20
+ 622:	ad ec       	ldi	r26, 0xCD	; 205
+ 624:	bc ec       	ldi	r27, 0xCC	; 204
+ 626:	0e 94 74 06 	call	0xce8	; 0xce8 <__umulhisi3>
+ 62a:	ac 01       	movw	r20, r24
+ 62c:	56 95       	lsr	r21
+ 62e:	47 95       	ror	r20
+ 630:	56 95       	lsr	r21
+ 632:	47 95       	ror	r20
+ 634:	56 95       	lsr	r21
+ 636:	47 95       	ror	r20
+    {
+        buf[--idx] = '0';
+    }
+    else
+    {
+        while (value > 0 && idx > 0)
+ 638:	41 15       	cp	r20, r1
+ 63a:	51 05       	cpc	r21, r1
+ 63c:	11 f0       	breq	.+4      	; 0x642 <hal_uart_put_u16+0x8e>
+ 63e:	e1 11       	cpse	r30, r1
+ 640:	cb cf       	rjmp	.-106    	; 0x5d8 <hal_uart_put_u16+0x24>
+            buf[--idx] = (char)('0' + (value % 10));
+            value /= 10;
+        }
+    }
+
+    hal_uart_puts(&buf[idx]);
+ 642:	81 e0       	ldi	r24, 0x01	; 1
+ 644:	90 e0       	ldi	r25, 0x00	; 0
+ 646:	8c 0f       	add	r24, r28
+ 648:	9d 1f       	adc	r25, r29
+ 64a:	8e 0f       	add	r24, r30
+ 64c:	91 1d       	adc	r25, r1
+ 64e:	0e 94 cb 02 	call	0x596	; 0x596 <hal_uart_puts>
+}
+ 652:	26 96       	adiw	r28, 0x06	; 6
+ 654:	cd bf       	out	0x3d, r28	; 61
+ 656:	de bf       	out	0x3e, r29	; 62
+ 658:	df 91       	pop	r29
+ 65a:	cf 91       	pop	r28
+ 65c:	1f 91       	pop	r17
+ 65e:	0f 91       	pop	r16
+ 660:	08 95       	ret
+
+00000662 <act_service_reset>:
+ */
+static void act_service_reset(void *ctx)
+{
+    vend_ctx_t *c = (vend_ctx_t *)ctx;
+
+    c->credit_cents = 0;
+ 662:	fc 01       	movw	r30, r24
+ 664:	11 86       	std	Z+9, r1	; 0x09
+    c->sos_step     = 0;
+ 666:	16 8a       	std	Z+22, r1	; 0x16
+
+    hal_uart_puts("[ACT] Service reset acknowledged. Machine cleared.\r\n");
+ 668:	80 e0       	ldi	r24, 0x00	; 0
+ 66a:	90 e4       	ldi	r25, 0x40	; 64
+ 66c:	0e 94 cb 02 	call	0x596	; 0x596 <hal_uart_puts>
+ 670:	08 95       	ret
+
+00000672 <on_entry_idle>:
+ * @param[in] ctx  Application context pointer (unused here).
+ */
+static void on_entry_idle(void *ctx)
+{
+    (void)ctx;  /* unused in this hook */
+    hal_led_off();
+ 672:	0e 94 e4 01 	call	0x3c8	; 0x3c8 <hal_led_off>
+    hal_uart_puts(">>> STATE: IDLE  (LED off - waiting for coin)\r\n");
+ 676:	85 e3       	ldi	r24, 0x35	; 53
+ 678:	90 e4       	ldi	r25, 0x40	; 64
+ 67a:	0e 94 cb 02 	call	0x596	; 0x596 <hal_uart_puts>
+ 67e:	08 95       	ret
+
+00000680 <on_entry_fault>:
+ * Turns off the LED (SOS pattern is handled in vending_run) and logs.
+ *
+ * @param[in] ctx  Application context pointer.
+ */
+static void on_entry_fault(void *ctx)
+{
+ 680:	cf 93       	push	r28
+ 682:	df 93       	push	r29
+ 684:	ec 01       	movw	r28, r24
+    vend_ctx_t *c = (vend_ctx_t *)ctx;
+    hal_led_off();
+ 686:	0e 94 e4 01 	call	0x3c8	; 0x3c8 <hal_led_off>
+    c->led_ts  = hal_tick_ms();   /* start SOS timer */
+ 68a:	0e 94 fa 01 	call	0x3f4	; 0x3f4 <hal_tick_ms>
+ 68e:	6a 8b       	std	Y+18, r22	; 0x12
+ 690:	7b 8b       	std	Y+19, r23	; 0x13
+ 692:	8c 8b       	std	Y+20, r24	; 0x14
+ 694:	9d 8b       	std	Y+21, r25	; 0x15
+    c->sos_step = 0;
+ 696:	1e 8a       	std	Y+22, r1	; 0x16
+    hal_uart_puts(">>> STATE: FAULT  (LED SOS pattern - service required)\r\n");
+ 698:	85 e6       	ldi	r24, 0x65	; 101
+ 69a:	90 e4       	ldi	r25, 0x40	; 64
+ 69c:	0e 94 cb 02 	call	0x596	; 0x596 <hal_uart_puts>
+}
+ 6a0:	df 91       	pop	r29
+ 6a2:	cf 91       	pop	r28
+ 6a4:	08 95       	ret
+
+000006a6 <on_entry_dispensing>:
+ * Resets the LED fast-blink timer and logs dispense start.
+ *
+ * @param[in] ctx  Application context pointer.
+ */
+static void on_entry_dispensing(void *ctx)
+{
+ 6a6:	cf 93       	push	r28
+ 6a8:	df 93       	push	r29
+ 6aa:	ec 01       	movw	r28, r24
+    vend_ctx_t *c = (vend_ctx_t *)ctx;
+    hal_led_off();
+ 6ac:	0e 94 e4 01 	call	0x3c8	; 0x3c8 <hal_led_off>
+    c->led_ts      = hal_tick_ms();   /* start LED fast-blink timer */
+ 6b0:	0e 94 fa 01 	call	0x3f4	; 0x3f4 <hal_tick_ms>
+ 6b4:	6a 8b       	std	Y+18, r22	; 0x12
+ 6b6:	7b 8b       	std	Y+19, r23	; 0x13
+ 6b8:	8c 8b       	std	Y+20, r24	; 0x14
+ 6ba:	9d 8b       	std	Y+21, r25	; 0x15
+    c->dispense_ts = hal_tick_ms();   /* start dispense timeout */
+ 6bc:	0e 94 fa 01 	call	0x3f4	; 0x3f4 <hal_tick_ms>
+ 6c0:	6e 87       	std	Y+14, r22	; 0x0e
+ 6c2:	7f 87       	std	Y+15, r23	; 0x0f
+ 6c4:	88 8b       	std	Y+16, r24	; 0x10
+ 6c6:	99 8b       	std	Y+17, r25	; 0x11
+    hal_uart_puts(">>> STATE: DISPENSING  (LED fast-blink - vending...)\r\n");
+ 6c8:	8e e9       	ldi	r24, 0x9E	; 158
+ 6ca:	90 e4       	ldi	r25, 0x40	; 64
+ 6cc:	0e 94 cb 02 	call	0x596	; 0x596 <hal_uart_puts>
+}
+ 6d0:	df 91       	pop	r29
+ 6d2:	cf 91       	pop	r28
+ 6d4:	08 95       	ret
+
+000006d6 <on_entry_full_credit>:
+ * Resets the LED blink timer so the blink pattern starts cleanly.
+ *
+ * @param[in] ctx  Application context pointer.
+ */
+static void on_entry_full_credit(void *ctx)
+{
+ 6d6:	cf 93       	push	r28
+ 6d8:	df 93       	push	r29
+ 6da:	ec 01       	movw	r28, r24
+    vend_ctx_t *c = (vend_ctx_t *)ctx;
+    hal_led_off();
+ 6dc:	0e 94 e4 01 	call	0x3c8	; 0x3c8 <hal_led_off>
+    c->led_ts      = hal_tick_ms();   /* start LED blink timer */
+ 6e0:	0e 94 fa 01 	call	0x3f4	; 0x3f4 <hal_tick_ms>
+ 6e4:	6a 8b       	std	Y+18, r22	; 0x12
+ 6e6:	7b 8b       	std	Y+19, r23	; 0x13
+ 6e8:	8c 8b       	std	Y+20, r24	; 0x14
+ 6ea:	9d 8b       	std	Y+21, r25	; 0x15
+    c->activity_ts = hal_tick_ms();   /* restart idle timeout */
+ 6ec:	0e 94 fa 01 	call	0x3f4	; 0x3f4 <hal_tick_ms>
+ 6f0:	6a 87       	std	Y+10, r22	; 0x0a
+ 6f2:	7b 87       	std	Y+11, r23	; 0x0b
+ 6f4:	8c 87       	std	Y+12, r24	; 0x0c
+ 6f6:	9d 87       	std	Y+13, r25	; 0x0d
+    hal_uart_puts(">>> STATE: FULL_CREDIT  (LED blinking - press DISPENSE)\r\n");
+ 6f8:	85 ed       	ldi	r24, 0xD5	; 213
+ 6fa:	90 e4       	ldi	r25, 0x40	; 64
+ 6fc:	0e 94 cb 02 	call	0x596	; 0x596 <hal_uart_puts>
+}
+ 700:	df 91       	pop	r29
+ 702:	cf 91       	pop	r28
+ 704:	08 95       	ret
+
+00000706 <on_entry_has_credit>:
+ * Turns the LED on (steady) and reminds the user to insert another coin.
+ *
+ * @param[in] ctx  Application context pointer.
+ */
+static void on_entry_has_credit(void *ctx)
+{
+ 706:	cf 93       	push	r28
+ 708:	df 93       	push	r29
+ 70a:	ec 01       	movw	r28, r24
+    vend_ctx_t *c = (vend_ctx_t *)ctx;
+    hal_led_on();
+ 70c:	0e 94 e0 01 	call	0x3c0	; 0x3c0 <hal_led_on>
+    c->activity_ts = hal_tick_ms();   /* start idle timeout from now */
+ 710:	0e 94 fa 01 	call	0x3f4	; 0x3f4 <hal_tick_ms>
+ 714:	6a 87       	std	Y+10, r22	; 0x0a
+ 716:	7b 87       	std	Y+11, r23	; 0x0b
+ 718:	8c 87       	std	Y+12, r24	; 0x0c
+ 71a:	9d 87       	std	Y+13, r25	; 0x0d
+    hal_uart_puts(">>> STATE: HAS_CREDIT  (LED on - insert one more coin)\r\n");
+ 71c:	8f e0       	ldi	r24, 0x0F	; 15
+ 71e:	91 e4       	ldi	r25, 0x41	; 65
+ 720:	0e 94 cb 02 	call	0x596	; 0x596 <hal_uart_puts>
+}
+ 724:	df 91       	pop	r29
+ 726:	cf 91       	pop	r28
+ 728:	08 95       	ret
+
+0000072a <log_kv>:
+ *
+ * @param[in] label  Descriptive prefix string.
+ * @param[in] value  16-bit unsigned integer to print.
+ */
+static void log_kv(const char *label, uint16_t value)
+{
+ 72a:	0f 93       	push	r16
+ 72c:	1f 93       	push	r17
+ 72e:	cf 93       	push	r28
+ 730:	df 93       	push	r29
+ 732:	8c 01       	movw	r16, r24
+ 734:	eb 01       	movw	r28, r22
+    hal_uart_puts("  ");
+ 736:	89 ef       	ldi	r24, 0xF9	; 249
+ 738:	94 e4       	ldi	r25, 0x44	; 68
+ 73a:	0e 94 cb 02 	call	0x596	; 0x596 <hal_uart_puts>
+    hal_uart_puts(label);
+ 73e:	c8 01       	movw	r24, r16
+ 740:	0e 94 cb 02 	call	0x596	; 0x596 <hal_uart_puts>
+    hal_uart_puts(": ");
+ 744:	83 ef       	ldi	r24, 0xF3	; 243
+ 746:	94 e4       	ldi	r25, 0x44	; 68
+ 748:	0e 94 cb 02 	call	0x596	; 0x596 <hal_uart_puts>
+    hal_uart_put_u16(value);
+ 74c:	ce 01       	movw	r24, r28
+ 74e:	0e 94 da 02 	call	0x5b4	; 0x5b4 <hal_uart_put_u16>
+    hal_uart_puts("\r\n");
+ 752:	8d e8       	ldi	r24, 0x8D	; 141
+ 754:	94 e4       	ldi	r25, 0x44	; 68
+ 756:	0e 94 cb 02 	call	0x596	; 0x596 <hal_uart_puts>
+}
+ 75a:	df 91       	pop	r29
+ 75c:	cf 91       	pop	r28
+ 75e:	1f 91       	pop	r17
+ 760:	0f 91       	pop	r16
+ 762:	08 95       	ret
+
+00000764 <act_fault>:
+ * until a SERVICE event is raised.
+ *
+ * @param[in,out] ctx  Application context pointer.
+ */
+static void act_fault(void *ctx)
+{
+ 764:	cf 93       	push	r28
+ 766:	df 93       	push	r29
+ 768:	ec 01       	movw	r28, r24
+    vend_ctx_t *c = (vend_ctx_t *)ctx;
+
+    hal_uart_puts("[ACT] *** FAULT DETECTED ***\r\n");
+ 76a:	88 e4       	ldi	r24, 0x48	; 72
+ 76c:	91 e4       	ldi	r25, 0x41	; 65
+ 76e:	0e 94 cb 02 	call	0x596	; 0x596 <hal_uart_puts>
+    log_kv("ADC value", c->adc_value);
+ 772:	6f 89       	ldd	r22, Y+23	; 0x17
+ 774:	78 8d       	ldd	r23, Y+24	; 0x18
+ 776:	87 e6       	ldi	r24, 0x67	; 103
+ 778:	91 e4       	ldi	r25, 0x41	; 65
+ 77a:	0e 94 95 03 	call	0x72a	; 0x72a <log_kv>
+    hal_uart_puts("[ACT] Machine locked. Press SW0+DISPENSE to service.\r\n");
+ 77e:	81 e7       	ldi	r24, 0x71	; 113
+ 780:	91 e4       	ldi	r25, 0x41	; 65
+ 782:	0e 94 cb 02 	call	0x596	; 0x596 <hal_uart_puts>
+}
+ 786:	df 91       	pop	r29
+ 788:	cf 91       	pop	r28
+ 78a:	08 95       	ret
+
+0000078c <act_dispense_complete>:
+ * state.  Logs any change due to the customer.
+ *
+ * @param[in,out] ctx  Application context pointer.
+ */
+static void act_dispense_complete(void *ctx)
+{
+ 78c:	cf 93       	push	r28
+ 78e:	df 93       	push	r29
+ 790:	ec 01       	movw	r28, r24
+    vend_ctx_t *c = (vend_ctx_t *)ctx;
+
+    hal_uart_puts("[ACT] Dispense complete.\r\n");
+ 792:	88 ea       	ldi	r24, 0xA8	; 168
+ 794:	91 e4       	ldi	r25, 0x41	; 65
+ 796:	0e 94 cb 02 	call	0x596	; 0x596 <hal_uart_puts>
+    if (c->credit_cents > 0)
+ 79a:	69 85       	ldd	r22, Y+9	; 0x09
+ 79c:	66 23       	and	r22, r22
+ 79e:	29 f0       	breq	.+10     	; 0x7aa <act_dispense_complete+0x1e>
+    {
+        log_kv("Change returned", c->credit_cents);
+ 7a0:	70 e0       	ldi	r23, 0x00	; 0
+ 7a2:	83 ec       	ldi	r24, 0xC3	; 195
+ 7a4:	91 e4       	ldi	r25, 0x41	; 65
+ 7a6:	0e 94 95 03 	call	0x72a	; 0x72a <log_kv>
+    }
+    c->credit_cents = 0;
+ 7aa:	19 86       	std	Y+9, r1	; 0x09
+}
+ 7ac:	df 91       	pop	r29
+ 7ae:	cf 91       	pop	r28
+ 7b0:	08 95       	ret
+
+000007b2 <act_add_coin_full>:
+ * deducted on dispense).  Logs the overpayment.
+ *
+ * @param[in,out] ctx  Application context pointer.
+ */
+static void act_add_coin_full(void *ctx)
+{
+ 7b2:	cf 93       	push	r28
+ 7b4:	df 93       	push	r29
+ 7b6:	ec 01       	movw	r28, r24
+    vend_ctx_t *c = (vend_ctx_t *)ctx;
+    c->credit_cents += VEND_COIN_VALUE;
+ 7b8:	89 85       	ldd	r24, Y+9	; 0x09
+ 7ba:	87 5e       	subi	r24, 0xE7	; 231
+ 7bc:	89 87       	std	Y+9, r24	; 0x09
+    c->activity_ts   = hal_tick_ms();
+ 7be:	0e 94 fa 01 	call	0x3f4	; 0x3f4 <hal_tick_ms>
+ 7c2:	6a 87       	std	Y+10, r22	; 0x0a
+ 7c4:	7b 87       	std	Y+11, r23	; 0x0b
+ 7c6:	8c 87       	std	Y+12, r24	; 0x0c
+ 7c8:	9d 87       	std	Y+13, r25	; 0x0d
+
+    hal_uart_puts("[ACT] Extra coin accepted.\r\n");
+ 7ca:	83 ed       	ldi	r24, 0xD3	; 211
+ 7cc:	91 e4       	ldi	r25, 0x41	; 65
+ 7ce:	0e 94 cb 02 	call	0x596	; 0x596 <hal_uart_puts>
+    log_kv("Credit", c->credit_cents);
+ 7d2:	69 85       	ldd	r22, Y+9	; 0x09
+ 7d4:	70 e0       	ldi	r23, 0x00	; 0
+ 7d6:	80 ef       	ldi	r24, 0xF0	; 240
+ 7d8:	91 e4       	ldi	r25, 0x41	; 65
+ 7da:	0e 94 95 03 	call	0x72a	; 0x72a <log_kv>
+}
+ 7de:	df 91       	pop	r29
+ 7e0:	cf 91       	pop	r28
+ 7e2:	08 95       	ret
+
+000007e4 <act_dispense>:
+ * dispense start timestamp for the auto-reset timeout.
+ *
+ * @param[in,out] ctx  Application context pointer.
+ */
+static void act_dispense(void *ctx)
+{
+ 7e4:	cf 93       	push	r28
+ 7e6:	df 93       	push	r29
+ 7e8:	ec 01       	movw	r28, r24
+    vend_ctx_t *c = (vend_ctx_t *)ctx;
+    c->credit_cents  -= VEND_PRICE;   /* deduct item price */
+ 7ea:	89 85       	ldd	r24, Y+9	; 0x09
+ 7ec:	82 53       	subi	r24, 0x32	; 50
+ 7ee:	89 87       	std	Y+9, r24	; 0x09
+    c->dispense_ts    = hal_tick_ms(); /* start dispense timer */
+ 7f0:	0e 94 fa 01 	call	0x3f4	; 0x3f4 <hal_tick_ms>
+ 7f4:	6e 87       	std	Y+14, r22	; 0x0e
+ 7f6:	7f 87       	std	Y+15, r23	; 0x0f
+ 7f8:	88 8b       	std	Y+16, r24	; 0x10
+ 7fa:	99 8b       	std	Y+17, r25	; 0x11
+
+    hal_uart_puts("[ACT] DISPENSING product!\r\n");
+ 7fc:	87 ef       	ldi	r24, 0xF7	; 247
+ 7fe:	91 e4       	ldi	r25, 0x41	; 65
+ 800:	0e 94 cb 02 	call	0x596	; 0x596 <hal_uart_puts>
+    log_kv("Price paid", VEND_PRICE);
+ 804:	62 e3       	ldi	r22, 0x32	; 50
+ 806:	70 e0       	ldi	r23, 0x00	; 0
+ 808:	83 e1       	ldi	r24, 0x13	; 19
+ 80a:	92 e4       	ldi	r25, 0x42	; 66
+ 80c:	0e 94 95 03 	call	0x72a	; 0x72a <log_kv>
+    log_kv("Change due", c->credit_cents);
+ 810:	69 85       	ldd	r22, Y+9	; 0x09
+ 812:	70 e0       	ldi	r23, 0x00	; 0
+ 814:	8e e1       	ldi	r24, 0x1E	; 30
+ 816:	92 e4       	ldi	r25, 0x42	; 66
+ 818:	0e 94 95 03 	call	0x72a	; 0x72a <log_kv>
+}
+ 81c:	df 91       	pop	r29
+ 81e:	cf 91       	pop	r28
+ 820:	08 95       	ret
+
+00000822 <act_cancel_from_full>:
+ * (kept separate so messages can differ if desired in the future).
+ *
+ * @param[in,out] ctx  Application context pointer.
+ */
+static void act_cancel_from_full(void *ctx)
+{
+ 822:	cf 93       	push	r28
+ 824:	df 93       	push	r29
+ 826:	ec 01       	movw	r28, r24
+    vend_ctx_t *c = (vend_ctx_t *)ctx;
+
+    hal_uart_puts("[ACT] Selection cancelled. Refunding ");
+ 828:	89 e2       	ldi	r24, 0x29	; 41
+ 82a:	92 e4       	ldi	r25, 0x42	; 66
+ 82c:	0e 94 cb 02 	call	0x596	; 0x596 <hal_uart_puts>
+    hal_uart_put_u16(c->credit_cents);
+ 830:	89 85       	ldd	r24, Y+9	; 0x09
+ 832:	90 e0       	ldi	r25, 0x00	; 0
+ 834:	0e 94 da 02 	call	0x5b4	; 0x5b4 <hal_uart_put_u16>
+    hal_uart_puts(" cents.\r\n");
+ 838:	8f e4       	ldi	r24, 0x4F	; 79
+ 83a:	92 e4       	ldi	r25, 0x42	; 66
+ 83c:	0e 94 cb 02 	call	0x596	; 0x596 <hal_uart_puts>
+
+    c->credit_cents = 0;
+ 840:	19 86       	std	Y+9, r1	; 0x09
+}
+ 842:	df 91       	pop	r29
+ 844:	cf 91       	pop	r28
+ 846:	08 95       	ret
+
+00000848 <act_cancel_from_credit>:
+ * Resets credit to zero and informs the customer via UART.
+ *
+ * @param[in,out] ctx  Application context pointer.
+ */
+static void act_cancel_from_credit(void *ctx)
+{
+ 848:	cf 93       	push	r28
+ 84a:	df 93       	push	r29
+ 84c:	ec 01       	movw	r28, r24
+    vend_ctx_t *c = (vend_ctx_t *)ctx;
+
+    hal_uart_puts("[ACT] Cancelled. Refunding ");
+ 84e:	89 e5       	ldi	r24, 0x59	; 89
+ 850:	92 e4       	ldi	r25, 0x42	; 66
+ 852:	0e 94 cb 02 	call	0x596	; 0x596 <hal_uart_puts>
+    hal_uart_put_u16(c->credit_cents);
+ 856:	89 85       	ldd	r24, Y+9	; 0x09
+ 858:	90 e0       	ldi	r25, 0x00	; 0
+ 85a:	0e 94 da 02 	call	0x5b4	; 0x5b4 <hal_uart_put_u16>
+    hal_uart_puts(" cents.\r\n");
+ 85e:	8f e4       	ldi	r24, 0x4F	; 79
+ 860:	92 e4       	ldi	r25, 0x42	; 66
+ 862:	0e 94 cb 02 	call	0x596	; 0x596 <hal_uart_puts>
+
+    c->credit_cents = 0;
+ 866:	19 86       	std	Y+9, r1	; 0x09
+}
+ 868:	df 91       	pop	r29
+ 86a:	cf 91       	pop	r28
+ 86c:	08 95       	ret
+
+0000086e <act_insert_coin_full>:
+ * Prompts the user to press DISPENSE.
+ *
+ * @param[in,out] ctx  Application context pointer.
+ */
+static void act_insert_coin_full(void *ctx)
+{
+ 86e:	cf 93       	push	r28
+ 870:	df 93       	push	r29
+ 872:	ec 01       	movw	r28, r24
+    vend_ctx_t *c = (vend_ctx_t *)ctx;
+    c->credit_cents += VEND_COIN_VALUE;
+ 874:	89 85       	ldd	r24, Y+9	; 0x09
+ 876:	87 5e       	subi	r24, 0xE7	; 231
+ 878:	89 87       	std	Y+9, r24	; 0x09
+    c->activity_ts   = hal_tick_ms();
+ 87a:	0e 94 fa 01 	call	0x3f4	; 0x3f4 <hal_tick_ms>
+ 87e:	6a 87       	std	Y+10, r22	; 0x0a
+ 880:	7b 87       	std	Y+11, r23	; 0x0b
+ 882:	8c 87       	std	Y+12, r24	; 0x0c
+ 884:	9d 87       	std	Y+13, r25	; 0x0d
+
+    hal_uart_puts("[ACT] Coin inserted (+");
+ 886:	85 e7       	ldi	r24, 0x75	; 117
+ 888:	92 e4       	ldi	r25, 0x42	; 66
+ 88a:	0e 94 cb 02 	call	0x596	; 0x596 <hal_uart_puts>
+    hal_uart_put_u16(VEND_COIN_VALUE);
+ 88e:	89 e1       	ldi	r24, 0x19	; 25
+ 890:	90 e0       	ldi	r25, 0x00	; 0
+ 892:	0e 94 da 02 	call	0x5b4	; 0x5b4 <hal_uart_put_u16>
+    hal_uart_puts(" c)\r\n");
+ 896:	8c e8       	ldi	r24, 0x8C	; 140
+ 898:	92 e4       	ldi	r25, 0x42	; 66
+ 89a:	0e 94 cb 02 	call	0x596	; 0x596 <hal_uart_puts>
+    log_kv("Credit", c->credit_cents);
+ 89e:	69 85       	ldd	r22, Y+9	; 0x09
+ 8a0:	70 e0       	ldi	r23, 0x00	; 0
+ 8a2:	80 ef       	ldi	r24, 0xF0	; 240
+ 8a4:	91 e4       	ldi	r25, 0x41	; 65
+ 8a6:	0e 94 95 03 	call	0x72a	; 0x72a <log_kv>
+    hal_uart_puts("[ACT] Full credit! Press DISPENSE to vend.\r\n");
+ 8aa:	82 e9       	ldi	r24, 0x92	; 146
+ 8ac:	92 e4       	ldi	r25, 0x42	; 66
+ 8ae:	0e 94 cb 02 	call	0x596	; 0x596 <hal_uart_puts>
+}
+ 8b2:	df 91       	pop	r29
+ 8b4:	cf 91       	pop	r28
+ 8b6:	08 95       	ret
+
+000008b8 <act_insert_coin_partial>:
+ * Resets the activity timestamp so the idle timeout starts from now.
+ *
+ * @param[in,out] ctx  Application context pointer.
+ */
+static void act_insert_coin_partial(void *ctx)
+{
+ 8b8:	cf 93       	push	r28
+ 8ba:	df 93       	push	r29
+ 8bc:	ec 01       	movw	r28, r24
+    vend_ctx_t *c = (vend_ctx_t *)ctx;
+    c->credit_cents += VEND_COIN_VALUE;
+ 8be:	89 85       	ldd	r24, Y+9	; 0x09
+ 8c0:	87 5e       	subi	r24, 0xE7	; 231
+ 8c2:	89 87       	std	Y+9, r24	; 0x09
+    c->activity_ts   = hal_tick_ms();  /* reset idle timeout */
+ 8c4:	0e 94 fa 01 	call	0x3f4	; 0x3f4 <hal_tick_ms>
+ 8c8:	6a 87       	std	Y+10, r22	; 0x0a
+ 8ca:	7b 87       	std	Y+11, r23	; 0x0b
+ 8cc:	8c 87       	std	Y+12, r24	; 0x0c
+ 8ce:	9d 87       	std	Y+13, r25	; 0x0d
+
+    hal_uart_puts("[ACT] Coin inserted (+");
+ 8d0:	85 e7       	ldi	r24, 0x75	; 117
+ 8d2:	92 e4       	ldi	r25, 0x42	; 66
+ 8d4:	0e 94 cb 02 	call	0x596	; 0x596 <hal_uart_puts>
+    hal_uart_put_u16(VEND_COIN_VALUE);
+ 8d8:	89 e1       	ldi	r24, 0x19	; 25
+ 8da:	90 e0       	ldi	r25, 0x00	; 0
+ 8dc:	0e 94 da 02 	call	0x5b4	; 0x5b4 <hal_uart_put_u16>
+    hal_uart_puts(" c)\r\n");
+ 8e0:	8c e8       	ldi	r24, 0x8C	; 140
+ 8e2:	92 e4       	ldi	r25, 0x42	; 66
+ 8e4:	0e 94 cb 02 	call	0x596	; 0x596 <hal_uart_puts>
+    log_kv("Credit", c->credit_cents);
+ 8e8:	69 85       	ldd	r22, Y+9	; 0x09
+ 8ea:	70 e0       	ldi	r23, 0x00	; 0
+ 8ec:	80 ef       	ldi	r24, 0xF0	; 240
+ 8ee:	91 e4       	ldi	r25, 0x41	; 65
+ 8f0:	0e 94 95 03 	call	0x72a	; 0x72a <log_kv>
+    hal_uart_puts("[ACT] Insert one more coin to vend.\r\n");
+ 8f4:	8f eb       	ldi	r24, 0xBF	; 191
+ 8f6:	92 e4       	ldi	r25, 0x42	; 66
+ 8f8:	0e 94 cb 02 	call	0x596	; 0x596 <hal_uart_puts>
+}
+ 8fc:	df 91       	pop	r29
+ 8fe:	cf 91       	pop	r28
+ 900:	08 95       	ret
+
+00000902 <led_update_blink>:
+ *
+ * @param[in,out] ctx           Application context pointer.
+ * @param[in]     half_period_ms Half the desired blink period in ms.
+ */
+static void led_update_blink(vend_ctx_t *ctx, uint16_t half_period_ms)
+{
+ 902:	cf 92       	push	r12
+ 904:	df 92       	push	r13
+ 906:	ef 92       	push	r14
+ 908:	ff 92       	push	r15
+ 90a:	0f 93       	push	r16
+ 90c:	1f 93       	push	r17
+ 90e:	cf 93       	push	r28
+ 910:	df 93       	push	r29
+ 912:	8c 01       	movw	r16, r24
+ 914:	eb 01       	movw	r28, r22
+    if (hal_elapsed_ms(ctx->led_ts) >= half_period_ms)
+ 916:	fc 01       	movw	r30, r24
+ 918:	62 89       	ldd	r22, Z+18	; 0x12
+ 91a:	73 89       	ldd	r23, Z+19	; 0x13
+ 91c:	84 89       	ldd	r24, Z+20	; 0x14
+ 91e:	95 89       	ldd	r25, Z+21	; 0x15
+ 920:	0e 94 b2 02 	call	0x564	; 0x564 <hal_elapsed_ms>
+ 924:	6e 01       	movw	r12, r28
+ 926:	e1 2c       	mov	r14, r1
+ 928:	f1 2c       	mov	r15, r1
+ 92a:	6c 15       	cp	r22, r12
+ 92c:	7d 05       	cpc	r23, r13
+ 92e:	8e 05       	cpc	r24, r14
+ 930:	9f 05       	cpc	r25, r15
+ 932:	48 f0       	brcs	.+18     	; 0x946 <led_update_blink+0x44>
+    {
+        ctx->led_ts = hal_tick_ms();
+ 934:	0e 94 fa 01 	call	0x3f4	; 0x3f4 <hal_tick_ms>
+ 938:	f8 01       	movw	r30, r16
+ 93a:	62 8b       	std	Z+18, r22	; 0x12
+ 93c:	73 8b       	std	Z+19, r23	; 0x13
+ 93e:	84 8b       	std	Z+20, r24	; 0x14
+ 940:	95 8b       	std	Z+21, r25	; 0x15
+        hal_led_toggle();
+ 942:	0e 94 e8 01 	call	0x3d0	; 0x3d0 <hal_led_toggle>
+    }
+}
+ 946:	df 91       	pop	r29
+ 948:	cf 91       	pop	r28
+ 94a:	1f 91       	pop	r17
+ 94c:	0f 91       	pop	r16
+ 94e:	ff 90       	pop	r15
+ 950:	ef 90       	pop	r14
+ 952:	df 90       	pop	r13
+ 954:	cf 90       	pop	r12
+ 956:	08 95       	ret
+
+00000958 <vending_init>:
+ * and fire its on_entry hook.  Prints a boot banner over UART.
+ *
+ * @param[out] ctx  Uninitialised application context; fully populated here.
+ */
+void vending_init(vend_ctx_t *ctx)
+{
+ 958:	cf 92       	push	r12
+ 95a:	df 92       	push	r13
+ 95c:	ef 92       	push	r14
+ 95e:	0f 93       	push	r16
+ 960:	1f 93       	push	r17
+ 962:	cf 93       	push	r28
+ 964:	df 93       	push	r29
+ 966:	ec 01       	movw	r28, r24
+    /* Zero everything first so no field has garbage */
+    ctx->credit_cents = 0;
+ 968:	19 86       	std	Y+9, r1	; 0x09
+    ctx->activity_ts  = 0;
+ 96a:	1a 86       	std	Y+10, r1	; 0x0a
+ 96c:	1b 86       	std	Y+11, r1	; 0x0b
+ 96e:	1c 86       	std	Y+12, r1	; 0x0c
+ 970:	1d 86       	std	Y+13, r1	; 0x0d
+    ctx->dispense_ts  = 0;
+ 972:	1e 86       	std	Y+14, r1	; 0x0e
+ 974:	1f 86       	std	Y+15, r1	; 0x0f
+ 976:	18 8a       	std	Y+16, r1	; 0x10
+ 978:	19 8a       	std	Y+17, r1	; 0x11
+    ctx->led_ts       = 0;
+ 97a:	1a 8a       	std	Y+18, r1	; 0x12
+ 97c:	1b 8a       	std	Y+19, r1	; 0x13
+ 97e:	1c 8a       	std	Y+20, r1	; 0x14
+ 980:	1d 8a       	std	Y+21, r1	; 0x15
+    ctx->sos_step     = 0;
+ 982:	1e 8a       	std	Y+22, r1	; 0x16
+    ctx->adc_value    = 0;
+ 984:	1f 8a       	std	Y+23, r1	; 0x17
+ 986:	18 8e       	std	Y+24, r1	; 0x18
+
+    /* Boot banner */
+    hal_uart_puts("\r\n");
+ 988:	8d e8       	ldi	r24, 0x8D	; 141
+ 98a:	94 e4       	ldi	r25, 0x44	; 68
+ 98c:	0e 94 cb 02 	call	0x596	; 0x596 <hal_uart_puts>
+    hal_uart_puts("========================================\r\n");
+ 990:	85 ee       	ldi	r24, 0xE5	; 229
+ 992:	92 e4       	ldi	r25, 0x42	; 66
+ 994:	0e 94 cb 02 	call	0x596	; 0x596 <hal_uart_puts>
+    hal_uart_puts("  FSM Vending Machine Demo\r\n");
+ 998:	80 e1       	ldi	r24, 0x10	; 16
+ 99a:	93 e4       	ldi	r25, 0x43	; 67
+ 99c:	0e 94 cb 02 	call	0x596	; 0x596 <hal_uart_puts>
+    hal_uart_puts("  AVR128DA48 Curiosity Nano\r\n");
+ 9a0:	8d e2       	ldi	r24, 0x2D	; 45
+ 9a2:	93 e4       	ldi	r25, 0x43	; 67
+ 9a4:	0e 94 cb 02 	call	0x596	; 0x596 <hal_uart_puts>
+    hal_uart_puts("----------------------------------------\r\n");
+ 9a8:	8b e4       	ldi	r24, 0x4B	; 75
+ 9aa:	93 e4       	ldi	r25, 0x43	; 67
+ 9ac:	0e 94 cb 02 	call	0x596	; 0x596 <hal_uart_puts>
+    hal_uart_puts("  Buttons:\r\n");
+ 9b0:	86 e7       	ldi	r24, 0x76	; 118
+ 9b2:	93 e4       	ldi	r25, 0x43	; 67
+ 9b4:	0e 94 cb 02 	call	0x596	; 0x596 <hal_uart_puts>
+    hal_uart_puts("    PA2 (COIN)     - Insert 25c coin\r\n");
+ 9b8:	83 e8       	ldi	r24, 0x83	; 131
+ 9ba:	93 e4       	ldi	r25, 0x43	; 67
+ 9bc:	0e 94 cb 02 	call	0x596	; 0x596 <hal_uart_puts>
+    hal_uart_puts("    PA3 (DISPENSE) - Select product\r\n");
+ 9c0:	8a ea       	ldi	r24, 0xAA	; 170
+ 9c2:	93 e4       	ldi	r25, 0x43	; 67
+ 9c4:	0e 94 cb 02 	call	0x596	; 0x596 <hal_uart_puts>
+    hal_uart_puts("    PC7 (SW0)      - Cancel / refund\r\n");
+ 9c8:	80 ed       	ldi	r24, 0xD0	; 208
+ 9ca:	93 e4       	ldi	r25, 0x43	; 67
+ 9cc:	0e 94 cb 02 	call	0x596	; 0x596 <hal_uart_puts>
+    hal_uart_puts("    SW0+DISPENSE   - Service reset\r\n");
+ 9d0:	87 ef       	ldi	r24, 0xF7	; 247
+ 9d2:	93 e4       	ldi	r25, 0x43	; 67
+ 9d4:	0e 94 cb 02 	call	0x596	; 0x596 <hal_uart_puts>
+    hal_uart_puts("  ADC on PD3: raise voltage > 2.5V\r\n");
+ 9d8:	8c e1       	ldi	r24, 0x1C	; 28
+ 9da:	94 e4       	ldi	r25, 0x44	; 68
+ 9dc:	0e 94 cb 02 	call	0x596	; 0x596 <hal_uart_puts>
+    hal_uart_puts("             to simulate fault.\r\n");
+ 9e0:	81 e4       	ldi	r24, 0x41	; 65
+ 9e2:	94 e4       	ldi	r25, 0x44	; 68
+ 9e4:	0e 94 cb 02 	call	0x596	; 0x596 <hal_uart_puts>
+    hal_uart_puts("========================================\r\n\r\n");
+ 9e8:	83 e6       	ldi	r24, 0x63	; 99
+ 9ea:	94 e4       	ldi	r25, 0x44	; 68
+ 9ec:	0e 94 cb 02 	call	0x596	; 0x596 <hal_uart_puts>
+     *  - Initial state : VEND_ST_IDLE
+     *  - Table         : vend_table[]  (defined above)
+     *  - Hooks         : vend_hooks[]  (entry/exit per state)
+     *  - Context       : ctx           (passed to every action/hook)
+     */
+    fsm_init(&ctx->fsm,
+ 9f0:	6e 01       	movw	r12, r28
+ 9f2:	0f 2e       	mov	r0, r31
+ 9f4:	f5 e0       	ldi	r31, 0x05	; 5
+ 9f6:	ef 2e       	mov	r14, r31
+ 9f8:	f0 2d       	mov	r31, r0
+ 9fa:	01 e7       	ldi	r16, 0x71	; 113
+ 9fc:	15 e4       	ldi	r17, 0x45	; 69
+ 9fe:	29 e0       	ldi	r18, 0x09	; 9
+ a00:	45 e8       	ldi	r20, 0x85	; 133
+ a02:	55 e4       	ldi	r21, 0x45	; 69
+ a04:	60 e0       	ldi	r22, 0x00	; 0
+ a06:	ce 01       	movw	r24, r28
+ a08:	0e 94 a3 00 	call	0x146	; 0x146 <fsm_init>
+             vend_table,
+             VEND_TABLE_LEN,
+             vend_hooks,
+             (uint8_t)VEND_ST_COUNT,
+             ctx);
+}
+ a0c:	df 91       	pop	r29
+ a0e:	cf 91       	pop	r28
+ a10:	1f 91       	pop	r17
+ a12:	0f 91       	pop	r16
+ a14:	ef 90       	pop	r14
+ a16:	df 90       	pop	r13
+ a18:	cf 90       	pop	r12
+ a1a:	08 95       	ret
+
+00000a1c <vending_state_name>:
+ * @param[in] state  vend_state_t value cast to fsm_id_t.
+ * @return    Pointer to a constant string literal.
+ */
+const char *vending_state_name(fsm_id_t state)
+{
+    switch ((vend_state_t)state)
+ a1c:	82 30       	cpi	r24, 0x02	; 2
+ a1e:	71 f0       	breq	.+28     	; 0xa3c <vending_state_name+0x20>
+ a20:	28 f4       	brcc	.+10     	; 0xa2c <vending_state_name+0x10>
+ a22:	88 23       	and	r24, r24
+ a24:	b9 f0       	breq	.+46     	; 0xa54 <vending_state_name+0x38>
+ a26:	81 30       	cpi	r24, 0x01	; 1
+ a28:	31 f0       	breq	.+12     	; 0xa36 <vending_state_name+0x1a>
+ a2a:	11 c0       	rjmp	.+34     	; 0xa4e <vending_state_name+0x32>
+ a2c:	83 30       	cpi	r24, 0x03	; 3
+ a2e:	49 f0       	breq	.+18     	; 0xa42 <vending_state_name+0x26>
+ a30:	84 30       	cpi	r24, 0x04	; 4
+ a32:	51 f0       	breq	.+20     	; 0xa48 <vending_state_name+0x2c>
+ a34:	0c c0       	rjmp	.+24     	; 0xa4e <vending_state_name+0x32>
+    {
+        case VEND_ST_IDLE:        return "IDLE";
+        case VEND_ST_HAS_CREDIT:  return "HAS_CREDIT";
+ a36:	85 e9       	ldi	r24, 0x95	; 149
+ a38:	94 e4       	ldi	r25, 0x44	; 68
+ a3a:	08 95       	ret
+        case VEND_ST_FULL_CREDIT: return "FULL_CREDIT";
+ a3c:	80 ea       	ldi	r24, 0xA0	; 160
+ a3e:	94 e4       	ldi	r25, 0x44	; 68
+ a40:	08 95       	ret
+        case VEND_ST_DISPENSING:  return "DISPENSING";
+ a42:	8c ea       	ldi	r24, 0xAC	; 172
+ a44:	94 e4       	ldi	r25, 0x44	; 68
+ a46:	08 95       	ret
+        case VEND_ST_FAULT:       return "FAULT";
+ a48:	87 eb       	ldi	r24, 0xB7	; 183
+ a4a:	94 e4       	ldi	r25, 0x44	; 68
+ a4c:	08 95       	ret
+        default:                  return "UNKNOWN";
+ a4e:	8d eb       	ldi	r24, 0xBD	; 189
+ a50:	94 e4       	ldi	r25, 0x44	; 68
+ a52:	08 95       	ret
+ */
+const char *vending_state_name(fsm_id_t state)
+{
+    switch ((vend_state_t)state)
+    {
+        case VEND_ST_IDLE:        return "IDLE";
+ a54:	80 e9       	ldi	r24, 0x90	; 144
+ a56:	94 e4       	ldi	r25, 0x44	; 68
+        case VEND_ST_FULL_CREDIT: return "FULL_CREDIT";
+        case VEND_ST_DISPENSING:  return "DISPENSING";
+        case VEND_ST_FAULT:       return "FAULT";
+        default:                  return "UNKNOWN";
+    }
+}
+ a58:	08 95       	ret
+
+00000a5a <vending_event_name>:
+ * @param[in] event  vend_event_t value cast to fsm_id_t.
+ * @return    Pointer to a constant string literal.
+ */
+const char *vending_event_name(fsm_id_t event)
+{
+    switch ((vend_event_t)event)
+ a5a:	82 30       	cpi	r24, 0x02	; 2
+ a5c:	79 f0       	breq	.+30     	; 0xa7c <vending_event_name+0x22>
+ a5e:	28 f4       	brcc	.+10     	; 0xa6a <vending_event_name+0x10>
+ a60:	88 23       	and	r24, r24
+ a62:	d9 f0       	breq	.+54     	; 0xa9a <vending_event_name+0x40>
+ a64:	81 30       	cpi	r24, 0x01	; 1
+ a66:	39 f0       	breq	.+14     	; 0xa76 <vending_event_name+0x1c>
+ a68:	15 c0       	rjmp	.+42     	; 0xa94 <vending_event_name+0x3a>
+ a6a:	84 30       	cpi	r24, 0x04	; 4
+ a6c:	69 f0       	breq	.+26     	; 0xa88 <vending_event_name+0x2e>
+ a6e:	48 f0       	brcs	.+18     	; 0xa82 <vending_event_name+0x28>
+ a70:	85 30       	cpi	r24, 0x05	; 5
+ a72:	69 f0       	breq	.+26     	; 0xa8e <vending_event_name+0x34>
+ a74:	0f c0       	rjmp	.+30     	; 0xa94 <vending_event_name+0x3a>
+    {
+        case EVNT_COIN:     return "COIN";
+        case EVNT_DISPENSE: return "DISPENSE";
+ a76:	8a ec       	ldi	r24, 0xCA	; 202
+ a78:	94 e4       	ldi	r25, 0x44	; 68
+ a7a:	08 95       	ret
+        case EVNT_CANCEL:   return "CANCEL";
+ a7c:	83 ed       	ldi	r24, 0xD3	; 211
+ a7e:	94 e4       	ldi	r25, 0x44	; 68
+ a80:	08 95       	ret
+        case EVNT_FAULT:    return "FAULT";
+ a82:	87 eb       	ldi	r24, 0xB7	; 183
+ a84:	94 e4       	ldi	r25, 0x44	; 68
+ a86:	08 95       	ret
+        case EVNT_SERVICE:  return "SERVICE";
+ a88:	8a ed       	ldi	r24, 0xDA	; 218
+ a8a:	94 e4       	ldi	r25, 0x44	; 68
+ a8c:	08 95       	ret
+        case EVNT_RESET:    return "RESET";
+ a8e:	82 ee       	ldi	r24, 0xE2	; 226
+ a90:	94 e4       	ldi	r25, 0x44	; 68
+ a92:	08 95       	ret
+        default:            return "UNKNOWN";
+ a94:	8d eb       	ldi	r24, 0xBD	; 189
+ a96:	94 e4       	ldi	r25, 0x44	; 68
+ a98:	08 95       	ret
+ */
+const char *vending_event_name(fsm_id_t event)
+{
+    switch ((vend_event_t)event)
+    {
+        case EVNT_COIN:     return "COIN";
+ a9a:	85 ec       	ldi	r24, 0xC5	; 197
+ a9c:	94 e4       	ldi	r25, 0x44	; 68
+        case EVNT_FAULT:    return "FAULT";
+        case EVNT_SERVICE:  return "SERVICE";
+        case EVNT_RESET:    return "RESET";
+        default:            return "UNKNOWN";
+    }
+}
+ a9e:	08 95       	ret
+
+00000aa0 <dispatch>:
+ *
+ * @param[in,out] ctx    Application context (contains embedded fsm_t).
+ * @param[in]     event  Event to dispatch.
+ */
+static void dispatch(vend_ctx_t *ctx, vend_event_t event)
+{
+ aa0:	0f 93       	push	r16
+ aa2:	1f 93       	push	r17
+ aa4:	cf 93       	push	r28
+ aa6:	df 93       	push	r29
+ aa8:	ec 01       	movw	r28, r24
+ aaa:	16 2f       	mov	r17, r22
+    vend_state_t before = (vend_state_t)fsm_state(&ctx->fsm);
+ aac:	0e 94 4c 01 	call	0x298	; 0x298 <fsm_state>
+ ab0:	08 2f       	mov	r16, r24
+
+    bool fired = fsm_dispatch(&ctx->fsm, (fsm_id_t)event);
+ ab2:	61 2f       	mov	r22, r17
+ ab4:	ce 01       	movw	r24, r28
+ ab6:	0e 94 ca 00 	call	0x194	; 0x194 <fsm_dispatch>
+
+    if (fired)
+ aba:	88 23       	and	r24, r24
+ abc:	19 f1       	breq	.+70     	; 0xb04 <dispatch+0x64>
+    {
+        vend_state_t after = (vend_state_t)fsm_state(&ctx->fsm);
+ abe:	ce 01       	movw	r24, r28
+ ac0:	0e 94 4c 01 	call	0x298	; 0x298 <fsm_state>
+ ac4:	c8 2f       	mov	r28, r24
+ */
+static void log_transition(vend_event_t event,
+                            vend_state_t from_state,
+                            vend_state_t to_state)
+{
+    hal_uart_puts("[FSM] EVENT: ");
+ ac6:	88 ee       	ldi	r24, 0xE8	; 232
+ ac8:	94 e4       	ldi	r25, 0x44	; 68
+ aca:	0e 94 cb 02 	call	0x596	; 0x596 <hal_uart_puts>
+    hal_uart_puts(vending_event_name((fsm_id_t)event));
+ ace:	81 2f       	mov	r24, r17
+ ad0:	0e 94 2d 05 	call	0xa5a	; 0xa5a <vending_event_name>
+ ad4:	0e 94 cb 02 	call	0x596	; 0x596 <hal_uart_puts>
+    hal_uart_puts("  |  ");
+ ad8:	86 ef       	ldi	r24, 0xF6	; 246
+ ada:	94 e4       	ldi	r25, 0x44	; 68
+ adc:	0e 94 cb 02 	call	0x596	; 0x596 <hal_uart_puts>
+    hal_uart_puts(vending_state_name((fsm_id_t)from_state));
+ ae0:	80 2f       	mov	r24, r16
+ ae2:	0e 94 0e 05 	call	0xa1c	; 0xa1c <vending_state_name>
+ ae6:	0e 94 cb 02 	call	0x596	; 0x596 <hal_uart_puts>
+    hal_uart_puts(" -> ");
+ aea:	8c ef       	ldi	r24, 0xFC	; 252
+ aec:	94 e4       	ldi	r25, 0x44	; 68
+ aee:	0e 94 cb 02 	call	0x596	; 0x596 <hal_uart_puts>
+    hal_uart_puts(vending_state_name((fsm_id_t)to_state));
+ af2:	8c 2f       	mov	r24, r28
+ af4:	0e 94 0e 05 	call	0xa1c	; 0xa1c <vending_state_name>
+ af8:	0e 94 cb 02 	call	0x596	; 0x596 <hal_uart_puts>
+    hal_uart_puts("\r\n");
+ afc:	8d e8       	ldi	r24, 0x8D	; 141
+ afe:	94 e4       	ldi	r25, 0x44	; 68
+ b00:	0e 94 cb 02 	call	0x596	; 0x596 <hal_uart_puts>
+    {
+        vend_state_t after = (vend_state_t)fsm_state(&ctx->fsm);
+        log_transition(event, before, after);
+    }
+    /* Silently discard events that have no matching rule (fired == false) */
+}
+ b04:	df 91       	pop	r29
+ b06:	cf 91       	pop	r28
+ b08:	1f 91       	pop	r17
+ b0a:	0f 91       	pop	r16
+ b0c:	08 95       	ret
+
+00000b0e <vending_run>:
+ *    The correct LED animation function is called based on current state.
+ *
+ * @param[in,out] ctx  Application context pointer.
+ */
+void vending_run(vend_ctx_t *ctx)
+{
+ b0e:	cf 92       	push	r12
+ b10:	df 92       	push	r13
+ b12:	ef 92       	push	r14
+ b14:	ff 92       	push	r15
+ b16:	0f 93       	push	r16
+ b18:	1f 93       	push	r17
+ b1a:	cf 93       	push	r28
+ b1c:	df 93       	push	r29
+ b1e:	ec 01       	movw	r28, r24
+    vend_state_t state = (vend_state_t)fsm_state(&ctx->fsm);
+ b20:	0e 94 4c 01 	call	0x298	; 0x298 <fsm_state>
+     *
+     * Read all buttons.  If both SW0 and DISPENSE are pressed in the same
+     * polling cycle, treat it as a SERVICE event (technician key combo).
+     * Otherwise handle each button independently.
+     * ------------------------------------------------------------------ */
+    bool sw0      = hal_btn_pressed(HAL_BTN_SW0);
+ b24:	80 e0       	ldi	r24, 0x00	; 0
+ b26:	0e 94 06 02 	call	0x40c	; 0x40c <hal_btn_pressed>
+ b2a:	18 2f       	mov	r17, r24
+    bool coin     = hal_btn_pressed(HAL_BTN_COIN);
+ b2c:	81 e0       	ldi	r24, 0x01	; 1
+ b2e:	0e 94 06 02 	call	0x40c	; 0x40c <hal_btn_pressed>
+ b32:	f8 2e       	mov	r15, r24
+    bool dispense = hal_btn_pressed(HAL_BTN_DISPENSE);
+ b34:	82 e0       	ldi	r24, 0x02	; 2
+ b36:	0e 94 06 02 	call	0x40c	; 0x40c <hal_btn_pressed>
+ b3a:	08 2f       	mov	r16, r24
+
+    if (sw0 && dispense)
+ b3c:	11 23       	and	r17, r17
+ b3e:	41 f0       	breq	.+16     	; 0xb50 <vending_run+0x42>
+ b40:	88 23       	and	r24, r24
+ b42:	09 f4       	brne	.+2      	; 0xb46 <vending_run+0x38>
+ b44:	ac c0       	rjmp	.+344    	; 0xc9e <vending_run+0x190>
+    {
+        /* Both pressed simultaneously -> service key combo */
+        dispatch(ctx, EVNT_SERVICE);
+ b46:	64 e0       	ldi	r22, 0x04	; 4
+ b48:	ce 01       	movw	r24, r28
+ b4a:	0e 94 50 05 	call	0xaa0	; 0xaa0 <dispatch>
+ b4e:	13 c0       	rjmp	.+38     	; 0xb76 <vending_run+0x68>
+    }
+    else
+    {
+        if (coin)     dispatch(ctx, EVNT_COIN);
+ b50:	ff 20       	and	r15, r15
+ b52:	09 f4       	brne	.+2      	; 0xb56 <vending_run+0x48>
+ b54:	a8 c0       	rjmp	.+336    	; 0xca6 <vending_run+0x198>
+ b56:	60 e0       	ldi	r22, 0x00	; 0
+ b58:	ce 01       	movw	r24, r28
+ b5a:	0e 94 50 05 	call	0xaa0	; 0xaa0 <dispatch>
+        if (dispense) dispatch(ctx, EVNT_DISPENSE);
+ b5e:	00 23       	and	r16, r16
+ b60:	21 f0       	breq	.+8      	; 0xb6a <vending_run+0x5c>
+ b62:	61 e0       	ldi	r22, 0x01	; 1
+ b64:	ce 01       	movw	r24, r28
+ b66:	0e 94 50 05 	call	0xaa0	; 0xaa0 <dispatch>
+        if (sw0)      dispatch(ctx, EVNT_CANCEL);
+ b6a:	11 23       	and	r17, r17
+ b6c:	21 f0       	breq	.+8      	; 0xb76 <vending_run+0x68>
+ b6e:	62 e0       	ldi	r22, 0x02	; 2
+ b70:	ce 01       	movw	r24, r28
+ b72:	0e 94 50 05 	call	0xaa0	; 0xaa0 <dispatch>
+    }
+
+    /* Update state after possible transitions above */
+    state = (vend_state_t)fsm_state(&ctx->fsm);
+ b76:	ce 01       	movw	r24, r28
+ b78:	0e 94 4c 01 	call	0x298	; 0x298 <fsm_state>
+ b7c:	18 2f       	mov	r17, r24
+     * Phase 2: ADC fault detection
+     *
+     * If no conversion is in progress, start one.  When a result arrives,
+     * store it in context (for logging in act_fault) and check the threshold.
+     * ------------------------------------------------------------------ */
+    if (hal_adc_ready())
+ b7e:	0e 94 f0 01 	call	0x3e0	; 0x3e0 <hal_adc_ready>
+ b82:	88 23       	and	r24, r24
+ b84:	b1 f0       	breq	.+44     	; 0xbb2 <vending_run+0xa4>
+    {
+        ctx->adc_value = hal_adc_read();
+ b86:	0e 94 f3 01 	call	0x3e6	; 0x3e6 <hal_adc_read>
+ b8a:	8f 8b       	std	Y+23, r24	; 0x17
+ b8c:	98 8f       	std	Y+24, r25	; 0x18
+
+        if (ctx->adc_value >= VEND_ADC_FAULT_THRESH)
+ b8e:	8f 31       	cpi	r24, 0x1F	; 31
+ b90:	9c 40       	sbci	r25, 0x0C	; 12
+ b92:	60 f0       	brcs	.+24     	; 0xbac <vending_run+0x9e>
+        {
+            /* Only raise a fault if not already in FAULT state            */
+            if (state != VEND_ST_FAULT)
+ b94:	14 30       	cpi	r17, 0x04	; 4
+ b96:	09 f4       	brne	.+2      	; 0xb9a <vending_run+0x8c>
+ b98:	42 c0       	rjmp	.+132    	; 0xc1e <vending_run+0x110>
+            {
+                dispatch(ctx, EVNT_FAULT);
+ b9a:	63 e0       	ldi	r22, 0x03	; 3
+ b9c:	ce 01       	movw	r24, r28
+ b9e:	0e 94 50 05 	call	0xaa0	; 0xaa0 <dispatch>
+                state = (vend_state_t)fsm_state(&ctx->fsm);
+ ba2:	ce 01       	movw	r24, r28
+ ba4:	0e 94 4c 01 	call	0x298	; 0x298 <fsm_state>
+ ba8:	18 2f       	mov	r17, r24
+ baa:	05 c0       	rjmp	.+10     	; 0xbb6 <vending_run+0xa8>
+            }
+        }
+        else
+        {
+            /* Kick off the next conversion immediately                    */
+            hal_adc_start();
+ bac:	0e 94 ec 01 	call	0x3d8	; 0x3d8 <hal_adc_start>
+ bb0:	02 c0       	rjmp	.+4      	; 0xbb6 <vending_run+0xa8>
+        }
+    }
+    else
+    {
+        /* No result pending - start a conversion if ADC is not busy      */
+        hal_adc_start();
+ bb2:	0e 94 ec 01 	call	0x3d8	; 0x3d8 <hal_adc_start>
+     * Phase 3: Idle timeout (HAS_CREDIT and FULL_CREDIT only)
+     *
+     * If the customer inserts a coin but does nothing for VEND_IDLE_TIMEOUT_MS
+     * milliseconds, automatically cancel and refund.
+     * ------------------------------------------------------------------ */
+    if ((state == VEND_ST_HAS_CREDIT) || (state == VEND_ST_FULL_CREDIT))
+ bb6:	8f ef       	ldi	r24, 0xFF	; 255
+ bb8:	81 0f       	add	r24, r17
+ bba:	82 30       	cpi	r24, 0x02	; 2
+ bbc:	b8 f4       	brcc	.+46     	; 0xbec <vending_run+0xde>
+    {
+        if (hal_elapsed_ms(ctx->activity_ts) >= VEND_IDLE_TIMEOUT_MS)
+ bbe:	6a 85       	ldd	r22, Y+10	; 0x0a
+ bc0:	7b 85       	ldd	r23, Y+11	; 0x0b
+ bc2:	8c 85       	ldd	r24, Y+12	; 0x0c
+ bc4:	9d 85       	ldd	r25, Y+13	; 0x0d
+ bc6:	0e 94 b2 02 	call	0x564	; 0x564 <hal_elapsed_ms>
+ bca:	60 31       	cpi	r22, 0x10	; 16
+ bcc:	77 42       	sbci	r23, 0x27	; 39
+ bce:	81 05       	cpc	r24, r1
+ bd0:	91 05       	cpc	r25, r1
+ bd2:	60 f0       	brcs	.+24     	; 0xbec <vending_run+0xde>
+        {
+            hal_uart_puts("[TMR] Idle timeout - auto-cancel.\r\n");
+ bd4:	81 e0       	ldi	r24, 0x01	; 1
+ bd6:	95 e4       	ldi	r25, 0x45	; 69
+ bd8:	0e 94 cb 02 	call	0x596	; 0x596 <hal_uart_puts>
+            dispatch(ctx, EVNT_CANCEL);
+ bdc:	62 e0       	ldi	r22, 0x02	; 2
+ bde:	ce 01       	movw	r24, r28
+ be0:	0e 94 50 05 	call	0xaa0	; 0xaa0 <dispatch>
+            state = (vend_state_t)fsm_state(&ctx->fsm);
+ be4:	ce 01       	movw	r24, r28
+ be6:	0e 94 4c 01 	call	0x298	; 0x298 <fsm_state>
+ bea:	18 2f       	mov	r17, r24
+     * Phase 4: Dispense timeout (DISPENSING only)
+     *
+     * After VEND_DISPENSE_TIME_MS ms in the DISPENSING state the machine
+     * auto-resets to IDLE via an internal EVNT_RESET event.
+     * ------------------------------------------------------------------ */
+    if (state == VEND_ST_DISPENSING)
+ bec:	13 30       	cpi	r17, 0x03	; 3
+ bee:	b9 f4       	brne	.+46     	; 0xc1e <vending_run+0x110>
+    {
+        if (hal_elapsed_ms(ctx->dispense_ts) >= VEND_DISPENSE_TIME_MS)
+ bf0:	6e 85       	ldd	r22, Y+14	; 0x0e
+ bf2:	7f 85       	ldd	r23, Y+15	; 0x0f
+ bf4:	88 89       	ldd	r24, Y+16	; 0x10
+ bf6:	99 89       	ldd	r25, Y+17	; 0x11
+ bf8:	0e 94 b2 02 	call	0x564	; 0x564 <hal_elapsed_ms>
+ bfc:	60 3d       	cpi	r22, 0xD0	; 208
+ bfe:	77 40       	sbci	r23, 0x07	; 7
+ c00:	81 05       	cpc	r24, r1
+ c02:	91 05       	cpc	r25, r1
+ c04:	c8 f0       	brcs	.+50     	; 0xc38 <vending_run+0x12a>
+        {
+            hal_uart_puts("[TMR] Dispense timeout - resetting.\r\n");
+ c06:	85 e2       	ldi	r24, 0x25	; 37
+ c08:	95 e4       	ldi	r25, 0x45	; 69
+ c0a:	0e 94 cb 02 	call	0x596	; 0x596 <hal_uart_puts>
+            dispatch(ctx, EVNT_RESET);
+ c0e:	65 e0       	ldi	r22, 0x05	; 5
+ c10:	ce 01       	movw	r24, r28
+ c12:	0e 94 50 05 	call	0xaa0	; 0xaa0 <dispatch>
+            state = (vend_state_t)fsm_state(&ctx->fsm);
+ c16:	ce 01       	movw	r24, r28
+ c18:	0e 94 4c 01 	call	0x298	; 0x298 <fsm_state>
+ c1c:	18 2f       	mov	r17, r24
+     * Phase 5: LED update
+     *
+     * Driven entirely by non-blocking elapsed-time checks so the superloop
+     * is never stalled.
+     * ------------------------------------------------------------------ */
+    switch (state)
+ c1e:	13 30       	cpi	r17, 0x03	; 3
+ c20:	59 f0       	breq	.+22     	; 0xc38 <vending_run+0x12a>
+ c22:	14 30       	cpi	r17, 0x04	; 4
+ c24:	79 f0       	breq	.+30     	; 0xc44 <vending_run+0x136>
+ c26:	12 30       	cpi	r17, 0x02	; 2
+ c28:	09 f0       	breq	.+2      	; 0xc2c <vending_run+0x11e>
+ c2a:	41 c0       	rjmp	.+130    	; 0xcae <vending_run+0x1a0>
+            /* LED is permanently on - nothing to update periodically      */
+            break;
+
+        case VEND_ST_FULL_CREDIT:
+            /* Slow blink: toggle every 500 ms                             */
+            led_update_blink(ctx, 500u);
+ c2c:	64 ef       	ldi	r22, 0xF4	; 244
+ c2e:	71 e0       	ldi	r23, 0x01	; 1
+ c30:	ce 01       	movw	r24, r28
+ c32:	0e 94 81 04 	call	0x902	; 0x902 <led_update_blink>
+            break;
+ c36:	3b c0       	rjmp	.+118    	; 0xcae <vending_run+0x1a0>
+
+        case VEND_ST_DISPENSING:
+            /* Fast blink: toggle every 100 ms                             */
+            led_update_blink(ctx, 100u);
+ c38:	64 e6       	ldi	r22, 0x64	; 100
+ c3a:	70 e0       	ldi	r23, 0x00	; 0
+ c3c:	ce 01       	movw	r24, r28
+ c3e:	0e 94 81 04 	call	0x902	; 0x902 <led_update_blink>
+            break;
+ c42:	35 c0       	rjmp	.+106    	; 0xcae <vending_run+0x1a0>
+ *
+ * @param[in,out] ctx  Application context pointer.
+ */
+static void led_update_sos(vend_ctx_t *ctx)
+{
+    if (hal_elapsed_ms(ctx->led_ts) >= sos_timings[ctx->sos_step])
+ c44:	6a 89       	ldd	r22, Y+18	; 0x12
+ c46:	7b 89       	ldd	r23, Y+19	; 0x13
+ c48:	8c 89       	ldd	r24, Y+20	; 0x14
+ c4a:	9d 89       	ldd	r25, Y+21	; 0x15
+ c4c:	0e 94 b2 02 	call	0x564	; 0x564 <hal_elapsed_ms>
+ c50:	2e 89       	ldd	r18, Y+22	; 0x16
+ c52:	30 e0       	ldi	r19, 0x00	; 0
+ c54:	f9 01       	movw	r30, r18
+ c56:	ee 0f       	add	r30, r30
+ c58:	ff 1f       	adc	r31, r31
+ c5a:	e5 5b       	subi	r30, 0xB5	; 181
+ c5c:	fa 4b       	sbci	r31, 0xBA	; 186
+ c5e:	40 81       	ld	r20, Z
+ c60:	51 81       	ldd	r21, Z+1	; 0x01
+ c62:	6a 01       	movw	r12, r20
+ c64:	e1 2c       	mov	r14, r1
+ c66:	f1 2c       	mov	r15, r1
+ c68:	6c 15       	cp	r22, r12
+ c6a:	7d 05       	cpc	r23, r13
+ c6c:	8e 05       	cpc	r24, r14
+ c6e:	9f 05       	cpc	r25, r15
+ c70:	f0 f0       	brcs	.+60     	; 0xcae <vending_run+0x1a0>
+    {
+        ctx->sos_step = (ctx->sos_step + 1) % SOS_STEPS;
+ c72:	c9 01       	movw	r24, r18
+ c74:	01 96       	adiw	r24, 0x01	; 1
+ c76:	63 e1       	ldi	r22, 0x13	; 19
+ c78:	70 e0       	ldi	r23, 0x00	; 0
+ c7a:	0e 94 60 06 	call	0xcc0	; 0xcc0 <__divmodhi4>
+ c7e:	8e 8b       	std	Y+22, r24	; 0x16
+        ctx->led_ts   = hal_tick_ms();
+ c80:	0e 94 fa 01 	call	0x3f4	; 0x3f4 <hal_tick_ms>
+ c84:	6a 8b       	std	Y+18, r22	; 0x12
+ c86:	7b 8b       	std	Y+19, r23	; 0x13
+ c88:	8c 8b       	std	Y+20, r24	; 0x14
+ c8a:	9d 8b       	std	Y+21, r25	; 0x15
+
+        /* Odd steps = LED ON, even steps = LED OFF */
+        if (ctx->sos_step & 0x01)
+ c8c:	8e 89       	ldd	r24, Y+22	; 0x16
+ c8e:	80 ff       	sbrs	r24, 0
+ c90:	03 c0       	rjmp	.+6      	; 0xc98 <vending_run+0x18a>
+        {
+            hal_led_on();
+ c92:	0e 94 e0 01 	call	0x3c0	; 0x3c0 <hal_led_on>
+ c96:	0b c0       	rjmp	.+22     	; 0xcae <vending_run+0x1a0>
+        }
+        else
+        {
+            hal_led_off();
+ c98:	0e 94 e4 01 	call	0x3c8	; 0x3c8 <hal_led_off>
+            break;
+
+        default:
+            break;
+    }
+}
+ c9c:	08 c0       	rjmp	.+16     	; 0xcae <vending_run+0x1a0>
+        /* Both pressed simultaneously -> service key combo */
+        dispatch(ctx, EVNT_SERVICE);
+    }
+    else
+    {
+        if (coin)     dispatch(ctx, EVNT_COIN);
+ c9e:	ff 20       	and	r15, r15
+ ca0:	09 f4       	brne	.+2      	; 0xca4 <vending_run+0x196>
+ ca2:	65 cf       	rjmp	.-310    	; 0xb6e <vending_run+0x60>
+ ca4:	58 cf       	rjmp	.-336    	; 0xb56 <vending_run+0x48>
+        if (dispense) dispatch(ctx, EVNT_DISPENSE);
+ ca6:	88 23       	and	r24, r24
+ ca8:	09 f4       	brne	.+2      	; 0xcac <vending_run+0x19e>
+ caa:	65 cf       	rjmp	.-310    	; 0xb76 <vending_run+0x68>
+ cac:	5a cf       	rjmp	.-332    	; 0xb62 <vending_run+0x54>
+            break;
+
+        default:
+            break;
+    }
+}
+ cae:	df 91       	pop	r29
+ cb0:	cf 91       	pop	r28
+ cb2:	1f 91       	pop	r17
+ cb4:	0f 91       	pop	r16
+ cb6:	ff 90       	pop	r15
+ cb8:	ef 90       	pop	r14
+ cba:	df 90       	pop	r13
+ cbc:	cf 90       	pop	r12
+ cbe:	08 95       	ret
+
+00000cc0 <__divmodhi4>:
+ cc0:	97 fb       	bst	r25, 7
+ cc2:	07 2e       	mov	r0, r23
+ cc4:	16 f4       	brtc	.+4      	; 0xcca <__divmodhi4+0xa>
+ cc6:	00 94       	com	r0
+ cc8:	07 d0       	rcall	.+14     	; 0xcd8 <__divmodhi4_neg1>
+ cca:	77 fd       	sbrc	r23, 7
+ ccc:	09 d0       	rcall	.+18     	; 0xce0 <__divmodhi4_neg2>
+ cce:	0e 94 83 06 	call	0xd06	; 0xd06 <__udivmodhi4>
+ cd2:	07 fc       	sbrc	r0, 7
+ cd4:	05 d0       	rcall	.+10     	; 0xce0 <__divmodhi4_neg2>
+ cd6:	3e f4       	brtc	.+14     	; 0xce6 <__divmodhi4_exit>
+
+00000cd8 <__divmodhi4_neg1>:
+ cd8:	90 95       	com	r25
+ cda:	81 95       	neg	r24
+ cdc:	9f 4f       	sbci	r25, 0xFF	; 255
+ cde:	08 95       	ret
+
+00000ce0 <__divmodhi4_neg2>:
+ ce0:	70 95       	com	r23
+ ce2:	61 95       	neg	r22
+ ce4:	7f 4f       	sbci	r23, 0xFF	; 255
+
+00000ce6 <__divmodhi4_exit>:
+ ce6:	08 95       	ret
+
+00000ce8 <__umulhisi3>:
+ ce8:	a2 9f       	mul	r26, r18
+ cea:	b0 01       	movw	r22, r0
+ cec:	b3 9f       	mul	r27, r19
+ cee:	c0 01       	movw	r24, r0
+ cf0:	a3 9f       	mul	r26, r19
+ cf2:	70 0d       	add	r23, r0
+ cf4:	81 1d       	adc	r24, r1
+ cf6:	11 24       	eor	r1, r1
+ cf8:	91 1d       	adc	r25, r1
+ cfa:	b2 9f       	mul	r27, r18
+ cfc:	70 0d       	add	r23, r0
+ cfe:	81 1d       	adc	r24, r1
+ d00:	11 24       	eor	r1, r1
+ d02:	91 1d       	adc	r25, r1
+ d04:	08 95       	ret
+
+00000d06 <__udivmodhi4>:
+ d06:	aa 1b       	sub	r26, r26
+ d08:	bb 1b       	sub	r27, r27
+ d0a:	51 e1       	ldi	r21, 0x11	; 17
+ d0c:	07 c0       	rjmp	.+14     	; 0xd1c <__udivmodhi4_ep>
+
+00000d0e <__udivmodhi4_loop>:
+ d0e:	aa 1f       	adc	r26, r26
+ d10:	bb 1f       	adc	r27, r27
+ d12:	a6 17       	cp	r26, r22
+ d14:	b7 07       	cpc	r27, r23
+ d16:	10 f0       	brcs	.+4      	; 0xd1c <__udivmodhi4_ep>
+ d18:	a6 1b       	sub	r26, r22
+ d1a:	b7 0b       	sbc	r27, r23
+
+00000d1c <__udivmodhi4_ep>:
+ d1c:	88 1f       	adc	r24, r24
+ d1e:	99 1f       	adc	r25, r25
+ d20:	5a 95       	dec	r21
+ d22:	a9 f7       	brne	.-22     	; 0xd0e <__udivmodhi4_loop>
+ d24:	80 95       	com	r24
+ d26:	90 95       	com	r25
+ d28:	bc 01       	movw	r22, r24
+ d2a:	cd 01       	movw	r24, r26
+ d2c:	08 95       	ret
+
+00000d2e <_exit>:
+ d2e:	f8 94       	cli
+
+00000d30 <__stop_program>:
+ d30:	ff cf       	rjmp	.-2      	; 0xd30 <__stop_program>
