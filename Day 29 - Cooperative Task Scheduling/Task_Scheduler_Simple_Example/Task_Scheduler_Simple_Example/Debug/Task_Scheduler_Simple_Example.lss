@@ -1,0 +1,573 @@
+
+Task_Scheduler_Simple_Example.elf:     file format elf32-avr
+
+Sections:
+Idx Name          Size      VMA       LMA       File off  Algn
+  0 .data         00000000  00804000  00804000  000003ac  2**0
+                  CONTENTS, ALLOC, LOAD, DATA
+  1 .text         00000338  00000000  00000000  00000074  2**1
+                  CONTENTS, ALLOC, LOAD, READONLY, CODE
+  2 .bss          00000008  00804000  00804000  000003ac  2**0
+                  ALLOC
+  3 .comment      00000030  00000000  00000000  000003ac  2**0
+                  CONTENTS, READONLY
+  4 .note.gnu.avr.deviceinfo 00000040  00000000  00000000  000003dc  2**2
+                  CONTENTS, READONLY
+  5 .debug_aranges 00000078  00000000  00000000  0000041c  2**0
+                  CONTENTS, READONLY, DEBUGGING
+  6 .debug_info   00003c40  00000000  00000000  00000494  2**0
+                  CONTENTS, READONLY, DEBUGGING
+  7 .debug_abbrev 00003175  00000000  00000000  000040d4  2**0
+                  CONTENTS, READONLY, DEBUGGING
+  8 .debug_line   0000051c  00000000  00000000  00007249  2**0
+                  CONTENTS, READONLY, DEBUGGING
+  9 .debug_frame  00000110  00000000  00000000  00007768  2**2
+                  CONTENTS, READONLY, DEBUGGING
+ 10 .debug_str    00001f76  00000000  00000000  00007878  2**0
+                  CONTENTS, READONLY, DEBUGGING
+ 11 .debug_loc    000000b1  00000000  00000000  000097ee  2**0
+                  CONTENTS, READONLY, DEBUGGING
+ 12 .debug_ranges 00000068  00000000  00000000  0000989f  2**0
+                  CONTENTS, READONLY, DEBUGGING
+
+Disassembly of section .text:
+
+00000000 <__vectors>:
+   0:	0c 94 74 00 	jmp	0xe8	; 0xe8 <__ctors_end>
+   4:	0c 94 86 00 	jmp	0x10c	; 0x10c <__bad_interrupt>
+   8:	0c 94 86 00 	jmp	0x10c	; 0x10c <__bad_interrupt>
+   c:	0c 94 86 00 	jmp	0x10c	; 0x10c <__bad_interrupt>
+  10:	0c 94 86 00 	jmp	0x10c	; 0x10c <__bad_interrupt>
+  14:	0c 94 86 00 	jmp	0x10c	; 0x10c <__bad_interrupt>
+  18:	0c 94 86 00 	jmp	0x10c	; 0x10c <__bad_interrupt>
+  1c:	0c 94 86 00 	jmp	0x10c	; 0x10c <__bad_interrupt>
+  20:	0c 94 86 00 	jmp	0x10c	; 0x10c <__bad_interrupt>
+  24:	0c 94 86 00 	jmp	0x10c	; 0x10c <__bad_interrupt>
+  28:	0c 94 86 00 	jmp	0x10c	; 0x10c <__bad_interrupt>
+  2c:	0c 94 86 00 	jmp	0x10c	; 0x10c <__bad_interrupt>
+  30:	0c 94 e9 00 	jmp	0x1d2	; 0x1d2 <__vector_12>
+  34:	0c 94 86 00 	jmp	0x10c	; 0x10c <__bad_interrupt>
+  38:	0c 94 86 00 	jmp	0x10c	; 0x10c <__bad_interrupt>
+  3c:	0c 94 86 00 	jmp	0x10c	; 0x10c <__bad_interrupt>
+  40:	0c 94 86 00 	jmp	0x10c	; 0x10c <__bad_interrupt>
+  44:	0c 94 86 00 	jmp	0x10c	; 0x10c <__bad_interrupt>
+  48:	0c 94 86 00 	jmp	0x10c	; 0x10c <__bad_interrupt>
+  4c:	0c 94 86 00 	jmp	0x10c	; 0x10c <__bad_interrupt>
+  50:	0c 94 86 00 	jmp	0x10c	; 0x10c <__bad_interrupt>
+  54:	0c 94 86 00 	jmp	0x10c	; 0x10c <__bad_interrupt>
+  58:	0c 94 86 00 	jmp	0x10c	; 0x10c <__bad_interrupt>
+  5c:	0c 94 86 00 	jmp	0x10c	; 0x10c <__bad_interrupt>
+  60:	0c 94 86 00 	jmp	0x10c	; 0x10c <__bad_interrupt>
+  64:	0c 94 86 00 	jmp	0x10c	; 0x10c <__bad_interrupt>
+  68:	0c 94 86 00 	jmp	0x10c	; 0x10c <__bad_interrupt>
+  6c:	0c 94 86 00 	jmp	0x10c	; 0x10c <__bad_interrupt>
+  70:	0c 94 86 00 	jmp	0x10c	; 0x10c <__bad_interrupt>
+  74:	0c 94 86 00 	jmp	0x10c	; 0x10c <__bad_interrupt>
+  78:	0c 94 86 00 	jmp	0x10c	; 0x10c <__bad_interrupt>
+  7c:	0c 94 86 00 	jmp	0x10c	; 0x10c <__bad_interrupt>
+  80:	0c 94 86 00 	jmp	0x10c	; 0x10c <__bad_interrupt>
+  84:	0c 94 86 00 	jmp	0x10c	; 0x10c <__bad_interrupt>
+  88:	0c 94 86 00 	jmp	0x10c	; 0x10c <__bad_interrupt>
+  8c:	0c 94 86 00 	jmp	0x10c	; 0x10c <__bad_interrupt>
+  90:	0c 94 86 00 	jmp	0x10c	; 0x10c <__bad_interrupt>
+  94:	0c 94 86 00 	jmp	0x10c	; 0x10c <__bad_interrupt>
+  98:	0c 94 86 00 	jmp	0x10c	; 0x10c <__bad_interrupt>
+  9c:	0c 94 86 00 	jmp	0x10c	; 0x10c <__bad_interrupt>
+  a0:	0c 94 86 00 	jmp	0x10c	; 0x10c <__bad_interrupt>
+  a4:	0c 94 86 00 	jmp	0x10c	; 0x10c <__bad_interrupt>
+  a8:	0c 94 86 00 	jmp	0x10c	; 0x10c <__bad_interrupt>
+  ac:	0c 94 86 00 	jmp	0x10c	; 0x10c <__bad_interrupt>
+  b0:	0c 94 86 00 	jmp	0x10c	; 0x10c <__bad_interrupt>
+  b4:	0c 94 86 00 	jmp	0x10c	; 0x10c <__bad_interrupt>
+  b8:	0c 94 86 00 	jmp	0x10c	; 0x10c <__bad_interrupt>
+  bc:	0c 94 86 00 	jmp	0x10c	; 0x10c <__bad_interrupt>
+  c0:	0c 94 86 00 	jmp	0x10c	; 0x10c <__bad_interrupt>
+  c4:	0c 94 86 00 	jmp	0x10c	; 0x10c <__bad_interrupt>
+  c8:	0c 94 86 00 	jmp	0x10c	; 0x10c <__bad_interrupt>
+  cc:	0c 94 86 00 	jmp	0x10c	; 0x10c <__bad_interrupt>
+  d0:	0c 94 86 00 	jmp	0x10c	; 0x10c <__bad_interrupt>
+  d4:	0c 94 86 00 	jmp	0x10c	; 0x10c <__bad_interrupt>
+  d8:	0c 94 86 00 	jmp	0x10c	; 0x10c <__bad_interrupt>
+  dc:	0c 94 86 00 	jmp	0x10c	; 0x10c <__bad_interrupt>
+  e0:	0c 94 86 00 	jmp	0x10c	; 0x10c <__bad_interrupt>
+  e4:	0c 94 86 00 	jmp	0x10c	; 0x10c <__bad_interrupt>
+
+000000e8 <__ctors_end>:
+  e8:	11 24       	eor	r1, r1
+  ea:	1f be       	out	0x3f, r1	; 63
+  ec:	cf ef       	ldi	r28, 0xFF	; 255
+  ee:	cd bf       	out	0x3d, r28	; 61
+  f0:	df e7       	ldi	r29, 0x7F	; 127
+  f2:	de bf       	out	0x3e, r29	; 62
+
+000000f4 <__do_clear_bss>:
+  f4:	20 e4       	ldi	r18, 0x40	; 64
+  f6:	a0 e0       	ldi	r26, 0x00	; 0
+  f8:	b0 e4       	ldi	r27, 0x40	; 64
+  fa:	01 c0       	rjmp	.+2      	; 0xfe <.do_clear_bss_start>
+
+000000fc <.do_clear_bss_loop>:
+  fc:	1d 92       	st	X+, r1
+
+000000fe <.do_clear_bss_start>:
+  fe:	a8 30       	cpi	r26, 0x08	; 8
+ 100:	b2 07       	cpc	r27, r18
+ 102:	e1 f7       	brne	.-8      	; 0xfc <.do_clear_bss_loop>
+ 104:	0e 94 6b 01 	call	0x2d6	; 0x2d6 <main>
+ 108:	0c 94 9a 01 	jmp	0x334	; 0x334 <_exit>
+
+0000010c <__bad_interrupt>:
+ 10c:	0c 94 00 00 	jmp	0	; 0x0 <__vectors>
+
+00000110 <LED_init>:
+/**
+ * @brief Initialize LED pin.
+ */
+static void LED_init(void)
+{
+    LED_PORT.DIRSET = LED_PIN;
+ 110:	e0 e4       	ldi	r30, 0x40	; 64
+ 112:	f4 e0       	ldi	r31, 0x04	; 4
+ 114:	80 e4       	ldi	r24, 0x40	; 64
+ 116:	81 83       	std	Z+1, r24	; 0x01
+    LED_PORT.OUTCLR = LED_PIN;
+ 118:	86 83       	std	Z+6, r24	; 0x06
+ 11a:	08 95       	ret
+
+0000011c <LED_toggle>:
+/**
+ * @brief Toggle LED output.
+ */
+static void LED_toggle(void)
+{
+    LED_PORT.OUTTGL = LED_PIN;
+ 11c:	80 e4       	ldi	r24, 0x40	; 64
+ 11e:	80 93 47 04 	sts	0x0447, r24	; 0x800447 <__TEXT_REGION_LENGTH__+0x7e0447>
+ 122:	08 95       	ret
+
+00000124 <ADC0_init>:
+ * @brief Initialize ADC0 for single-ended 12-bit conversion.
+ */
+static void ADC0_init(void)
+{
+    // Disable ADC before configuration
+    ADC0.CTRLA = 0; 
+ 124:	e0 e0       	ldi	r30, 0x00	; 0
+ 126:	f6 e0       	ldi	r31, 0x06	; 6
+ 128:	10 82       	st	Z, r1
+    
+    // Select reference 
+    // Enable reference always ON for ADC0 
+    // Internal 4.096V reference 
+    VREF.ADC0REF = 1 << VREF_ALWAYSON_bp 
+ 12a:	82 e8       	ldi	r24, 0x82	; 130
+ 12c:	80 93 a0 00 	sts	0x00A0, r24	; 0x8000a0 <__TEXT_REGION_LENGTH__+0x7e00a0>
+	      		 | VREF_REFSEL_4V096_gc; 
+
+    // ADC input pin 0 
+    ADC0.MUXPOS = ADC_MUXPOS_AIN0_gc; 
+ 130:	10 86       	std	Z+8, r1	; 0x08
+
+    // No accumulation 
+    ADC0.CTRLB = ADC_SAMPNUM_NONE_gc; 
+ 132:	11 82       	std	Z+1, r1	; 0x01
+
+    // Prescaler = CLK_PER / 16
+    ADC0.CTRLC = ADC_PRESC_DIV16_gc;
+ 134:	84 e0       	ldi	r24, 0x04	; 4
+ 136:	82 83       	std	Z+2, r24	; 0x02
+
+    // 12-bit mode 
+    ADC0.CTRLA |= ADC_RESSEL_12BIT_gc;
+ 138:	80 81       	ld	r24, Z
+ 13a:	80 83       	st	Z, r24
+
+    // Single-ended conversion mode 
+    ADC0.CTRLA |= 0 << ADC_CONVMODE_bp; 
+ 13c:	80 81       	ld	r24, Z
+ 13e:	80 83       	st	Z, r24
+
+    // Enable ADC 
+    ADC0.CTRLA |= 1 << ADC_ENABLE_bp;
+ 140:	80 81       	ld	r24, Z
+ 142:	81 60       	ori	r24, 0x01	; 1
+ 144:	80 83       	st	Z, r24
+ 146:	08 95       	ret
+
+00000148 <ADC0_start>:
+/**
+ * @brief Start ADC conversion.
+ */
+static void ADC0_start(void)
+{
+    ADC0.COMMAND = ADC_STCONV_bm;
+ 148:	81 e0       	ldi	r24, 0x01	; 1
+ 14a:	80 93 0a 06 	sts	0x060A, r24	; 0x80060a <__TEXT_REGION_LENGTH__+0x7e060a>
+ 14e:	08 95       	ret
+
+00000150 <ADC0_ready>:
+ *
+ * @return 1 if ready, otherwise 0.
+ */
+static uint8_t ADC0_ready(void)
+{
+    return (ADC0.INTFLAGS & ADC_RESRDY_bm) ? 1u : 0u;
+ 150:	80 91 0d 06 	lds	r24, 0x060D	; 0x80060d <__TEXT_REGION_LENGTH__+0x7e060d>
+}
+ 154:	81 70       	andi	r24, 0x01	; 1
+ 156:	08 95       	ret
+
+00000158 <ADC0_read>:
+ *
+ * @return ADC conversion result.
+ */
+static uint16_t ADC0_read(void)
+{
+    ADC0.INTFLAGS = ADC_RESRDY_bm;
+ 158:	e0 e0       	ldi	r30, 0x00	; 0
+ 15a:	f6 e0       	ldi	r31, 0x06	; 6
+ 15c:	81 e0       	ldi	r24, 0x01	; 1
+ 15e:	85 87       	std	Z+13, r24	; 0x0d
+    return ADC0.RES;
+ 160:	80 89       	ldd	r24, Z+16	; 0x10
+ 162:	91 89       	ldd	r25, Z+17	; 0x11
+}
+ 164:	08 95       	ret
+
+00000166 <TCB0_init>:
+ * @brief Initialize TCB0 to generate a 1 ms scheduler tick.
+ */
+static void TCB0_init(void)
+{
+    // Disable TCB0 before configuration 
+	TCB0.CTRLA &= ~(1 << TCB_ENABLE_bp);
+ 166:	e0 e0       	ldi	r30, 0x00	; 0
+ 168:	fb e0       	ldi	r31, 0x0B	; 11
+ 16a:	80 81       	ld	r24, Z
+ 16c:	8e 7f       	andi	r24, 0xFE	; 254
+ 16e:	80 83       	st	Z, r24
+
+	// Periodic interrupt mode 
+	TCB0.CTRLB = TCB_CNTMODE_INT_gc;
+ 170:	11 82       	std	Z+1, r1	; 0x01
+
+	// Set compare value for 1 ms interval
+    // 24 MHz / 2 = 12 MHz, 12 MHz / 12000 = 1 kHz (1 ms period)
+	TCB0.CCMP = 12000; 
+ 172:	80 ee       	ldi	r24, 0xE0	; 224
+ 174:	9e e2       	ldi	r25, 0x2E	; 46
+ 176:	84 87       	std	Z+12, r24	; 0x0c
+ 178:	95 87       	std	Z+13, r25	; 0x0d
+	// Clear any pending interrupt flags 
+	TCB0.INTFLAGS = TCB_CAPT_bm;
+ 17a:	81 e0       	ldi	r24, 0x01	; 1
+ 17c:	86 83       	std	Z+6, r24	; 0x06
+
+	// Enable capture/compare interrupt
+	TCB0.INTCTRL = TCB_CAPT_bm;
+ 17e:	85 83       	std	Z+5, r24	; 0x05
+
+	// Enable timer, use CLK_PER divided by 2 for better resolution
+    TCB0.CTRLA = TCB_CLKSEL_DIV2_gc | TCB_ENABLE_bm;
+ 180:	83 e0       	ldi	r24, 0x03	; 3
+ 182:	80 83       	st	Z, r24
+ 184:	08 95       	ret
+
+00000186 <task_10ms>:
+ *
+ * Starts a new ADC conversion if previous one is complete.
+ */
+static void task_10ms(void)
+{
+    if (ADC0_ready())
+ 186:	0e 94 a8 00 	call	0x150	; 0x150 <ADC0_ready>
+ 18a:	88 23       	and	r24, r24
+ 18c:	31 f0       	breq	.+12     	; 0x19a <task_10ms+0x14>
+    {
+        g_adc_value = ADC0_read();
+ 18e:	0e 94 ac 00 	call	0x158	; 0x158 <ADC0_read>
+ 192:	80 93 03 40 	sts	0x4003, r24	; 0x804003 <g_adc_value>
+ 196:	90 93 04 40 	sts	0x4004, r25	; 0x804004 <g_adc_value+0x1>
+    }
+
+    ADC0_start();
+ 19a:	0e 94 a4 00 	call	0x148	; 0x148 <ADC0_start>
+ 19e:	08 95       	ret
+
+000001a0 <task_100ms>:
+ *
+ * Toggles LED.
+ */
+static void task_100ms(void)
+{
+    LED_toggle();
+ 1a0:	0e 94 8e 00 	call	0x11c	; 0x11c <LED_toggle>
+ 1a4:	08 95       	ret
+
+000001a6 <task_1000ms>:
+ *
+ * Demonstrates a simple cooperative state machine.
+ */
+static void task_1000ms(void)
+{
+    switch (g_status_state)
+ 1a6:	80 91 02 40 	lds	r24, 0x4002	; 0x804002 <g_status_state>
+ 1aa:	81 30       	cpi	r24, 0x01	; 1
+ 1ac:	41 f0       	breq	.+16     	; 0x1be <task_1000ms+0x18>
+ 1ae:	18 f0       	brcs	.+6      	; 0x1b6 <task_1000ms+0x10>
+ 1b0:	82 30       	cpi	r24, 0x02	; 2
+ 1b2:	49 f0       	breq	.+18     	; 0x1c6 <task_1000ms+0x20>
+ 1b4:	0b c0       	rjmp	.+22     	; 0x1cc <task_1000ms+0x26>
+    {
+        case STATUS_STATE_IDLE:
+            g_status_state = STATUS_STATE_SAMPLE;
+ 1b6:	81 e0       	ldi	r24, 0x01	; 1
+ 1b8:	80 93 02 40 	sts	0x4002, r24	; 0x804002 <g_status_state>
+            break;
+ 1bc:	08 95       	ret
+
+        case STATUS_STATE_SAMPLE:
+            /* Use g_adc_value here if needed */
+            g_status_state = STATUS_STATE_UPDATE;
+ 1be:	82 e0       	ldi	r24, 0x02	; 2
+ 1c0:	80 93 02 40 	sts	0x4002, r24	; 0x804002 <g_status_state>
+            break;
+ 1c4:	08 95       	ret
+
+        case STATUS_STATE_UPDATE:
+            /* Update application status here */
+            g_status_state = STATUS_STATE_IDLE;
+ 1c6:	10 92 02 40 	sts	0x4002, r1	; 0x804002 <g_status_state>
+            break;
+ 1ca:	08 95       	ret
+
+        default:
+            g_status_state = STATUS_STATE_IDLE;
+ 1cc:	10 92 02 40 	sts	0x4002, r1	; 0x804002 <g_status_state>
+ 1d0:	08 95       	ret
+
+000001d2 <__vector_12>:
+
+/**
+ * @brief TCB0 ISR generates scheduler flags.
+ */
+ISR(TCB0_INT_vect)
+{
+ 1d2:	1f 92       	push	r1
+ 1d4:	0f 92       	push	r0
+ 1d6:	0f b6       	in	r0, 0x3f	; 63
+ 1d8:	0f 92       	push	r0
+ 1da:	11 24       	eor	r1, r1
+ 1dc:	2f 93       	push	r18
+ 1de:	3f 93       	push	r19
+ 1e0:	4f 93       	push	r20
+ 1e2:	5f 93       	push	r21
+ 1e4:	6f 93       	push	r22
+ 1e6:	7f 93       	push	r23
+ 1e8:	8f 93       	push	r24
+ 1ea:	9f 93       	push	r25
+ 1ec:	af 93       	push	r26
+ 1ee:	bf 93       	push	r27
+    static uint16_t tick_count = 0u;
+
+    TCB0.INTFLAGS = TCB_CAPT_bm;
+ 1f0:	81 e0       	ldi	r24, 0x01	; 1
+ 1f2:	80 93 06 0b 	sts	0x0B06, r24	; 0x800b06 <__TEXT_REGION_LENGTH__+0x7e0b06>
+
+    tick_count++;
+ 1f6:	40 91 00 40 	lds	r20, 0x4000	; 0x804000 <__DATA_REGION_ORIGIN__>
+ 1fa:	50 91 01 40 	lds	r21, 0x4001	; 0x804001 <__DATA_REGION_ORIGIN__+0x1>
+ 1fe:	4f 5f       	subi	r20, 0xFF	; 255
+ 200:	5f 4f       	sbci	r21, 0xFF	; 255
+ 202:	40 93 00 40 	sts	0x4000, r20	; 0x804000 <__DATA_REGION_ORIGIN__>
+ 206:	50 93 01 40 	sts	0x4001, r21	; 0x804001 <__DATA_REGION_ORIGIN__+0x1>
+
+    if ((tick_count % 10u) == 0u)
+ 20a:	9a 01       	movw	r18, r20
+ 20c:	ad ec       	ldi	r26, 0xCD	; 205
+ 20e:	bc ec       	ldi	r27, 0xCC	; 204
+ 210:	0e 94 8b 01 	call	0x316	; 0x316 <__umulhisi3>
+ 214:	96 95       	lsr	r25
+ 216:	87 95       	ror	r24
+ 218:	96 95       	lsr	r25
+ 21a:	87 95       	ror	r24
+ 21c:	96 95       	lsr	r25
+ 21e:	87 95       	ror	r24
+ 220:	9c 01       	movw	r18, r24
+ 222:	22 0f       	add	r18, r18
+ 224:	33 1f       	adc	r19, r19
+ 226:	88 0f       	add	r24, r24
+ 228:	99 1f       	adc	r25, r25
+ 22a:	88 0f       	add	r24, r24
+ 22c:	99 1f       	adc	r25, r25
+ 22e:	88 0f       	add	r24, r24
+ 230:	99 1f       	adc	r25, r25
+ 232:	82 0f       	add	r24, r18
+ 234:	93 1f       	adc	r25, r19
+ 236:	48 17       	cp	r20, r24
+ 238:	59 07       	cpc	r21, r25
+ 23a:	19 f4       	brne	.+6      	; 0x242 <__EEPROM_REGION_LENGTH__+0x42>
+    {
+        task_10ms_flag = 1u;
+ 23c:	81 e0       	ldi	r24, 0x01	; 1
+ 23e:	80 93 07 40 	sts	0x4007, r24	; 0x804007 <task_10ms_flag>
+    }
+
+    if ((tick_count % 100u) == 0u)
+ 242:	9a 01       	movw	r18, r20
+ 244:	36 95       	lsr	r19
+ 246:	27 95       	ror	r18
+ 248:	36 95       	lsr	r19
+ 24a:	27 95       	ror	r18
+ 24c:	ab e7       	ldi	r26, 0x7B	; 123
+ 24e:	b4 e1       	ldi	r27, 0x14	; 20
+ 250:	0e 94 8b 01 	call	0x316	; 0x316 <__umulhisi3>
+ 254:	96 95       	lsr	r25
+ 256:	87 95       	ror	r24
+ 258:	64 e6       	ldi	r22, 0x64	; 100
+ 25a:	68 9f       	mul	r22, r24
+ 25c:	90 01       	movw	r18, r0
+ 25e:	69 9f       	mul	r22, r25
+ 260:	30 0d       	add	r19, r0
+ 262:	11 24       	eor	r1, r1
+ 264:	42 17       	cp	r20, r18
+ 266:	53 07       	cpc	r21, r19
+ 268:	19 f4       	brne	.+6      	; 0x270 <__EEPROM_REGION_LENGTH__+0x70>
+    {
+        task_100ms_flag = 1u;
+ 26a:	81 e0       	ldi	r24, 0x01	; 1
+ 26c:	80 93 06 40 	sts	0x4006, r24	; 0x804006 <task_100ms_flag>
+    }
+
+    if ((tick_count % 1000u) == 0u)
+ 270:	9a 01       	movw	r18, r20
+ 272:	36 95       	lsr	r19
+ 274:	27 95       	ror	r18
+ 276:	36 95       	lsr	r19
+ 278:	27 95       	ror	r18
+ 27a:	36 95       	lsr	r19
+ 27c:	27 95       	ror	r18
+ 27e:	a5 ec       	ldi	r26, 0xC5	; 197
+ 280:	b0 e2       	ldi	r27, 0x20	; 32
+ 282:	0e 94 8b 01 	call	0x316	; 0x316 <__umulhisi3>
+ 286:	92 95       	swap	r25
+ 288:	82 95       	swap	r24
+ 28a:	8f 70       	andi	r24, 0x0F	; 15
+ 28c:	89 27       	eor	r24, r25
+ 28e:	9f 70       	andi	r25, 0x0F	; 15
+ 290:	89 27       	eor	r24, r25
+ 292:	68 ee       	ldi	r22, 0xE8	; 232
+ 294:	73 e0       	ldi	r23, 0x03	; 3
+ 296:	86 9f       	mul	r24, r22
+ 298:	90 01       	movw	r18, r0
+ 29a:	87 9f       	mul	r24, r23
+ 29c:	30 0d       	add	r19, r0
+ 29e:	96 9f       	mul	r25, r22
+ 2a0:	30 0d       	add	r19, r0
+ 2a2:	11 24       	eor	r1, r1
+ 2a4:	42 17       	cp	r20, r18
+ 2a6:	53 07       	cpc	r21, r19
+ 2a8:	39 f4       	brne	.+14     	; 0x2b8 <__EEPROM_REGION_LENGTH__+0xb8>
+    {
+        task_1000ms_flag = 1u;
+ 2aa:	81 e0       	ldi	r24, 0x01	; 1
+ 2ac:	80 93 05 40 	sts	0x4005, r24	; 0x804005 <task_1000ms_flag>
+        tick_count = 0u;
+ 2b0:	10 92 00 40 	sts	0x4000, r1	; 0x804000 <__DATA_REGION_ORIGIN__>
+ 2b4:	10 92 01 40 	sts	0x4001, r1	; 0x804001 <__DATA_REGION_ORIGIN__+0x1>
+    }
+}
+ 2b8:	bf 91       	pop	r27
+ 2ba:	af 91       	pop	r26
+ 2bc:	9f 91       	pop	r25
+ 2be:	8f 91       	pop	r24
+ 2c0:	7f 91       	pop	r23
+ 2c2:	6f 91       	pop	r22
+ 2c4:	5f 91       	pop	r21
+ 2c6:	4f 91       	pop	r20
+ 2c8:	3f 91       	pop	r19
+ 2ca:	2f 91       	pop	r18
+ 2cc:	0f 90       	pop	r0
+ 2ce:	0f be       	out	0x3f, r0	; 63
+ 2d0:	0f 90       	pop	r0
+ 2d2:	1f 90       	pop	r1
+ 2d4:	18 95       	reti
+
+000002d6 <main>:
+ * @return Never returns.
+ */
+int main(void)
+{
+    // Initialize LED pin
+    LED_init();
+ 2d6:	0e 94 88 00 	call	0x110	; 0x110 <LED_init>
+    
+    // Initialize ADC0 for periodic sampling
+    ADC0_init();
+ 2da:	0e 94 92 00 	call	0x124	; 0x124 <ADC0_init>
+    
+    // Initialize TCB0 for scheduler tick generation
+    TCB0_init();
+ 2de:	0e 94 b3 00 	call	0x166	; 0x166 <TCB0_init>
+
+    // Enable global interrupts
+    sei();
+ 2e2:	78 94       	sei
+
+    while (1)
+    {
+        if (task_10ms_flag)
+ 2e4:	80 91 07 40 	lds	r24, 0x4007	; 0x804007 <task_10ms_flag>
+ 2e8:	88 23       	and	r24, r24
+ 2ea:	21 f0       	breq	.+8      	; 0x2f4 <main+0x1e>
+        {
+            task_10ms_flag = 0u;
+ 2ec:	10 92 07 40 	sts	0x4007, r1	; 0x804007 <task_10ms_flag>
+            task_10ms();
+ 2f0:	0e 94 c3 00 	call	0x186	; 0x186 <task_10ms>
+        }
+
+        if (task_100ms_flag)
+ 2f4:	80 91 06 40 	lds	r24, 0x4006	; 0x804006 <task_100ms_flag>
+ 2f8:	88 23       	and	r24, r24
+ 2fa:	21 f0       	breq	.+8      	; 0x304 <main+0x2e>
+        {
+            task_100ms_flag = 0u;
+ 2fc:	10 92 06 40 	sts	0x4006, r1	; 0x804006 <task_100ms_flag>
+            task_100ms();
+ 300:	0e 94 d0 00 	call	0x1a0	; 0x1a0 <task_100ms>
+        }
+
+        if (task_1000ms_flag)
+ 304:	80 91 05 40 	lds	r24, 0x4005	; 0x804005 <task_1000ms_flag>
+ 308:	88 23       	and	r24, r24
+ 30a:	61 f3       	breq	.-40     	; 0x2e4 <main+0xe>
+        {
+            task_1000ms_flag = 0u;
+ 30c:	10 92 05 40 	sts	0x4005, r1	; 0x804005 <task_1000ms_flag>
+            task_1000ms();
+ 310:	0e 94 d3 00 	call	0x1a6	; 0x1a6 <task_1000ms>
+ 314:	e7 cf       	rjmp	.-50     	; 0x2e4 <main+0xe>
+
+00000316 <__umulhisi3>:
+ 316:	a2 9f       	mul	r26, r18
+ 318:	b0 01       	movw	r22, r0
+ 31a:	b3 9f       	mul	r27, r19
+ 31c:	c0 01       	movw	r24, r0
+ 31e:	a3 9f       	mul	r26, r19
+ 320:	70 0d       	add	r23, r0
+ 322:	81 1d       	adc	r24, r1
+ 324:	11 24       	eor	r1, r1
+ 326:	91 1d       	adc	r25, r1
+ 328:	b2 9f       	mul	r27, r18
+ 32a:	70 0d       	add	r23, r0
+ 32c:	81 1d       	adc	r24, r1
+ 32e:	11 24       	eor	r1, r1
+ 330:	91 1d       	adc	r25, r1
+ 332:	08 95       	ret
+
+00000334 <_exit>:
+ 334:	f8 94       	cli
+
+00000336 <__stop_program>:
+ 336:	ff cf       	rjmp	.-2      	; 0x336 <__stop_program>
