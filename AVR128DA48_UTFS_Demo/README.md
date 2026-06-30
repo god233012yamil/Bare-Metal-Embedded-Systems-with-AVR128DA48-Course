@@ -7,7 +7,7 @@ This project demonstrates how to integrate UTFS with an AVR128DA48 MCU using the
 - MCU: AVR128DA48
 - IDE: Atmel Studio 7 / Microchip Studio
 - Toolchain: AVR/GNU C Compiler
-- CPU/peripheral clock: 1.2 MHz (12 MHz internal oscillator divided by 10)
+- CPU/peripheral clock: 12 MHz 
 - Serial port: USART0
 - Baud rate: 115200 8N1
 - EEPROM UTFS region: 512 bytes
